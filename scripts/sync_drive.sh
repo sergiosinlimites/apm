@@ -1,6 +1,6 @@
 #!/bin/bash
 RCLONE="$HOME/.local/bin/rclone"
-REMOTE="unal,shared_with_me:PROYECTO INTEGRADOR APM"
+REMOTE="unal:APM"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOCAL="$SCRIPT_DIR/../archivos-drive/"
 

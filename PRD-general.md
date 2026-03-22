@@ -640,7 +640,7 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [x] Configurar paleta de colores (granate `#A8201A` como primario)
 - [x] Organizar estructura de carpetas del repositorio
 - [x] Configurar `.cursor/` con reglas, skills y agents (depurado de Aerosophia)
-- [ ] Sincronizar `archivos-drive/` con Google Drive (rclone)
+- [x] Sincronizar `archivos-drive/` con Google Drive (rclone → `unal:APM`)
 - [x] Crear `.gitignore` apropiado
 - [x] Hacer commit inicial
 
@@ -749,15 +749,15 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [ ] 11.3 Consolidar cuadro resumen final
 - [ ] 11.4 Curar repositorio GitHub
 - [x] 11.5a Landing page del sitio web (hero, proceso, productos, indicadores, fases, equipo)
-- [ ] 11.5b Reestructurar sitio web a arquitectura modular (una página por módulo)
-- [ ] 11.5c Página Módulo 1: Introducción a la Automatización
-- [ ] 11.5d Página Módulo 2: Gestión y evaluación de la producción
-- [ ] 11.5e Página Módulo 3: Planeación y Evaluación de proyectos
-- [ ] 11.5f Página Módulo 4: Celdas de manufactura robotizadas
-- [ ] 11.5g Página Módulo 5: Digital Factory
-- [ ] 11.5h Página Módulo 6: Controladores industriales (PLC)
-- [ ] 11.5i Página Módulo 7: Sistema de supervisión SCADA
-- [ ] 11.5j Página Evaluación económica (contenido del módulo 3 o sección aparte)
+- [x] 11.5b Reestructurar sitio web a arquitectura modular (7 páginas de módulo creadas con placeholder)
+- [ ] 11.5c Llenar contenido Módulo 1: Introducción a la Automatización
+- [ ] 11.5d Llenar contenido Módulo 2: Gestión y evaluación de la producción
+- [ ] 11.5e Llenar contenido Módulo 3: Planeación y Evaluación de proyectos
+- [ ] 11.5f Llenar contenido Módulo 4: Celdas de manufactura robotizadas
+- [ ] 11.5g Llenar contenido Módulo 5: Digital Factory
+- [ ] 11.5h Llenar contenido Módulo 6: Controladores industriales (PLC)
+- [ ] 11.5i Llenar contenido Módulo 7: Sistema de supervisión SCADA
+- [ ] 11.5j Llenar contenido Evaluación económica
 - [ ] 11.6 Producir video del proyecto
 - [ ] 11.7 Preparar sustentación intermedia
 - [ ] 11.8 Preparar sustentación final
@@ -825,29 +825,23 @@ apm/
 
 ### Configuración actual: `rclone` v1.73.2
 
-Instalado en `~/.local/bin/rclone`. Remote configurado: `unal` (Google Drive personal con acceso a carpetas compartidas).
+Instalado en `~/.local/bin/rclone`. Remote configurado: `unal` (Google Drive personal).
 
-La carpeta del proyecto en Drive es **"PROYECTO INTEGRADOR APM"** (compartida con el equipo). Se accede con el flag `shared_with_me`:
+La carpeta del proyecto en Drive es **`unal:APM`**.
 
-**Sincronizar Drive → local:**
+**Descargar Drive → local:**
 ```bash
-~/.local/bin/rclone sync "unal,shared_with_me:PROYECTO INTEGRADOR APM" archivos-drive/ --progress --exclude "extracted/**"
+scripts/sync_drive.sh pull
 ```
 
-**Sincronizar local → Drive:**
+**Subir local → Drive:**
 ```bash
-~/.local/bin/rclone sync archivos-drive/ "unal,shared_with_me:PROYECTO INTEGRADOR APM" --progress --exclude "extracted/**" --exclude ".rclone*"
+scripts/sync_drive.sh push
 ```
 
-**Script automático** (`scripts/sync_drive.sh`):
+**Listar contenido de Drive:**
 ```bash
-#!/bin/bash
-RCLONE="$HOME/.local/bin/rclone"
-REMOTE="unal,shared_with_me:PROYECTO INTEGRADOR APM"
-LOCAL="$(dirname "$0")/../archivos-drive/"
-echo "Sincronizando Google Drive → local..."
-$RCLONE sync "$REMOTE" "$LOCAL" --progress --exclude "extracted/**" --exclude ".rclone*"
-echo "Sincronización completa: $(date)"
+scripts/sync_drive.sh list
 ```
 
 ---
