@@ -582,13 +582,13 @@ Los agentes pueden usar Model Context Protocol (MCP) servers cuando sea necesari
 Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` al completarse. Los items marcados con `[PRUEBA]` contienen datos de prueba que deben reemplazarse con datos reales.
 
 ### Fase 0: Configuración del Repositorio
-- [ ] Elegir nombre del proyecto (ver Sección 1)
-- [ ] Configurar paleta de colores (ver Sección 2)
-- [ ] Organizar estructura de carpetas del repositorio
-- [ ] Configurar `.cursor/` con reglas, skills y agents
-- [ ] Sincronizar `archivos-drive/` con Google Drive
-- [ ] Crear `.gitignore` apropiado
-- [ ] Hacer commit inicial
+- [x] Elegir nombre del proyecto: **FluxLine**
+- [x] Configurar paleta de colores (granate `#A8201A` como primario)
+- [x] Organizar estructura de carpetas del repositorio
+- [x] Configurar `.cursor/` con reglas, skills y agents (depurado de Aerosophia)
+- [ ] Sincronizar `archivos-drive/` con Google Drive (rclone)
+- [x] Crear `.gitignore` apropiado
+- [x] Hacer commit inicial
 
 ### Fase 1: Alcance Técnico (EDT 1.x)
 - [x] 1.1 Definir familia de bebidas: Sector Bebidas (Coca-Cola FEMSA Bogotá)
@@ -694,7 +694,7 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [ ] 11.2 Ejecutar pruebas end-to-end
 - [ ] 11.3 Consolidar cuadro resumen final
 - [ ] 11.4 Curar repositorio GitHub
-- [ ] 11.5 Completar sitio web del proyecto
+- [x] 11.5 Completar sitio web del proyecto (versión base con hero, proceso, productos, indicadores, fases, equipo)
 - [ ] 11.6 Producir video del proyecto
 - [ ] 11.7 Preparar sustentación intermedia
 - [ ] 11.8 Preparar sustentación final
