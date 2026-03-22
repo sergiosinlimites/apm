@@ -28,11 +28,25 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__list" id="nav-menu">
+        <!-- [REMOVAL-001] Enlace «Fases» sustituido por menú desplegable «Módulos» (navegación multi-página) -->
         <li><a href="#inicio" class="nav__link">Inicio</a></li>
         <li><a href="#proceso" class="nav__link">Proceso</a></li>
         <li><a href="#productos" class="nav__link">Productos</a></li>
         <li><a href="#indicadores" class="nav__link">Indicadores</a></li>
-        <li><a href="#fases" class="nav__link">Fases</a></li>
+        <li class="nav__item nav__dropdown" data-nav-dropdown>
+          <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
+            Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__dropdown-menu" id="nav-modules-menu" role="menu">
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/introduccion.html">Introducción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/produccion.html">Producción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/planeacion.html">Planeación</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/robotica.html">Robótica</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/digital-factory.html">Digital Factory</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/control.html">Control (PLC)</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/scada.html">SCADA</a></li>
+          </ul>
+        </li>
         <li><a href="#equipo" class="nav__link">Equipo</a></li>
       </ul>
     </nav>
@@ -294,6 +308,7 @@
               <h3 class="timeline__title">Análisis AS-IS</h3>
               <p class="timeline__meta">10 días</p>
               <p class="timeline__desc">Caracterización del estado actual y cuellos de botella.</p>
+              <a class="timeline__link" href="modulos/produccion.html#as-is">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--left reveal">
@@ -305,6 +320,7 @@
               <h3 class="timeline__title">Diseño TO-BE</h3>
               <p class="timeline__meta">7 días</p>
               <p class="timeline__desc">Propuesta de mejoras y escenarios futuros.</p>
+              <a class="timeline__link" href="modulos/produccion.html#to-be">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--right reveal">
@@ -327,6 +343,7 @@
               <h3 class="timeline__title">Simulación</h3>
               <p class="timeline__meta">10 días</p>
               <p class="timeline__desc">Modelado y experimentación en entorno de simulación.</p>
+              <a class="timeline__link" href="modulos/produccion.html#simulacion">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--right reveal">
@@ -338,6 +355,7 @@
               <h3 class="timeline__title">Viabilidad Económica</h3>
               <p class="timeline__meta">11 días</p>
               <p class="timeline__desc">Análisis de costos, beneficios y retorno.</p>
+              <a class="timeline__link" href="modulos/planeacion.html">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--left reveal">
@@ -349,6 +367,7 @@
               <h3 class="timeline__title">Celda Robotizada</h3>
               <p class="timeline__meta">8 días</p>
               <p class="timeline__desc">Integración robótica y layout de celda.</p>
+              <a class="timeline__link" href="modulos/robotica.html">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--right reveal">
@@ -360,6 +379,7 @@
               <h3 class="timeline__title">Control Industrial</h3>
               <p class="timeline__meta">9 días</p>
               <p class="timeline__desc">PLC, ladder y lógica de control.</p>
+              <a class="timeline__link" href="modulos/control.html">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--left reveal">
@@ -371,6 +391,7 @@
               <h3 class="timeline__title">Gemelo Digital</h3>
               <p class="timeline__meta">8 días</p>
               <p class="timeline__desc">Modelo virtual y sincronización con planta.</p>
+              <a class="timeline__link" href="modulos/digital-factory.html">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--right reveal">
@@ -382,6 +403,7 @@
               <h3 class="timeline__title">SCADA</h3>
               <p class="timeline__meta">8 días</p>
               <p class="timeline__desc">Supervisión, alarmas e interfaces HMI.</p>
+              <a class="timeline__link" href="modulos/scada.html">Ver módulo →</a>
             </div>
           </li>
           <li class="timeline__item timeline__item--left reveal">

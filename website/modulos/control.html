@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Controladores Industriales (PLC) — FluxLine · Grafcet y Studio 5000.">
+  <title>Controladores Industriales (PLC) · FluxLine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page">
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Principal">
+      <a href="../index.html#inicio" class="nav__brand" aria-label="FluxLine — Inicio">
+        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="28" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span class="nav__logo-text">FluxLine</span>
+      </a>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
+        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
+        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li class="nav__item nav__dropdown" data-nav-dropdown>
+          <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
+            Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__dropdown-menu" id="nav-modules-menu" role="menu">
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="introduccion.html">Introducción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="produccion.html">Producción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="planeacion.html">Planeación</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="robotica.html">Robótica</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="digital-factory.html">Digital Factory</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="control.html" aria-current="page">Control (PLC)</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="module-main">
+    <section class="hero hero--compact" aria-labelledby="mod-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content hero__content--compact">
+        <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
+        <h1 class="hero__title" id="mod-title">Controladores Industriales (PLC)</h1>
+        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
+        <p class="hero__tagline">Especificación de secuencias con Grafcet, implementación en lógica Ladder (Studio 5000 / RSLogix), emulación de proceso y diseño de interlocks para operación segura del subsistema embotellador.</p>
+      </div>
+    </section>
+
+    <article class="module-content">
+      <div class="container">
+        <p class="module-content__intro">El PLC coordina modos, permisos y fallas: esta sección documentará el modelo de estados, entradas/salidas críticas y coherencia con la arquitectura ISA-95 del integrador.</p>
+
+        <section class="module-section" id="grafcet" aria-labelledby="sec-gf">
+          <h2 class="module-section__title" id="sec-gf">Grafcet y modos de operación</h2>
+          <p class="module-section__lead">Pasos, transiciones, macro-etapas (manual, automático, paro), sincronización con línea y condiciones de habilitación desde seguridad y SCADA.</p>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="ladder" aria-labelledby="sec-ld">
+          <h2 class="module-section__title" id="sec-ld">Lógica Ladder y estructura de programas</h2>
+          <p class="module-section__lead">Rutinas, JSR, timers, contadores y manejo de fallas; convenciones de nomenclatura y comentarios para auditoría.</p>
+          <div class="module-grid">
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          </div>
+        </section>
+
+        <section class="module-section" id="studio5000" aria-labelledby="sec-s5">
+          <h2 class="module-section__title" id="sec-s5">Studio 5000 / emulación</h2>
+          <p class="module-section__lead">Configuración de rack, módulos de E/S, enlace con Logix Emulate y pruebas de escenarios antes de despliegue físico.</p>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="interlocks" aria-labelledby="sec-il">
+          <h2 class="module-section__title" id="sec-il">Interlocks y seguridad</h2>
+          <p class="module-section__lead">Condiciones de bloqueo, reseteo de fallas, paros de categoría y coherencia con celda robotizada y periféricos.</p>
+          <ul class="module-list">
+            <li>Matriz preliminar causa–interlock–acción.</li>
+            <li>Secuencias de rearme y prueba de lazo.</li>
+            <li>Integración con etiquetas de alarma en SCADA.</li>
+          </ul>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
+      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
+      <p class="site-footer__block site-footer__block--right">Universidad</p>
+    </div>
+    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

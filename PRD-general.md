@@ -1,10 +1,10 @@
 # PRD - Automatización de Procesos de Manufactura (APM)
 
-> **Versión:** 1.0  
+> **Versión:** 2.0  
 > **Fecha:** 2026-03-22  
-> **Estado:** Borrador inicial  
-> **Materia:** Automatización de Procesos de Manufactura  
-> **Profesor:** Luis Miguel Mendez  
+> **Estado:** En desarrollo  
+> **Materia:** Automatización de Procesos de Manufactura (2017280 Gr. 01)  
+> **Semestre:** 2026-1S  
 > **Equipo:** Grupo 4 APM
 
 ---
@@ -83,6 +83,60 @@ Paleta basada en rojo industrial profundo (granate), distinto del rojo brillante
 | Rojo principal | `#FF000F` (puro, brillante) | `#A8201A` (granate profundo, cálido) |
 | Sensación | Corporativo, tecnológico | Industrial, académico, elegante |
 | Complemento | Gris neutro | Navy/Slate con profundidad |
+
+---
+
+## 2B. Profesores del Curso
+
+| Profesor | E-mail | Módulo |
+|----------|--------|--------|
+| Carlos Julio Cortés R. | cjcortesr@unal.edu.co | Gestión y evaluación de la producción automatizada |
+| Luis Miguel Méndez | lmmendezm@unal.edu.co | Introducción a la Automatización / Planeación y Evaluación |
+| Víctor Hugo Grisales | vhgrisalesp@unal.edu.co | Automatización discreta: PLC y SCADA |
+| Ricardo Ramírez H. | reramirezh@unal.edu.co | Celdas de manufactura robotizadas |
+| Eduardo Barrera Gualdrón | ebarrerag@unal.edu.co | — |
+| Ubaldo García Zaragoza | ugarciaz@unal.edu.co | Digital Factory |
+
+**Horario:** Miércoles y Viernes 14:00-16:00 · Salón 453-417
+
+---
+
+## 2C. Módulos del Curso y Evaluación
+
+El curso se evalúa por **módulos** (30%) y un **proyecto integrador** (70%). El sitio web del proyecto debe tener **una página por cada módulo** donde se presente el trabajo realizado.
+
+### Módulos (30% de la nota)
+
+| # | Módulo | Profesor | Peso | Página web |
+|---|--------|----------|:----:|------------|
+| 1 | Introducción a la Automatización en Manufactura | Luis Miguel Méndez | — | `introduccion.html` |
+| 2 | Gestión y evaluación de la producción automatizada | Carlos Julio Cortés | 5% | `produccion.html` |
+| 3 | Planeación y Evaluación de proyectos | Luis Miguel Méndez | 5% | `planeacion.html` |
+| 4 | Celdas de manufactura robotizadas | Ricardo Ramírez | 5% | `robotica.html` |
+| 5 | Tecnologías modernas / Digital Factory | Ubaldo García Zaragoza | 5% | `digital-factory.html` |
+| 6 | Controladores industriales (PLC) | Víctor Hugo Grisales | 5% | `control.html` |
+| 7 | Sistema de supervisión SCADA | Víctor Hugo Grisales | 5% | `scada.html` |
+
+### Proyecto Integrador (70% de la nota)
+
+| Componente | Peso |
+|------------|:----:|
+| Sustentación intermedia | 10% |
+| Sustentación final | 60% |
+
+### Contenido esperado por módulo (basado en proyectos referencia)
+
+Cada página de módulo debe contener el trabajo realizado para ese módulo: diagramas, análisis, resultados de simulación, indicadores, videos, comparativos pre/post automatización, etc. Ejemplos de referencia:
+
+- [Autounal Solutions (2025-2S)](https://autounal-solutions.github.io/sitio_web/index.html)
+- [Bicitrónica (semestre anterior)](https://garoperob.github.io/project-page/index.html)
+
+Estructura típica de cada página de módulo:
+1. Introducción y contexto del módulo
+2. Metodología aplicada
+3. Resultados (diagramas, tablas, gráficas, videos, simulaciones)
+4. Comparativos (AS-IS vs TO-BE cuando aplique)
+5. Conclusiones del módulo
 
 ---
 
@@ -479,7 +533,7 @@ La EDT de producción modela los entregables del proceso productivo (no del proy
 |-------------|-----|
 | **Cursor IDE** | Editor principal con agentes AI (orquestador + subagentes) |
 | **Git / GitHub** | Control de versiones, repositorio del proyecto |
-| **MkDocs / Hugo** | Sitio web del proyecto (entregable 11.5) |
+| **HTML/CSS/JS (vanilla)** | Sitio web modular del proyecto (entregable 11.5). Sin frameworks. |
 | **Python** | Scripts de análisis de datos, procesamiento de indicadores |
 | **Markdown** | Documentación técnica, PRD, reportes |
 | **Google Drive** | Almacenamiento compartido del equipo (sincronizado) |
@@ -694,7 +748,16 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [ ] 11.2 Ejecutar pruebas end-to-end
 - [ ] 11.3 Consolidar cuadro resumen final
 - [ ] 11.4 Curar repositorio GitHub
-- [x] 11.5 Completar sitio web del proyecto (versión base con hero, proceso, productos, indicadores, fases, equipo)
+- [x] 11.5a Landing page del sitio web (hero, proceso, productos, indicadores, fases, equipo)
+- [ ] 11.5b Reestructurar sitio web a arquitectura modular (una página por módulo)
+- [ ] 11.5c Página Módulo 1: Introducción a la Automatización
+- [ ] 11.5d Página Módulo 2: Gestión y evaluación de la producción
+- [ ] 11.5e Página Módulo 3: Planeación y Evaluación de proyectos
+- [ ] 11.5f Página Módulo 4: Celdas de manufactura robotizadas
+- [ ] 11.5g Página Módulo 5: Digital Factory
+- [ ] 11.5h Página Módulo 6: Controladores industriales (PLC)
+- [ ] 11.5i Página Módulo 7: Sistema de supervisión SCADA
+- [ ] 11.5j Página Evaluación económica (contenido del módulo 3 o sección aparte)
 - [ ] 11.6 Producir video del proyecto
 - [ ] 11.7 Preparar sustentación intermedia
 - [ ] 11.8 Preparar sustentación final
@@ -734,7 +797,20 @@ apm/
 │   ├── dap_analysis.py
 │   └── sync_drive.py
 │
-├── website/                    # Sitio web del proyecto (entregable 11.5)
+├── website/                    # Sitio web modular del proyecto (entregable 11.5)
+│   ├── index.html              # Landing page principal
+│   ├── css/styles.css          # Estilos compartidos (paleta, tipografía, layout)
+│   ├── js/main.js              # JS compartido (nav, scroll, animaciones)
+│   ├── modulos/                # Páginas individuales por módulo del curso
+│   │   ├── introduccion.html   # Módulo 1: Introducción a la Automatización
+│   │   ├── produccion.html     # Módulo 2: Gestión y evaluación de producción
+│   │   ├── planeacion.html     # Módulo 3: Planeación y Evaluación
+│   │   ├── robotica.html       # Módulo 4: Celdas robotizadas
+│   │   ├── digital-factory.html# Módulo 5: Digital Factory
+│   │   ├── control.html        # Módulo 6: Controladores industriales (PLC)
+│   │   └── scada.html          # Módulo 7: SCADA
+│   ├── equipo.html             # Página del equipo (opcional, puede quedar en index)
+│   └── assets/                 # Imágenes, videos, diagramas del sitio
 │
 ├── presentaciones/             # Slides de sustentaciones
 │
@@ -747,45 +823,32 @@ apm/
 
 ## 13. Conexión con Google Drive
 
-### Opción recomendada: `rclone`
+### Configuración actual: `rclone` v1.73.2
 
-`rclone` permite sincronizar bidireccional entre una carpeta local y Google Drive.
+Instalado en `~/.local/bin/rclone`. Remote configurado: `unal` (Google Drive personal con acceso a carpetas compartidas).
 
-**Instalación:**
+La carpeta del proyecto en Drive es **"PROYECTO INTEGRADOR APM"** (compartida con el equipo). Se accede con el flag `shared_with_me`:
+
+**Sincronizar Drive → local:**
 ```bash
-# Linux
-curl https://rclone.org/install.sh | sudo bash
-
-# Configurar remote
-rclone config
-# Seleccionar "Google Drive", autenticar con OAuth2
+~/.local/bin/rclone sync "unal,shared_with_me:PROYECTO INTEGRADOR APM" archivos-drive/ --progress --exclude "extracted/**"
 ```
 
-**Uso:**
+**Sincronizar local → Drive:**
 ```bash
-# Sincronizar Drive → local
-rclone sync gdrive:APM-Proyecto archivos-drive/ --progress
-
-# Sincronizar local → Drive
-rclone sync archivos-drive/ gdrive:APM-Proyecto --progress
-
-# Montar como filesystem (acceso directo)
-rclone mount gdrive:APM-Proyecto archivos-drive/ --vfs-cache-mode full &
+~/.local/bin/rclone sync archivos-drive/ "unal,shared_with_me:PROYECTO INTEGRADOR APM" --progress --exclude "extracted/**" --exclude ".rclone*"
 ```
 
 **Script automático** (`scripts/sync_drive.sh`):
 ```bash
 #!/bin/bash
-REMOTE="gdrive:APM-Proyecto"
-LOCAL="archivos-drive/"
-echo "Sincronizando Google Drive..."
-rclone sync "$REMOTE" "$LOCAL" --progress --exclude ".git/**"
-echo "Sincronización completa."
+RCLONE="$HOME/.local/bin/rclone"
+REMOTE="unal,shared_with_me:PROYECTO INTEGRADOR APM"
+LOCAL="$(dirname "$0")/../archivos-drive/"
+echo "Sincronizando Google Drive → local..."
+$RCLONE sync "$REMOTE" "$LOCAL" --progress --exclude "extracted/**" --exclude ".rclone*"
+echo "Sincronización completa: $(date)"
 ```
-
-### Alternativa: Google Drive Desktop
-
-Google Drive Desktop monta automáticamente el Drive como filesystem en Linux/Mac/Windows. Se puede crear un symlink desde `archivos-drive/` al directorio montado.
 
 ---
 

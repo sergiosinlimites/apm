@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión de Producción — FluxLine · VSM, simulación, KPIs y DAP.">
+  <title>Gestión de Producción · FluxLine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page">
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Principal">
+      <a href="../index.html#inicio" class="nav__brand" aria-label="FluxLine — Inicio">
+        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="28" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span class="nav__logo-text">FluxLine</span>
+      </a>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
+        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
+        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li class="nav__item nav__dropdown" data-nav-dropdown>
+          <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
+            Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__dropdown-menu" id="nav-modules-menu" role="menu">
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="introduccion.html">Introducción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="produccion.html" aria-current="page">Producción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="planeacion.html">Planeación</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="robotica.html">Robótica</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="digital-factory.html">Digital Factory</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="control.html">Control (PLC)</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="module-main">
+    <section class="hero hero--compact" aria-labelledby="mod-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content hero__content--compact">
+        <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
+        <h1 class="hero__title" id="mod-title">Gestión de Producción</h1>
+        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
+        <p class="hero__tagline">Diagnóstico y mejora del flujo de valor en la línea embotelladora: mapeo VSM, indicadores operativos, documentación de proceso (DAP) y experimentación en simulación para comparar escenarios AS-IS vs TO-BE.</p>
+      </div>
+    </section>
+
+    <article class="module-content">
+      <div class="container">
+        <p class="module-content__intro">Aquí se concentran los entregables de caracterización del sistema actual, la propuesta de mejoras y la validación por simulación (p. ej. FlexSim) con métricas comparables entre referencias Coca-Cola, Monster y Agua 1L.</p>
+
+        <section class="module-section" id="as-is" aria-labelledby="sec-as-is">
+          <h2 class="module-section__title" id="sec-as-is">Análisis AS-IS · Línea y cuellos de botella</h2>
+          <p class="module-section__lead">Mapas de flujo de valor, inventarios, tiempos de ciclo y takt frente a la demanda; identificación de desperdicios (sobreproducción, esperas, movimientos) en mezcla, llenado y empacado.</p>
+          <ul class="module-list">
+            <li>Diagramas VSM por familia de producto y zona de planta.</li>
+            <li>Tablero de KPIs AS-IS: OEE, utilización, cuellos y colas.</li>
+            <li>Anexo de datos y supuestos documentados (fuentes, periodo, línea base).</li>
+          </ul>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="to-be" aria-labelledby="sec-to-be">
+          <h2 class="module-section__title" id="sec-to-be">Diseño TO-BE · Mejoras de flujo y escenarios</h2>
+          <p class="module-section__lead">Propuesta de layout, balanceo de línea, políticas de inventario y buffers; definición de indicadores objetivo y comparativo AS-IS vs TO-BE por producto.</p>
+          <div class="module-grid">
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          </div>
+        </section>
+
+        <section class="module-section" id="dap-indicadores" aria-labelledby="sec-dap">
+          <h2 class="module-section__title" id="sec-dap">DAP e indicadores de proceso</h2>
+          <p class="module-section__lead">Documentación de actividades, recursos, entradas/salidas y puntos de medición; trazabilidad entre diagrama de operaciones de proceso y variables usadas en simulación y control.</p>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="simulacion" aria-labelledby="sec-sim">
+          <h2 class="module-section__title" id="sec-sim">Simulación de eventos discretos</h2>
+          <p class="module-section__lead">Modelo 3D/lógico del subsistema seleccionado, experimentos (factorial o escenarios), resultados de throughput, WIP y utilización; anexos de corridas y validación frente a AS-IS.</p>
+          <ul class="module-list">
+            <li>Configuración de corridas y réplicas (estadística básica).</li>
+            <li>Comparativo visual AS-IS vs TO-BE (gráficos, tablas, capturas).</li>
+            <li>Supuestos de entrada y limitaciones del modelo.</li>
+          </ul>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
+      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
+      <p class="site-footer__block site-footer__block--right">Universidad</p>
+    </div>
+    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

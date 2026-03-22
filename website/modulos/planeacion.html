@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planeación y Evaluación — FluxLine · EDT, cronograma y evaluación económica.">
+  <title>Planeación y Evaluación · FluxLine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page">
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Principal">
+      <a href="../index.html#inicio" class="nav__brand" aria-label="FluxLine — Inicio">
+        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="28" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span class="nav__logo-text">FluxLine</span>
+      </a>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
+        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
+        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li class="nav__item nav__dropdown" data-nav-dropdown>
+          <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
+            Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__dropdown-menu" id="nav-modules-menu" role="menu">
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="introduccion.html">Introducción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="produccion.html">Producción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="planeacion.html" aria-current="page">Planeación</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="robotica.html">Robótica</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="digital-factory.html">Digital Factory</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="control.html">Control (PLC)</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="module-main">
+    <section class="hero hero--compact" aria-labelledby="mod-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content hero__content--compact">
+        <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
+        <h1 class="hero__title" id="mod-title">Planeación y Evaluación</h1>
+        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
+        <p class="hero__tagline">Estructura de desglose del trabajo (EDT), cronograma del integrador, prácticas de gestión de proyecto y evaluación económica de alternativas (VPN, TIR, ROI) para justificar inversiones en automatización.</p>
+      </div>
+    </section>
+
+    <article class="module-content">
+      <div class="container">
+        <p class="module-content__intro">Este módulo articula el “cómo” y el “cuánto”: descomposición de entregables, secuencia lógica en el tiempo y criterios financieros comparables entre escenarios de inversión alineados al caso planta Bogotá.</p>
+
+        <section class="module-section" id="edt" aria-labelledby="sec-edt">
+          <h2 class="module-section__title" id="sec-edt">EDT y dependencias entre entregables</h2>
+          <p class="module-section__lead">Jerarquía de paquetes de trabajo, responsables sugeridos y vínculo con fases del curso; base para trazabilidad de riesgos y cambios de alcance.</p>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="cronograma" aria-labelledby="sec-gantt">
+          <h2 class="module-section__title" id="sec-gantt">Cronograma (Gantt) y ruta crítica</h2>
+          <p class="module-section__lead">Línea base de 96 días / 88 entregables, holguras, hitos de integración (simulación, PLC, gemelo, SCADA) y buffers para pruebas conjuntas.</p>
+          <div class="module-grid">
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          </div>
+        </section>
+
+        <section class="module-section" id="gestion" aria-labelledby="sec-pm">
+          <h2 class="module-section__title" id="sec-pm">Gestión de proyecto</h2>
+          <p class="module-section__lead">Roles, comunicaciones, matriz RACI ligera y registro de supuestos; preparación para la defensa oral y la consolidación documental del integrador.</p>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+
+        <section class="module-section" id="economica" aria-labelledby="sec-vpn">
+          <h2 class="module-section__title" id="sec-vpn">Evaluación económica (VPN, TIR, ROI)</h2>
+          <p class="module-section__lead">Flujos de caja incremental, tasa de descuento y horizonte; comparación de alternativas (p. ej. manual vs robotizado, escenarios de OEE) con análisis de sensibilidad.</p>
+          <ul class="module-list">
+            <li>Tabla de inversiones CAPEX/OPEX y supuestos de ahorro.</li>
+            <li>Indicadores por escenario y punto de equilibrio operativo.</li>
+            <li>Gráficos tornado o escenarios pesimista/base/optimista.</li>
+          </ul>
+          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
+      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
+      <p class="site-footer__block site-footer__block--right">Universidad</p>
+    </div>
+    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
