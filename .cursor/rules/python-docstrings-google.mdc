@@ -1,0 +1,61 @@
+---
+description: Estilo Google para docstrings en scripts Python del proyecto APM.
+globs: ["**/*.py"]
+alwaysApply: false
+---
+
+# Python Docstrings - Estilo Google
+
+## Regla
+
+Todo módulo, clase y función/método en archivos `*.py` debe tener un **docstring estilo Google** en español.
+
+## Plantillas
+
+### Módulo
+```python
+"""Descripción breve del módulo.
+
+Descripción extendida si es necesaria.
+"""
+```
+
+### Función
+```python
+def calcular_oee(disponibilidad: float, performance: float, calidad: float) -> float:
+    """Calcula el OEE (Overall Equipment Effectiveness).
+
+    Args:
+        disponibilidad: Fracción de tiempo disponible (0-1).
+        performance: Eficiencia de desempeño (0-1).
+        calidad: Tasa de calidad (0-1).
+
+    Returns:
+        OEE como fracción (0-1).
+
+    Raises:
+        ValueError: Si algún argumento está fuera de rango [0, 1].
+    """
+```
+
+### Clase
+```python
+class IndicadorProducto:
+    """Indicadores de producción para un producto.
+
+    Attributes:
+        nombre: Nombre del producto.
+        takt_time: Takt time en segundos por unidad.
+        oee: Overall Equipment Effectiveness.
+    """
+```
+
+## Secciones Permitidas
+
+Args, Returns, Yields, Raises, Note, Example, Attributes, Todo
+
+## Idioma
+
+- Docstrings en **español**.
+- Nombres de variables y funciones en **inglés** o **español sin acentos**.
+- Términos técnicos industriales sin traducir (OEE, Takt, MTBF, etc.).

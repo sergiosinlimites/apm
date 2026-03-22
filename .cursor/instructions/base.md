@@ -1,0 +1,13 @@
+- Responder siempre en español.
+- Este es un proyecto académico de **Automatización de Procesos de Manufactura (APM)** para el sector de bebidas.
+- El caso de estudio es la planta de **Coca-Cola FEMSA en Bogotá**.
+- El documento maestro del proyecto es `PRD-general.md` en la raíz del repositorio.
+- Seguir el **patrón orquestador**: el agente principal no escribe código; delega en subagentes (Task tool).
+- Los subagentes disponibles son: `documentation-writer`, `web-developer`, `data-analyst`, `code-reviewer`, `architecture-auditor`.
+- Los datos del equipo están en `archivos-drive/extracted/` (Excel, diagramas, PDFs).
+- Marcar datos de prueba con `[PRUEBA]` para distinguirlos de datos reales.
+- Scripts Python van en `scripts/` con Google-style docstrings en español.
+- El sitio web del proyecto va en `website/`.
+- Paleta de colores: primario `#A8201A` (granate), secundario `#1E293B` (navy).
+- Se permite y recomienda usar MCPs disponibles: Engram (memoria), Browser (testing web), Chrome DevTools (debug frontend).
+- Commits en español con formato: `tipo: descripción` (docs, feat, fix, style, refactor, chore).

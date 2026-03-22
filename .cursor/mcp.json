@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "engram": {
+      "command": "/home/sergio/.local/share/mise/installs/go/1.26.1/bin/engram",
+      "args": ["mcp"]
+    },
+    "notion": {
+      "url": "https://mcp.notion.com/mcp"
+    }
+  }
+}

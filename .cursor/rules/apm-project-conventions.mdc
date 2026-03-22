@@ -1,0 +1,86 @@
+---
+description: Convenciones específicas del proyecto APM (Automatización de Procesos de Manufactura).
+alwaysApply: true
+---
+
+# Convenciones del Proyecto APM
+
+## Contexto
+
+Proyecto académico de **Automatización de Procesos de Manufactura** para el sector de bebidas.
+Caso de estudio: Planta Coca-Cola FEMSA, Bogotá.
+Equipo: Grupo 4 (6 integrantes).
+
+## Idioma
+
+- Toda la documentación, comentarios y comunicación en **español**.
+- Variables, funciones y nombres de archivo en **inglés** o **español kebab-case** según contexto.
+- Términos técnicos industriales se mantienen en su forma estándar (ISA-95, SCADA, PLC, OEE, etc.).
+
+## Estructura del Repositorio
+
+```
+apm/
+├── .cursor/           → Configuración AI
+├── archivos-drive/    → Sync con Google Drive del equipo
+├── docs/              → Documentación por fase (fase-01-alcance/, etc.)
+├── scripts/           → Scripts Python de análisis
+├── website/           → Sitio web del proyecto
+├── presentaciones/    → Slides
+├── PRD-general.md     → Documento maestro del proyecto
+└── README.md          → Descripción general
+```
+
+## Documentos
+
+- El **PRD-general.md** es el documento maestro. Se actualiza cuando cambia el alcance.
+- Cada fase tiene su carpeta bajo `docs/fase-NN-nombre/`.
+- Los archivos del equipo en Google Drive van en `archivos-drive/`.
+- Los datos de prueba se marcan explícitamente con `[PRUEBA]`.
+
+## Paleta de Colores
+
+Cuando se genere contenido visual (sitio web, presentaciones, diagramas):
+
+| Rol | Hex |
+|-----|-----|
+| Primario (granate) | `#A8201A` |
+| Primario oscuro | `#6B1410` |
+| Primario claro | `#CC4A44` |
+| Secundario (navy) | `#1E293B` |
+| Fondo | `#F8FAFC` |
+| Success | `#059669` |
+| Warning | `#D97706` |
+| Error | `#DC2626` |
+| Info | `#2563EB` |
+
+## Scripts Python
+
+- Usar **Google-style docstrings** en español.
+- Prefijo de archivos descriptivo: `indicadores.py`, `dap_analysis.py`, `sync_drive.py`.
+- Dependencias en `requirements.txt` con versiones.
+- Encoding: UTF-8 siempre.
+
+## Commits
+
+- Mensajes en español.
+- Formato: `tipo: descripción breve`
+  - Tipos: `docs`, `feat`, `fix`, `style`, `refactor`, `chore`
+  - Ejemplo: `docs: agregar diccionario EDT fase 4-6`
+
+## Productos del Caso de Estudio
+
+| # | Producto | Formato | Envase |
+|---|----------|---------|--------|
+| 1 | Coca-Cola Clásica 400ml | Retornable | Vidrio |
+| 2 | Monster Energy 473ml | Lata | Aluminio |
+| 3 | Agua embotellada 1L | No retornable | PET |
+
+## Herramientas Industriales
+
+- Simulación: FlexSim
+- Control: Studio 5000 / RSLogix (Ladder)
+- Emulación: Logix Emulate
+- Robótica: RobotStudio (ABB)
+- SCADA: Ignition (Inductive Automation)
+- Diagramas: draw.io / diagrams.net

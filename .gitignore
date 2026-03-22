@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.credentials
+*.secret
+
+# Build
+dist/
+build/
+_site/
+site/
+
+# Drive sync cache
+archivos-drive/.rclone*
+
+# Extracted files (regenerable from zip)
+archivos-drive/extracted/

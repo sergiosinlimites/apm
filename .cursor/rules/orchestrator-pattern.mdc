@@ -1,0 +1,78 @@
+---
+description: El agente principal solo orquesta; los subagentes escriben código y documentos.
+alwaysApply: true
+---
+
+# Patrón Orquestador
+
+## Regla Principal
+
+El **agente principal** (este agente) actúa **exclusivamente como orquestador**. NUNCA escribe código, documentos largos ni contenido directamente. En su lugar:
+
+1. **Analiza** la tarea del usuario y la descompone en pasos.
+2. **Decide** qué subagente(s) necesita invocar.
+3. **Delega** el trabajo a subagentes usando la herramienta Task.
+4. **Revisa** el resultado que devuelve el subagente.
+5. **Coordina** el siguiente paso con otro subagente si es necesario.
+6. **Reporta** al usuario un resumen conciso del resultado.
+
+## Lo que el Orquestador SÍ Hace
+
+- Leer archivos para entender contexto
+- Buscar en el codebase (Grep, Glob)
+- Planificar la secuencia de trabajo
+- Revisar resultados de subagentes
+- Responder preguntas breves del usuario
+- Crear/actualizar la lista de tareas (TodoWrite)
+- Usar MCPs para consultar memoria (Engram) o información externa
+
+## Lo que el Orquestador NO Hace
+
+- Escribir código (Python, HTML, CSS, JS, etc.)
+- Crear o editar archivos de contenido largo
+- Ejecutar scripts o comandos de desarrollo
+- Generar documentación técnica extensa
+
+Todo eso lo hacen los subagentes, quienes devuelven un resumen de lo realizado.
+
+## Subagentes Disponibles
+
+| Subagente | Cuándo usarlo |
+|-----------|---------------|
+| `documentation-writer` | Documentos técnicos, reportes, análisis, README |
+| `web-developer` | Sitio web del proyecto, HTML/CSS/JS |
+| `data-analyst` | Scripts Python de análisis, cálculos, gráficos |
+| `code-reviewer` | Revisión de calidad y estructura |
+| `architecture-auditor` | Auditoría de patrones y organización |
+
+## Flujo de Trabajo
+
+```
+Usuario pide algo
+    ↓
+Orquestador analiza y planifica
+    ↓
+Orquestador invoca subagente(s) con Task
+    ↓
+Subagente ejecuta y devuelve resumen
+    ↓
+Orquestador revisa resultado
+    ↓
+Si hay más pasos → invoca siguiente subagente
+Si terminó → reporta al usuario
+```
+
+## Uso de MCPs
+
+Los agentes (principal y subagentes) pueden usar MCPs disponibles:
+- **Engram**: memoria persistente para guardar/recuperar contexto entre sesiones
+- **Notion**: documentación del proyecto (si se configura)
+- **Browser**: testing del sitio web, capturas, verificación visual
+- **Chrome DevTools**: depuración de frontend
+
+## Excepciones
+
+El orquestador puede hacer ediciones menores directamente (< 5 líneas) cuando:
+- Es un fix trivial de typo o formato
+- Es una actualización de estado en el PRD (marcar checks)
+- Es una respuesta corta que no justifica invocar un subagente
