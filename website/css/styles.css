@@ -462,6 +462,15 @@ a:hover {
   }
 }
 
+/* Texto oscuro en el menú desplegable aunque el header use enlaces claros sobre el hero */
+.site-header:not(.is-scrolled) .nav__dropdown-menu .nav__link--sub {
+  color: var(--secondary-light);
+}
+
+.site-header:not(.is-scrolled) .nav__dropdown-menu .nav__link--sub[aria-current="page"] {
+  color: var(--primary-dark);
+}
+
 /* ——— Hero ——— */
 .hero {
   position: relative;
@@ -627,7 +636,7 @@ a:hover {
 }
 
 .module-content {
-  padding: 3rem 0 4rem;
+  padding: 4rem 0 4rem;
 }
 
 .module-content .container {
@@ -1617,7 +1626,7 @@ section[id] {
 @media (max-width: 768px) {
   .container,
   .module-content .container {
-    width: calc(100% - 2rem);
+    width: 90%;
   }
 }
 
@@ -2479,7 +2488,7 @@ section[id] {
 
 /* ——— Legal pages ——— */
 .legal-content {
-  padding: 3rem 0 4rem;
+  padding: 4rem 0 4rem;
 }
 
 .legal-content .container {
