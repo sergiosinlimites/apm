@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Planeación y Evaluación — FluxLine · EDT, cronograma y evaluación económica.">
+  <meta name="description" content="Planeación y Evaluación — FluxLine · EDT 88 entregables, 96 días, cronograma reprogramado y evaluación económica. Planta embotelladora de referencia · Bogotá.">
   <title>Planeación y Evaluación · FluxLine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +28,9 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__list" id="nav-menu">
-        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
-        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
-        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
-        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li><a href="../index.html#inicio" class="nav__link">Presentación</a></li>
+        <li><a href="../contacto.html" class="nav__link">Contáctenos</a></li>
+        <li><a href="../asignatura.html" class="nav__link">Asignatura</a></li>
         <li class="nav__item nav__dropdown" data-nav-dropdown>
           <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
             Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
@@ -46,7 +45,7 @@
             <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
           </ul>
         </li>
-        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+        <li><a href="../reflexiones.html" class="nav__link">Reflexiones</a></li>
       </ul>
     </nav>
   </header>
@@ -57,45 +56,1888 @@
       <div class="container hero__content hero__content--compact">
         <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
         <h1 class="hero__title" id="mod-title">Planeación y Evaluación</h1>
-        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
+        <p class="hero__subtitle">Prof. Luis Miguel Méndez · Prof. Carlos Julio Cortés R.</p>
         <p class="hero__tagline">Estructura de desglose del trabajo (EDT), cronograma del integrador, prácticas de gestión de proyecto y evaluación económica de alternativas (VPN, TIR, ROI) para justificar inversiones en automatización.</p>
       </div>
     </section>
 
     <article class="module-content">
       <div class="container">
-        <p class="module-content__intro">Este módulo articula el “cómo” y el “cuánto”: descomposición de entregables, secuencia lógica en el tiempo y criterios financieros comparables entre escenarios de inversión alineados al caso planta Bogotá.</p>
+        <!-- [REMOVAL-001] Contenido anterior del artículo sustituido por EDT completa (88 entregables) con acordeones por fase -->
+        <p class="module-content__intro reveal">Este módulo articula el &#8216;cómo&#8217; y el &#8216;cuánto&#8217;: descomposición de entregables, secuencia lógica en el tiempo y criterios financieros comparables entre escenarios de inversión alineados al caso planta Bogotá.</p>
 
-        <section class="module-section" id="edt" aria-labelledby="sec-edt">
-          <h2 class="module-section__title" id="sec-edt">EDT y dependencias entre entregables</h2>
-          <p class="module-section__lead">Jerarquía de paquetes de trabajo, responsables sugeridos y vínculo con fases del curso; base para trazabilidad de riesgos y cambios de alcance.</p>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
-        </section>
+        <section class="module-section reveal" id="edt" aria-labelledby="sec-edt">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-edt">EDT — Estructura de desglose del trabajo</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">El proyecto se estructura en 11 fases y 88 entregables, con una duración total de 96 días.</p>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Resumen de fases del EDT con duración y porcentaje</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Fase</th>
+                  <th scope="col">Días</th>
+                  <th scope="col">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Alcance técnico del proceso definido</td><td>8</td><td>8.3%</td></tr>
+                <tr><td>2</td><td>Levantamiento de información y análisis AS-IS</td><td>10</td><td>10.4%</td></tr>
+                <tr><td>3</td><td>Diseño futuro del proceso definido</td><td>7</td><td>7.3%</td></tr>
+                <tr><td>4</td><td>Arquitectura de automatización e instrumentación definida</td><td>8</td><td>8.3%</td></tr>
+                <tr><td>5</td><td>Evaluación productiva por simulación completada</td><td>10</td><td>10.4%</td></tr>
+                <tr><td>6</td><td>Viabilidad técnico-económica sustentada</td><td>11</td><td>11.5%</td></tr>
+                <tr><td>7</td><td>Celda robotizada diseñada y validada</td><td>8</td><td>8.3%</td></tr>
+                <tr><td>8</td><td>Sistema de control industrial validado</td><td>9</td><td>9.4%</td></tr>
+                <tr><td>9</td><td>Gemelo digital integrado validado</td><td>8</td><td>8.3%</td></tr>
+                <tr><td>10</td><td>Supervisión SCADA implementada</td><td>8</td><td>8.3%</td></tr>
+                <tr><td>11</td><td>Cierre académico y entregables del curso</td><td>9</td><td>9.4%</td></tr>
+                <tr class="data-table__highlight"><td colspan="2"><strong>TOTAL</strong></td><td><strong>96</strong></td><td><strong>100%</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
 
-        <section class="module-section" id="cronograma" aria-labelledby="sec-gantt">
-          <h2 class="module-section__title" id="sec-gantt">Cronograma (Gantt) y ruta crítica</h2>
-          <p class="module-section__lead">Línea base de 96 días / 88 entregables, holguras, hitos de integración (simulación, PLC, gemelo, SCADA) y buffers para pruebas conjuntas.</p>
-          <div class="module-grid">
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          <h3 class="module-section__subtitle reveal" id="edt-completa">EDT Completa — 88 entregables</h3>
+          <div class="edt-accordion reveal" role="region" aria-label="Detalle por fase del EDT">
+    <details class="edt-phase" id="fase-1">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">1</span>
+        <span class="edt-phase__title">ALCANCE TÉCNICO DEL PROCESO DEFINIDO</span>
+        <span class="edt-phase__days">8 días</span>
+        <span class="edt-phase__badge edt-phase__badge--intermedia">Intermedia</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 1</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>1.1</td>
+                <td>Familia de bebidas y contexto operacional definidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.2</td>
+                <td>Portafolio de tres productos diferenciado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.3</td>
+                <td>Especificación de envases y formatos establecida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.4</td>
+                <td>Recetas y parámetros críticos documentados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.5</td>
+                <td>Transformaciones térmicas/químicas identificadas</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.6</td>
+                <td>Estrategia de calidad y trazabilidad definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.7</td>
+                <td>Interacción operador–SCADA definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>1.8</td>
+                <td>Indicadores por producto establecidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 1</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>1.1</td>
+                <td>Se establece la familia de bebidas seleccionada, el tipo de línea y el contexto de operación de alto volumen.</td>
+                <td>Se identifica claramente qué familia de bebidas se trabajará y bajo qué contexto productivo.</td>
+                <td>Documento de alcance o ficha del proceso seleccionado.</td>
+              </tr>
+
+              <tr>
+                <td>1.2</td>
+                <td>Se definen tres productos distintos con diferencias técnicas relevantes entre ellos.</td>
+                <td>Los tres productos están identificados y diferenciados al menos por dos criterios no triviales.</td>
+                <td>Tabla comparativa de productos.</td>
+              </tr>
+
+              <tr>
+                <td>1.3</td>
+                <td>Se documentan los envases, formatos y rangos de capacidad asociados a cada producto.</td>
+                <td>Cada producto tiene definido su tipo de envase, formato y capacidad.</td>
+                <td>Tabla de envases y formatos.</td>
+              </tr>
+
+              <tr>
+                <td>1.4</td>
+                <td>Se consolidan recetas y variables críticas de operación por producto.</td>
+                <td>Existe una relación de parámetros críticos por producto y etapa.</td>
+                <td>Tabla de recetas y variables de proceso.</td>
+              </tr>
+
+              <tr>
+                <td>1.5</td>
+                <td>Se identifican las etapas donde ocurren cambios térmicos, químicos o de acondicionamiento.</td>
+                <td>Las transformaciones relevantes están asociadas a los productos o etapas correspondientes.</td>
+                <td>Esquema del proceso con identificación de transformaciones.</td>
+              </tr>
+
+              <tr>
+                <td>1.6</td>
+                <td>Se plantea cómo se controlará la calidad del producto y su seguimiento por lote.</td>
+                <td>Se documenta una propuesta mínima de control de calidad y trazabilidad.</td>
+                <td>Documento de control de calidad y trazabilidad.</td>
+              </tr>
+
+              <tr>
+                <td>1.7</td>
+                <td>Se establecen las acciones del operador y la información que visualizará en SCADA.</td>
+                <td>Se documentan funciones mínimas del operador durante operación y cambios de producto.</td>
+                <td>Lista de interacciones operador-SCADA.</td>
+              </tr>
+
+              <tr>
+                <td>1.8</td>
+                <td>Se definen indicadores clave por producto para monitoreo y análisis.</td>
+                <td>Existe una lista de KPIs por producto con propósito claro.</td>
+                <td>Tabla de indicadores por producto.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-2">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">2</span>
+        <span class="edt-phase__title">LEVANTAMIENTO DE INFORMACIÓN Y ANÁLISIS AS-IS</span>
+        <span class="edt-phase__days">10 días</span>
+        <span class="edt-phase__badge edt-phase__badge--intermedia">Intermedia</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 2</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>2.1</td>
+                <td>Levantamiento técnico del proceso consolidado</td>
+                <td>2</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.2</td>
+                <td>Diagrama general del proceso elaborado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.3</td>
+                <td>Flujo de materiales e información definido</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.4</td>
+                <td>Estaciones, equipos y recursos caracterizados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.5</td>
+                <td>Tiempos base de operación estimados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.6</td>
+                <td>VSM estado actual elaborado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.7</td>
+                <td>Desperdicios/Muda identificados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.8</td>
+                <td>Indicadores AS-IS calculados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.9</td>
+                <td>Fallas típicas y parámetros de mantenimiento caracterizados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>2.10</td>
+                <td>Modelo conceptual de simulación documentado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 2</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>2.1</td>
+                <td>Se recopila y organiza la información técnica del proceso actual.</td>
+                <td>Existe una base documental consolidada del proceso actual.</td>
+                <td>Carpeta de evidencias y consolidado documental.</td>
+              </tr>
+
+              <tr>
+                <td>2.2</td>
+                <td>Se representa el proceso completo desde insumos hasta despacho.</td>
+                <td>El diagrama refleja de forma coherente las etapas principales.</td>
+                <td>Diagrama general del proceso.</td>
+              </tr>
+
+              <tr>
+                <td>2.3</td>
+                <td>Se identifican el flujo físico y el flujo informacional del sistema.</td>
+                <td>El flujo está descrito y relacionado con el proceso.</td>
+                <td>Diagrama de flujos.</td>
+              </tr>
+
+              <tr>
+                <td>2.4</td>
+                <td>Se describen las estaciones del proceso, equipos y recursos requeridos.</td>
+                <td>Existe una relación estructurada de estaciones, equipos y recursos.</td>
+                <td>Tabla de estaciones y equipos.</td>
+              </tr>
+
+              <tr>
+                <td>2.5</td>
+                <td>Se estiman tiempos de operación, transporte, espera o manipulación.</td>
+                <td>Se cuenta con tiempos base por etapa o estación.</td>
+                <td>Tabla de tiempos base.</td>
+              </tr>
+
+              <tr>
+                <td>2.6</td>
+                <td>Se construye el mapa de flujo de valor del estado actual.</td>
+                <td>El VSM representa flujo, tiempos e inventarios relevantes.</td>
+                <td>VSM AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>2.7</td>
+                <td>Se identifican pérdidas y actividades sin valor agregado.</td>
+                <td>Existe un análisis de desperdicios coherente con el diagnóstico.</td>
+                <td>Lista de Muda/desperdicios.</td>
+              </tr>
+
+              <tr>
+                <td>2.8</td>
+                <td>Se calculan métricas base del sistema actual.</td>
+                <td>Los indicadores están cuantificados y documentados.</td>
+                <td>Tabla de KPIs AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>2.9</td>
+                <td>Se documentan fallas recurrentes y variables de mantenimiento.</td>
+                <td>Las fallas y parámetros principales están identificados.</td>
+                <td>Tabla de fallas y mantenimiento.</td>
+              </tr>
+
+              <tr>
+                <td>2.10</td>
+                <td>Se formula conceptualmente el modelo de simulación.</td>
+                <td>El modelo describe entidades, recursos, colas, reglas y supuestos.</td>
+                <td>Documento del modelo conceptual.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-3">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">3</span>
+        <span class="edt-phase__title">DISEÑO FUTURO DEL PROCESO DEFINIDO</span>
+        <span class="edt-phase__days">7 días</span>
+        <span class="edt-phase__badge edt-phase__badge--intermedia">Intermedia</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 3</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>3.1</td>
+                <td>Objetivos de mejora aprobados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>3.2</td>
+                <td>Propuesta Lean/preautomatización formulada</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>3.3</td>
+                <td>VSM estado futuro elaborado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>3.4</td>
+                <td>Estrategia multiproducto definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>3.5</td>
+                <td>Estrategia de cambio de formato definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>3.6</td>
+                <td>Estrategia de fallas y recuperación definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>3.7</td>
+                <td>Estrategia de rechazo y reproceso definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 3</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>3.1</td>
+                <td>Se formulan metas de mejora del sistema en desempeño, calidad, tiempos o seguridad.</td>
+                <td>Los objetivos están definidos y validados por el equipo.</td>
+                <td>Lista de objetivos de mejora.</td>
+              </tr>
+
+              <tr>
+                <td>3.2</td>
+                <td>Se define un conjunto de mejoras previas o complementarias a la automatización.</td>
+                <td>Existe una propuesta de mejora con sustento técnico.</td>
+                <td>Documento de propuesta Lean/preautomatización.</td>
+              </tr>
+
+              <tr>
+                <td>3.3</td>
+                <td>Se construye el mapa de flujo de valor del estado futuro.</td>
+                <td>El VSM futuro representa la propuesta de mejora de forma consistente.</td>
+                <td>VSM TO-BE.</td>
+              </tr>
+
+              <tr>
+                <td>3.4</td>
+                <td>Se plantea cómo operará la línea con varios productos y parámetros diferenciados.</td>
+                <td>La lógica general de operación multiproducto está documentada.</td>
+                <td>Documento o tabla de estrategia multiproducto.</td>
+              </tr>
+
+              <tr>
+                <td>3.5</td>
+                <td>Se define cómo se ejecutarán los cambios de producto o formato.</td>
+                <td>La estrategia de set-up y cambio de formato está documentada.</td>
+                <td>Procedimiento o esquema de cambio de formato.</td>
+              </tr>
+
+              <tr>
+                <td>3.6</td>
+                <td>Se define cómo responderá el sistema ante paros, fallas y recuperación operativa.</td>
+                <td>Existe una lógica general de manejo y recuperación ante fallas.</td>
+                <td>Documento de estrategia de fallas y recuperación.</td>
+              </tr>
+
+              <tr>
+                <td>3.7</td>
+                <td>Se establece el tratamiento de producto no conforme, rechazo y posible reproceso.</td>
+                <td>La ruta de manejo del rechazo y reproceso está definida.</td>
+                <td>Esquema de rechazo/reproceso o matriz de decisión.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-4">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">4</span>
+        <span class="edt-phase__title">ARQUITECTURA DE AUTOMATIZACIÓN E INSTRUMENTACIÓN</span>
+        <span class="edt-phase__days">8 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 4</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr class="edt-critical-row">
+                <td>4.1</td>
+                <td>Arquitectura ISA-95 documentada</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>4.2</td>
+                <td>Arquitectura de comunicaciones definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>4.3</td>
+                <td>Topología de red industrial definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>4.4</td>
+                <td>Lista de E/S y tags consolidada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>4.5</td>
+                <td>PFD/P&amp;ID del sistema elaborados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>4.6</td>
+                <td>Matriz de señales y alarmas elaborada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>4.7</td>
+                <td>Requisitos de historización, eventos y lotes definidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 4</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>4.1</td>
+                <td>Se define la estructura del sistema según niveles ISA-95 y sus funciones.</td>
+                <td>Los niveles y funciones aplicables están documentados.</td>
+                <td>Diagrama o documento de arquitectura ISA-95.</td>
+              </tr>
+
+              <tr>
+                <td>4.2</td>
+                <td>Se establece cómo se comunicarán PLC, SCADA, gemelo digital y demás componentes.</td>
+                <td>Existe un esquema claro de comunicación entre sistemas.</td>
+                <td>Diagrama de comunicaciones.</td>
+              </tr>
+
+              <tr>
+                <td>4.3</td>
+                <td>Se define la estructura de red industrial, segmentación y conexiones principales.</td>
+                <td>La topología propuesta está representada y justificada.</td>
+                <td>Diagrama de red industrial.</td>
+              </tr>
+
+              <tr>
+                <td>4.4</td>
+                <td>Se consolida el listado de señales de entrada, salida y tags del sistema.</td>
+                <td>Las señales principales están identificadas y organizadas.</td>
+                <td>Lista de E/S y tags.</td>
+              </tr>
+
+              <tr>
+                <td>4.5</td>
+                <td>Se elaboran los diagramas de flujo de proceso e instrumentación del sistema.</td>
+                <td>Se dispone de diagramas coherentes con el proceso y la automatización planteada.</td>
+                <td>PFD y P&amp;ID del sistema.</td>
+              </tr>
+
+              <tr>
+                <td>4.6</td>
+                <td>Se organizan señales, rangos, tipos de dato, alarmas y criticidad.</td>
+                <td>Existe una matriz usable para control y supervisión.</td>
+                <td>Matriz de señales y alarmas.</td>
+              </tr>
+
+              <tr>
+                <td>4.7</td>
+                <td>Se define qué variables, eventos y registros de lote deben almacenarse.</td>
+                <td>La información mínima a registrar está especificada.</td>
+                <td>Especificación de historización, eventos y lotes.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-5">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">5</span>
+        <span class="edt-phase__title">EVALUACIÓN PRODUCTIVA POR SIMULACIÓN</span>
+        <span class="edt-phase__days">10 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 5</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>5.1</td>
+                <td>Modelo AS-IS implementado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>5.2</td>
+                <td>Modelo AS-IS validado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>5.3</td>
+                <td>Escenarios AS-IS simulados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>5.4</td>
+                <td>Desempeño AS-IS cuantificado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>5.5</td>
+                <td>Escenarios TO-BE diseñados</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>5.6</td>
+                <td>Modelo TO-BE simulado</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>5.7</td>
+                <td>OEE y KPIs por escenario calculados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>5.8</td>
+                <td>Comparativo AS-IS vs TO-BE consolidado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 5</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>5.1</td>
+                <td>Se implementa en simulación el estado actual del proceso.</td>
+                <td>El modelo AS-IS corre y representa la lógica base del sistema.</td>
+                <td>Archivo del modelo AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>5.2</td>
+                <td>Se verifica la consistencia del modelo AS-IS frente al proceso analizado.</td>
+                <td>El modelo validado es aceptable para análisis de desempeño.</td>
+                <td>Registro o informe de validación AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>5.3</td>
+                <td>Se ejecutan diferentes escenarios del sistema actual.</td>
+                <td>Existen resultados de simulación para escenarios representativos.</td>
+                <td>Reporte de escenarios AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>5.4</td>
+                <td>Se cuantifican indicadores del estado actual con base en simulación.</td>
+                <td>Los resultados numéricos del desempeño AS-IS están consolidados.</td>
+                <td>Tabla o reporte de desempeño AS-IS.</td>
+              </tr>
+
+              <tr>
+                <td>5.5</td>
+                <td>Se definen los escenarios del sistema futuro a evaluar.</td>
+                <td>Los escenarios TO-BE están descritos y listos para simulación.</td>
+                <td>Documento de escenarios TO-BE.</td>
+              </tr>
+
+              <tr>
+                <td>5.6</td>
+                <td>Se simula el sistema mejorado.</td>
+                <td>El modelo TO-BE corre y genera resultados comparables.</td>
+                <td>Archivo del modelo TO-BE y resultados.</td>
+              </tr>
+
+              <tr>
+                <td>5.7</td>
+                <td>Se calculan indicadores de desempeño por escenario.</td>
+                <td>Cada escenario tiene sus KPIs y OEE reportados.</td>
+                <td>Tabla comparativa de KPIs y OEE.</td>
+              </tr>
+
+              <tr>
+                <td>5.8</td>
+                <td>Se comparan resultados del sistema actual y futuro.</td>
+                <td>Existe un análisis consolidado de mejoras y trade-offs.</td>
+                <td>Informe o tabla comparativa AS-IS vs TO-BE.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-6">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">6</span>
+        <span class="edt-phase__title">VIABILIDAD TÉCNICO-ECONÓMICA SUSTENTADA</span>
+        <span class="edt-phase__days">11 días</span>
+        <span class="edt-phase__badge edt-phase__badge--intermedia">Intermedia</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 6</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>6.1</td>
+                <td>EDT y diccionario EDT aprobados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.2</td>
+                <td>Cronograma base del proyecto estructurado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.3</td>
+                <td>Plan de recursos consolidado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>6.4</td>
+                <td>Presupuesto CAPEX/OPEX consolidado</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>6.5</td>
+                <td>Evidencias de precios recopiladas</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.6</td>
+                <td>Flujo de caja documentado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.7</td>
+                <td>Indicadores financieros calculados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.8</td>
+                <td>Sensibilidad financiera elaborada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.9</td>
+                <td>Propuesta de valor formulada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.10</td>
+                <td>Oferta comercial estructurada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>6.11</td>
+                <td>Modelo de negocio resumido definido</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 6</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>6.1</td>
+                <td>Se formaliza la EDT del proyecto junto con su diccionario.</td>
+                <td>La EDT y su diccionario están completos y revisados por el equipo.</td>
+                <td>EDT final y diccionario EDT.</td>
+              </tr>
+
+              <tr>
+                <td>6.2</td>
+                <td>Se organiza la secuencia del proyecto con duraciones, dependencias e hitos.</td>
+                <td>Existe un cronograma base claro y coherente.</td>
+                <td>Gantt o cronograma base.</td>
+              </tr>
+
+              <tr>
+                <td>6.3</td>
+                <td>Se identifican recursos humanos, técnicos y de soporte requeridos.</td>
+                <td>Los recursos principales del proyecto están consolidados.</td>
+                <td>Tabla de recursos.</td>
+              </tr>
+
+              <tr>
+                <td>6.4</td>
+                <td>Se consolidan costos de inversión y costos operativos de la solución.</td>
+                <td>El presupuesto está estructurado por rubros principales.</td>
+                <td>Tabla de presupuesto CAPEX/OPEX.</td>
+              </tr>
+
+              <tr>
+                <td>6.5</td>
+                <td>Se reúnen cotizaciones, referencias o soportes de precios.</td>
+                <td>Los valores usados tienen soporte identificable.</td>
+                <td>Cotizaciones, capturas o referencias de precio.</td>
+              </tr>
+
+              <tr>
+                <td>6.6</td>
+                <td>Se construye el flujo de caja con supuestos y resultados financieros base.</td>
+                <td>El flujo de caja es coherente con el presupuesto y la solución.</td>
+                <td>Hoja de cálculo de flujo de caja.</td>
+              </tr>
+
+              <tr>
+                <td>6.7</td>
+                <td>Se calculan indicadores financieros de evaluación del proyecto.</td>
+                <td>Los indicadores financieros están calculados y explicados.</td>
+                <td>Tabla de VPN, TIR, ROI, Payback u otros.</td>
+              </tr>
+
+              <tr>
+                <td>6.8</td>
+                <td>Se analiza el efecto de cambios en supuestos críticos.</td>
+                <td>Se presentan escenarios comparables con su impacto financiero.</td>
+                <td>Análisis de sensibilidad o escenarios.</td>
+              </tr>
+
+              <tr>
+                <td>6.9</td>
+                <td>Se define el valor que la solución ofrece al cliente o empresa.</td>
+                <td>La propuesta de valor está expresada de forma clara y concreta.</td>
+                <td>Canvas, ficha o texto de propuesta de valor.</td>
+              </tr>
+
+              <tr>
+                <td>6.10</td>
+                <td>Se plantea la oferta al cliente con alcance, beneficios y justificación.</td>
+                <td>La oferta es comprensible y consistente con la solución propuesta.</td>
+                <td>Documento de oferta comercial.</td>
+              </tr>
+
+              <tr>
+                <td>6.11</td>
+                <td>Se resume el modelo de negocio asociado a la solución.</td>
+                <td>El esquema de cliente, problema, solución, costos e ingresos está definido.</td>
+                <td>Resumen de modelo de negocio o canvas.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-7">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">7</span>
+        <span class="edt-phase__title">CELDA ROBOTIZADA DISEÑADA Y VALIDADA</span>
+        <span class="edt-phase__days">8 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 7</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>7.1</td>
+                <td>Justificación de robotización sustentada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>7.2</td>
+                <td>Robot y herramienta de toma seleccionados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>7.3</td>
+                <td>Layout de celda elaborado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>7.4</td>
+                <td>Sensores y periféricos de celda definidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>7.5</td>
+                <td>Tiempos de celda cuantificados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>7.6</td>
+                <td>Simulación RobotStudio validada</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>7.7</td>
+                <td>Medidas de seguridad de celda definidas</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>7.8</td>
+                <td>Riesgos de celda evaluados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 7</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>7.1</td>
+                <td>Se argumenta técnicamente la pertinencia de robotizar parte del proceso.</td>
+                <td>La robotización queda justificada frente al problema del proceso.</td>
+                <td>Documento de justificación técnica.</td>
+              </tr>
+
+              <tr>
+                <td>7.2</td>
+                <td>Se seleccionan el robot y el sistema de agarre adecuados.</td>
+                <td>La selección está sustentada con criterios técnicos.</td>
+                <td>Ficha de selección de robot y EOAT.</td>
+              </tr>
+
+              <tr>
+                <td>7.3</td>
+                <td>Se diseña la distribución física de la celda robotizada.</td>
+                <td>El layout representa ubicación, flujo y accesos básicos.</td>
+                <td>Plano o layout de la celda.</td>
+              </tr>
+
+              <tr>
+                <td>7.4</td>
+                <td>Se definen los elementos auxiliares necesarios para la celda.</td>
+                <td>Existe un listado funcional de sensores y periféricos.</td>
+                <td>Tabla de sensores y periféricos.</td>
+              </tr>
+
+              <tr>
+                <td>7.5</td>
+                <td>Se calculan o estiman tiempos de ciclo y operación de la celda.</td>
+                <td>Los tiempos son suficientes para evaluar desempeño de la celda.</td>
+                <td>Tabla de tiempos de celda.</td>
+              </tr>
+
+              <tr>
+                <td>7.6</td>
+                <td>Se valida el funcionamiento de la celda en RobotStudio o similar.</td>
+                <td>La simulación reproduce la operación prevista sin errores críticos.</td>
+                <td>Archivo de simulación y evidencia de validación.</td>
+              </tr>
+
+              <tr>
+                <td>7.7</td>
+                <td>Se establecen medidas de seguridad física y lógica de la celda.</td>
+                <td>La propuesta de seguridad es coherente con la operación robotizada.</td>
+                <td>Documento o plano de seguridad de celda.</td>
+              </tr>
+
+              <tr>
+                <td>7.8</td>
+                <td>Se analizan riesgos asociados a la celda y sus mitigaciones.</td>
+                <td>Existe evaluación de riesgos con controles propuestos.</td>
+                <td>Matriz de riesgos de celda.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-8">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">8</span>
+        <span class="edt-phase__title">SISTEMA DE CONTROL INDUSTRIAL VALIDADO</span>
+        <span class="edt-phase__days">9 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 8</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>8.1</td>
+                <td>Filosofía de control definida</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>8.2</td>
+                <td>Grafcet del sistema elaborado</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>8.3</td>
+                <td>Interlocks y permisos definidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>8.4</td>
+                <td>Lógica Ladder implementada</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>8.5</td>
+                <td>Gestión de recetas implementada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>8.6</td>
+                <td>Manejo de fallas implementado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>8.7</td>
+                <td>Validación funcional del control completada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 8</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>8.1</td>
+                <td>Se establecen modos de operación y principios generales del control.</td>
+                <td>La filosofía de control está documentada y es coherente con el sistema.</td>
+                <td>Documento de filosofía de control.</td>
+              </tr>
+
+              <tr>
+                <td>8.2</td>
+                <td>Se representa la lógica secuencial del sistema mediante Grafcet.</td>
+                <td>El Grafcet cubre los estados y secuencias principales.</td>
+                <td>Diagrama Grafcet.</td>
+              </tr>
+
+              <tr>
+                <td>8.3</td>
+                <td>Se documentan enclavamientos, permisos y bloqueos de operación.</td>
+                <td>Los interlocks y permisos clave están identificados.</td>
+                <td>Matriz o tabla de interlocks y permisos.</td>
+              </tr>
+
+              <tr>
+                <td>8.4</td>
+                <td>Se implementa la secuencia de control en Ladder.</td>
+                <td>La lógica Ladder corre y refleja la secuencia definida.</td>
+                <td>Programa Ladder.</td>
+              </tr>
+
+              <tr>
+                <td>8.5</td>
+                <td>Se implementa el manejo de recetas o parámetros por producto.</td>
+                <td>El sistema permite aplicar o seleccionar recetas definidas.</td>
+                <td>Evidencia funcional de recetas en control.</td>
+              </tr>
+
+              <tr>
+                <td>8.6</td>
+                <td>Se implementa la lógica de respuesta ante fallas y recuperación.</td>
+                <td>El sistema reconoce y gestiona fallas principales.</td>
+                <td>Programa, matriz o evidencia funcional de fallas.</td>
+              </tr>
+
+              <tr>
+                <td>8.7</td>
+                <td>Se verifica el comportamiento del control en condiciones normales y de excepción.</td>
+                <td>El control cumple funcionalmente lo esperado.</td>
+                <td>Protocolo o reporte de validación funcional.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-9">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">9</span>
+        <span class="edt-phase__title">GEMELO DIGITAL INTEGRADO VALIDADO</span>
+        <span class="edt-phase__days">8 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 9</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr class="edt-critical-row">
+                <td>9.1</td>
+                <td>Modelo 3D del sistema desarrollado</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>9.2</td>
+                <td>Sensores y actuadores virtuales integrados</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>9.3</td>
+                <td>Integración con Logix Emulate implementada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>9.4</td>
+                <td>Pruebas integradas ejecutadas</td>
+                <td>2</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>9.5</td>
+                <td>Validación funcional del sistema completada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 9</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>9.1</td>
+                <td>Se desarrolla la representación tridimensional del sistema.</td>
+                <td>El modelo 3D es suficiente para integración y validación.</td>
+                <td>Archivo o capturas del modelo 3D.</td>
+              </tr>
+
+              <tr>
+                <td>9.2</td>
+                <td>Se incorporan elementos virtuales de sensado y actuación al modelo.</td>
+                <td>Los elementos virtuales están conectados al comportamiento del sistema.</td>
+                <td>Evidencia de integración de señales virtuales.</td>
+              </tr>
+
+              <tr>
+                <td>9.3</td>
+                <td>Se integra el modelo virtual con el entorno de emulación de control.</td>
+                <td>Existe intercambio funcional de señales entre modelo y emulador.</td>
+                <td>Evidencia de conexión con Logix Emulate.</td>
+              </tr>
+
+              <tr>
+                <td>9.4</td>
+                <td>Se realizan pruebas del sistema integrado modelo-control-señales.</td>
+                <td>Las pruebas se ejecutan y documentan con resultados claros.</td>
+                <td>Registro o informe de pruebas integradas.</td>
+              </tr>
+
+              <tr>
+                <td>9.5</td>
+                <td>Se valida el comportamiento global del sistema integrado.</td>
+                <td>El sistema integrado se comporta de forma aceptable frente a lo esperado.</td>
+                <td>Informe de validación funcional del gemelo digital.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-10">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">10</span>
+        <span class="edt-phase__title">SUPERVISIÓN SCADA IMPLEMENTADA</span>
+        <span class="edt-phase__days">8 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 10</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>10.1</td>
+                <td>Estándar HMI ISA-101 definido</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>10.2</td>
+                <td>Pantallas HMI diseñadas</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>10.3</td>
+                <td>Modelo de tags SCADA estructurado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr class="edt-critical-row">
+                <td>10.4</td>
+                <td>SCADA en Ignition implementado</td>
+                <td>2</td>
+                <td>Actividad crítica</td>
+              </tr>
+
+              <tr>
+                <td>10.5</td>
+                <td>Comunicación OPC operativa</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>10.6</td>
+                <td>Alarmas, eventos e historización configurados</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>10.7</td>
+                <td>Interacción del operador habilitada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>10.8</td>
+                <td>Validación funcional con gemelo digital completada</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 10</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>10.1</td>
+                <td>Se definen criterios visuales y de navegación para la HMI.</td>
+                <td>Existe una guía base de diseño HMI consistente.</td>
+                <td>Documento de estándar HMI.</td>
+              </tr>
+
+              <tr>
+                <td>10.2</td>
+                <td>Se diseñan las pantallas de supervisión requeridas por el sistema.</td>
+                <td>El conjunto de pantallas necesarias está diseñado.</td>
+                <td>Mockups, vistas o pantallas diseñadas.</td>
+              </tr>
+
+              <tr>
+                <td>10.3</td>
+                <td>Se organiza la estructura lógica de variables y equipos del SCADA.</td>
+                <td>La estructura de tags es usable para implementación.</td>
+                <td>Árbol o tabla de tags SCADA.</td>
+              </tr>
+
+              <tr>
+                <td>10.4</td>
+                <td>Se implementa el sistema de supervisión en Ignition.</td>
+                <td>El proyecto SCADA está montado y operativo a nivel funcional base.</td>
+                <td>Proyecto Ignition o capturas funcionales.</td>
+              </tr>
+
+              <tr>
+                <td>10.5</td>
+                <td>Se habilita la comunicación OPC entre control y supervisión.</td>
+                <td>Las variables se intercambian correctamente entre ambas capas.</td>
+                <td>Evidencia de tags comunicando por OPC.</td>
+              </tr>
+
+              <tr>
+                <td>10.6</td>
+                <td>Se configuran alarmas, registro de eventos e historización mínima.</td>
+                <td>El sistema registra y muestra alarmas, eventos y datos históricos clave.</td>
+                <td>Configuración y evidencia funcional de alarmas/eventos/histórico.</td>
+              </tr>
+
+              <tr>
+                <td>10.7</td>
+                <td>Se habilitan acciones del operador desde el SCADA.</td>
+                <td>El operador puede ejecutar las interacciones previstas.</td>
+                <td>Evidencia funcional de interacción operador-SCADA.</td>
+              </tr>
+
+              <tr>
+                <td>10.8</td>
+                <td>Se valida el SCADA junto con el gemelo digital y el control.</td>
+                <td>La supervisión funciona de forma integrada con el entorno virtual.</td>
+                <td>Protocolo o evidencia de validación integrada.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+    <details class="edt-phase" id="fase-11">
+      <summary class="edt-phase__summary">
+        <span class="edt-phase__number">11</span>
+        <span class="edt-phase__title">CIERRE ACADÉMICO Y ENTREGABLES DEL CURSO</span>
+        <span class="edt-phase__days">9 días</span>
+        <span class="edt-phase__badge edt-phase__badge--final">Final</span>
+      </summary>
+      <div class="edt-phase__body">
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Actividades de la fase 11</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Entregable</th>
+                <th scope="col">Días</th>
+                <th scope="col">Obs</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>11.1</td>
+                <td>Criterios de aceptación definidos</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.2</td>
+                <td>Pruebas integrales end-to-end ejecutadas</td>
+                <td>2</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.3</td>
+                <td>Cuadro resumen final consolidado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.4</td>
+                <td>Repositorio GitHub curado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.5</td>
+                <td>Sitio web del proyecto completado</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.6</td>
+                <td>Video de proyecto producido</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>11.7</td>
+                <td>Sustentación intermedia preparada</td>
+                <td>1</td>
+                <td>Hito</td>
+              </tr>
+
+              <tr>
+                <td>11.8</td>
+                <td>Sustentación final preparada</td>
+                <td>1</td>
+                <td>Hito</td>
+              </tr>
+
+              <tr>
+                <td>11.9</td>
+                <td>Reflexiones de aprendizaje consolidadas</td>
+                <td>1</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <h4 class="edt-phase__dict-heading">Diccionario EDT</h4>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">Diccionario EDT fase 11</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Criterio de cierre</th>
+                <th scope="col">Evidencia</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>11.1</td>
+                <td>Se establecen criterios mínimos para aceptar los principales entregables del proyecto.</td>
+                <td>Los criterios de aceptación están claros y documentados.</td>
+                <td>Lista o matriz de criterios de aceptación.</td>
+              </tr>
+
+              <tr>
+                <td>11.2</td>
+                <td>Se realizan pruebas completas del sistema integrado.</td>
+                <td>Las pruebas integrales se ejecutan y documentan.</td>
+                <td>Registro de pruebas end-to-end.</td>
+              </tr>
+
+              <tr>
+                <td>11.3</td>
+                <td>Se consolida la información final comparativa del proyecto.</td>
+                <td>El cuadro final reúne indicadores, tiempos, costos y resultados principales.</td>
+                <td>Cuadro resumen final.</td>
+              </tr>
+
+              <tr>
+                <td>11.4</td>
+                <td>Se organiza el repositorio con archivos, evidencias y documentación del proyecto.</td>
+                <td>El repositorio está completo, ordenado y usable.</td>
+                <td>Enlace o capturas del repositorio.</td>
+              </tr>
+
+              <tr>
+                <td>11.5</td>
+                <td>Se completa el sitio web del proyecto con las secciones requeridas.</td>
+                <td>El sitio está listo y contiene la información principal del proyecto.</td>
+                <td>Sitio web publicado o capturas.</td>
+              </tr>
+
+              <tr>
+                <td>11.6</td>
+                <td>Se produce el video final de presentación y demostración del proyecto.</td>
+                <td>El video cumple contenido y formato esperados.</td>
+                <td>Archivo o enlace del video.</td>
+              </tr>
+
+              <tr>
+                <td>11.7</td>
+                <td>Se preparan materiales y narrativa para la sustentación intermedia.</td>
+                <td>La presentación intermedia está lista para exponer.</td>
+                <td>Diapositivas y guion de sustentación intermedia.</td>
+              </tr>
+
+              <tr>
+                <td>11.8</td>
+                <td>Se preparan materiales y defensa técnica para la sustentación final.</td>
+                <td>La presentación final y sus soportes están listos.</td>
+                <td>Diapositivas y guion de sustentación final.</td>
+              </tr>
+
+              <tr>
+                <td>11.9</td>
+                <td>Se consolidan aprendizajes, dificultades y recomendaciones del proceso.</td>
+                <td>La reflexión final del equipo está redactada y organizada.</td>
+                <td>Documento de reflexiones de aprendizaje.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
           </div>
         </section>
 
-        <section class="module-section" id="gestion" aria-labelledby="sec-pm">
-          <h2 class="module-section__title" id="sec-pm">Gestión de proyecto</h2>
-          <p class="module-section__lead">Roles, comunicaciones, matriz RACI ligera y registro de supuestos; preparación para la defensa oral y la consolidación documental del integrador.</p>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section module-section--alt reveal" id="cronograma" aria-labelledby="sec-gantt">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-gantt">Cronograma y hitos</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">El cronograma base fue <strong>reprogramado</strong> (corte marzo 2026) para alinear ventanas de sustentación con el calendario académico, corregir dependencias y descontar días no hábiles (Semana Santa, Día del Trabajo). La línea de tiempo siguiente resume la cadena de hitos del integrador.</p>
+          <ul class="timeline-mini reveal" aria-label="Hitos del proyecto">
+            <li class="timeline-mini__item timeline-mini__item--done">
+              <span class="timeline-mini__label">H-F1 — Fase 1 Alcance técnico</span>
+              <span class="timeline-mini__date">11-feb</span>
+            </li>
+            <li class="timeline-mini__item timeline-mini__item--done">
+              <span class="timeline-mini__label">H-F2 — Fase 2 Levantamiento AS-IS</span>
+              <span class="timeline-mini__date">13-feb</span>
+            </li>
+            <li class="timeline-mini__item timeline-mini__item--done">
+              <span class="timeline-mini__label">H-F3 — Fase 3 Diseño TO-BE</span>
+              <span class="timeline-mini__date">10-mar</span>
+            </li>
+            <li class="timeline-mini__item timeline-mini__item--done">
+              <span class="timeline-mini__label">H-CMP — Consolidación paquete intermedio</span>
+              <span class="timeline-mini__date">22-mar</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">H-INT — Sustentación intermedia</span>
+              <span class="timeline-mini__date">25–27 mar</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">T-Arq — Arquitectura (Fase 4)</span>
+              <span class="timeline-mini__date">28-mar</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">T-PLC — Control PLC (Fase 8)</span>
+              <span class="timeline-mini__date">08-abr</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">T-SCADA — SCADA (Fase 10)</span>
+              <span class="timeline-mini__date">22-abr</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">T-Int — Integración E2E</span>
+              <span class="timeline-mini__date">10-may</span>
+            </li>
+            <li class="timeline-mini__item">
+              <span class="timeline-mini__label">H-Fin — Sustentación final</span>
+              <span class="timeline-mini__date">20–22 may</span>
+            </li>
+          </ul>
+          <div class="module-note reveal">
+            <strong>Ruta crítica final:</strong> Arquitectura → PLC → SCADA → Integración (40 días hábiles)
+          </div>
+          <div class="module-stats reveal">
+            <div class="stat-card">
+              <span class="stat-card__value">88</span>
+              <span class="stat-card__label">Entregables</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__value">96</span>
+              <span class="stat-card__label">Días</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__value">11</span>
+              <span class="stat-card__label">Fases</span>
+            </div>
+            <div class="stat-card stat-card--dark">
+              <span class="stat-card__value">6</span>
+              <span class="stat-card__label">Integrantes</span>
+            </div>
+          </div>
         </section>
 
-        <section class="module-section" id="economica" aria-labelledby="sec-vpn">
-          <h2 class="module-section__title" id="sec-vpn">Evaluación económica (VPN, TIR, ROI)</h2>
-          <p class="module-section__lead">Flujos de caja incremental, tasa de descuento y horizonte; comparación de alternativas (p. ej. manual vs robotizado, escenarios de OEE) con análisis de sensibilidad.</p>
-          <ul class="module-list">
+        <section class="module-section reveal" id="gestion" aria-labelledby="sec-pm">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-pm">Gestión de proyecto</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">La gestión del integrador se apoya en buenas prácticas <strong>PMI</strong> y en el enfoque <strong>PM4R</strong> (metodologías de gestión de proyectos para resultados), adaptadas al contexto académico: actas cortas, registro de supuestos, control de cambios de alcance y comunicación semanal del equipo.</p>
+          <p class="reveal"><strong>Siete pasos de planeación aplicados al proyecto:</strong></p>
+          <ol class="module-list reveal" style="list-style: decimal; padding-left: 1.25rem;">
+            <li>Definir alcance, objetivos medibles y criterios de éxito del integrador.</li>
+            <li>Construir y validar la EDT (88 entregables) con diccionario de términos.</li>
+            <li>Secuenciar actividades, dependencias y hitos; asignar responsables por paquete.</li>
+            <li>Estimar duraciones y recursos; incorporar holgura para sustentaciones y revisiones.</li>
+            <li>Desarrollar el cronograma integrado y la ruta crítica (post-reprogramación).</li>
+            <li>Planificar calidad, riesgos y comunicaciones (matriz ligera, registro de riesgos).</li>
+            <li>Establecer línea base y procedimiento de control de cambios hasta el cierre.</li>
+          </ol>
+        </section>
+
+        <section class="module-section module-section--alt reveal" id="economica" aria-labelledby="sec-vpn">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-vpn">Evaluación económica</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">Flujos de caja incremental, tasa de descuento y horizonte; comparación de alternativas (manual vs robotizado, escenarios de OEE) con análisis de sensibilidad.</p>
+          <ul class="module-list reveal">
             <li>Tabla de inversiones CAPEX/OPEX y supuestos de ahorro.</li>
             <li>Indicadores por escenario y punto de equilibrio operativo.</li>
-            <li>Gráficos tornado o escenarios pesimista/base/optimista.</li>
+            <li>Gráficos tornado o escenarios pesimista / base / optimista.</li>
           </ul>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          <div class="placeholder-card reveal">
+            <p class="placeholder-card__note"><strong>Próxima entrega:</strong> esta sección se completará con presupuesto <strong>CAPEX/OPEX</strong>, análisis de <strong>VPN</strong>, <strong>TIR</strong>, <strong>ROI</strong> y payback, alineado a la fase 6 del EDT y a los supuestos de la solución TO-BE.</p>
+          </div>
+        </section>
+
+        <div class="module-note reveal" style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+          <svg viewBox="0 0 24 24" fill="#2563EB" width="28" height="28" style="flex-shrink:0"><path d="M11.53 2c0 2.4 1.97 4.35 4.35 4.35h1.78v1.7c0 2.4 1.97 4.35 4.35 4.35V2.84a.84.84 0 00-.84-.84H11.53zM6.77 6.8a4.362 4.362 0 004.34 4.34h1.78v1.72a4.362 4.362 0 004.34 4.34V7.63a.84.84 0 00-.84-.84H6.77zM2 11.6a4.362 4.362 0 004.34 4.34h1.78v1.72c0 2.4 1.97 4.35 4.35 4.35V12.43a.84.84 0 00-.84-.84H2z"/></svg>
+          <div>
+            <strong>Seguimiento en Jira:</strong> El tablero de seguimiento del proyecto est&aacute; disponible en Jira Cloud.
+            <a href="https://sergioandresbolanospenagos.atlassian.net/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;margin-left:0.5rem;font-weight:600;color:var(--primary)">Ver board en Jira →</a>
+          </div>
+        </div>
+
+        <section class="video-showcase reveal" id="videos">
+          <h3 class="video-showcase__title">Videos del Módulo</h3>
+          <p class="video-showcase__lead">Material audiovisual de planeación y evaluación.</p>
+          <div class="video-grid">
+            <div class="video-card video-card--placeholder">
+              <div class="video-card__poster">
+                <p class="video-card__placeholder-text">Video en preparación</p>
+                <div class="video-card__play"><div class="video-card__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+              </div>
+              <div class="video-card__info">
+                <h4 class="video-card__name">Sustentación intermedia — Planeación</h4>
+                <p class="video-card__meta">Pendiente · 2026</p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </article>
@@ -104,10 +1946,10 @@
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
-      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
-      <p class="site-footer__block site-footer__block--right">Universidad</p>
+      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Dpto. Ing. Mecánica y Mecatrónica</p>
+      <p class="site-footer__block site-footer__block--right">Universidad Nacional de Colombia</p>
     </div>
-    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
+    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Planta embotelladora de referencia · Bogotá</p>
   </footer>
 
   <script src="../js/main.js"></script>
