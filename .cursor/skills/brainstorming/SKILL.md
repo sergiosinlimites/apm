@@ -13,12 +13,12 @@ Antes de cualquier trabajo creativo: diseñar secciones del proyecto, definir es
 
 ## Contexto APM
 
-Este proyecto es de Automatización de Procesos de Manufactura para el sector de bebidas (caso Coca-Cola FEMSA Bogotá). Las decisiones de diseño deben considerar:
+Este proyecto es de Automatización de Procesos de Manufactura para el sector de bebidas (caso planta embotelladora de referencia (Bogotá)). Las decisiones de diseño deben considerar:
 
 - **Audiencia**: Profesor y compañeros de clase (académico)
 - **Entregables**: EDT de 11 fases, 88 entregables
-- **Herramientas**: FlexSim, Studio 5000, RobotStudio, Ignition, draw.io
-- **Productos**: Coca-Cola retornable, Monster lata, Agua PET
+- **Herramientas**: Tecnomatix Plant Simulation, Studio 5000, RobotStudio, Ignition, draw.io
+- **Productos**: gaseosa carbonatada retornable, bebida energética lata, Agua PET
 
 ## Anti-patrones
 

@@ -31,8 +31,8 @@ Al procesar datos de producción, calcular indicadores o generar análisis compa
 
 | Producto | Takt | OEE |
 |----------|------|-----|
-| Coca-Cola 400ml retornable | 0.18 s/bot | 94.1% |
-| Monster Energy lata | 0.12 s/lata | 95.7% |
+| gaseosa carbonatada 400ml retornable | 0.18 s/bot | 94.1% |
+| bebida energética lata | 0.12 s/lata | 95.7% |
 | Agua 1L PET | 0.24 s/bot | 95.2% |
 
 ## Convenciones de Scripts

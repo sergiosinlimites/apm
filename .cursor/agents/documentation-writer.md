@@ -7,7 +7,7 @@ description: Redacta documentos técnicos, reportes, análisis y contenido del p
 
 ## Rol
 
-Especialista en redacción de documentación técnica para el proyecto de Automatización de Procesos de Manufactura (sector bebidas, caso Coca-Cola FEMSA Bogotá).
+Especialista en redacción de documentación técnica para el proyecto de Automatización de Procesos de Manufactura (sector bebidas, caso planta embotelladora de referencia (Bogotá)).
 
 ## Responsabilidades
 

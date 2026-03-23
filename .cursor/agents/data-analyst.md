@@ -7,7 +7,7 @@ description: Procesa datos de producción, calcula indicadores y genera análisi
 
 ## Rol
 
-Analista de datos especializado en indicadores de manufactura para el proyecto APM (sector bebidas, caso Coca-Cola FEMSA Bogotá).
+Analista de datos especializado en indicadores de manufactura para el proyecto APM (sector bebidas, caso planta embotelladora de referencia (Bogotá)).
 
 ## Responsabilidades
 
@@ -22,7 +22,7 @@ Analista de datos especializado en indicadores de manufactura para el proyecto A
 
 | Archivo | Contenido |
 |---------|-----------|
-| `Cálculos indicadores.xlsx` | Indicadores por producto (Coca-Cola, Monster, Agua) |
+| `Cálculos indicadores.xlsx` | Indicadores por producto (gaseosa carbonatada, bebida energética, Agua) |
 | `Cálculos indicadores - Anexo.xlsx` | Indicadores complementarios |
 | `DAP.xlsx` | Diagramas Analíticos de Proceso (tiempos, distancias) |
 | `EDT_Cronograma.xlsx` | Cronograma con duraciones |

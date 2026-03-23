@@ -8,7 +8,7 @@ alwaysApply: true
 ## Contexto
 
 Proyecto académico de **Automatización de Procesos de Manufactura** para el sector de bebidas.
-Caso de estudio: Planta Coca-Cola FEMSA, Bogotá.
+Caso de estudio: planta embotelladora de referencia en Bogotá.
 Equipo: Grupo 4 (6 integrantes).
 
 ## Idioma
@@ -72,13 +72,13 @@ Cuando se genere contenido visual (sitio web, presentaciones, diagramas):
 
 | # | Producto | Formato | Envase |
 |---|----------|---------|--------|
-| 1 | Coca-Cola Clásica 400ml | Retornable | Vidrio |
-| 2 | Monster Energy 473ml | Lata | Aluminio |
+| 1 | Gaseosa carbonatada 400ml | Retornable | Vidrio |
+| 2 | Bebida energética 473ml | Lata | Aluminio |
 | 3 | Agua embotellada 1L | No retornable | PET |
 
 ## Herramientas Industriales
 
-- Simulación: FlexSim
+- Simulación: Tecnomatix Plant Simulation
 - Control: Studio 5000 / RSLogix (Ladder)
 - Emulación: Logix Emulate
 - Robótica: RobotStudio (ABB)

@@ -1,6 +1,6 @@
 - Responder siempre en español.
 - Este es un proyecto académico de **Automatización de Procesos de Manufactura (APM)** para el sector de bebidas.
-- El caso de estudio es la planta de **Coca-Cola FEMSA en Bogotá**.
+- El caso de estudio es la **planta embotelladora de referencia en Bogotá**.
 - El documento maestro del proyecto es `PRD-general.md` en la raíz del repositorio.
 - Seguir el **patrón orquestador**: el agente principal no escribe código; delega en subagentes (Task tool).
 - Los subagentes disponibles son: `documentation-writer`, `web-developer`, `data-analyst`, `code-reviewer`, `architecture-auditor`.

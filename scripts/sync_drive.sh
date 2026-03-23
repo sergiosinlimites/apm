@@ -1,6 +1,6 @@
 #!/bin/bash
 RCLONE="$HOME/.local/bin/rclone"
-REMOTE="unal:APM"
+REMOTE="unal:"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOCAL="$SCRIPT_DIR/../archivos-drive/"
 
