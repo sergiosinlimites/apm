@@ -34,3 +34,6 @@ archivos-drive/.rclone*
 
 # Extracted files (regenerable from zip)
 archivos-drive/extracted/
+
+# LibreOffice lock files
+.~lock.*#
