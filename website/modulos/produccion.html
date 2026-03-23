@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gestión de Producción — FluxLine · VSM, simulación, KPIs y DAP.">
+  <meta name="description" content="Gestión de Producción — FluxLine · DAP, VSM, indicadores AS-IS y validación en Tecnomatix Plant Simulation. Planta embotelladora de referencia · Bogotá.">
   <title>Gestión de Producción · FluxLine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +28,9 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__list" id="nav-menu">
-        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
-        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
-        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
-        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li><a href="../index.html#inicio" class="nav__link">Presentación</a></li>
+        <li><a href="../contacto.html" class="nav__link">Contáctenos</a></li>
+        <li><a href="../asignatura.html" class="nav__link">Asignatura</a></li>
         <li class="nav__item nav__dropdown" data-nav-dropdown>
           <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
             Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
@@ -46,7 +45,7 @@
             <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
           </ul>
         </li>
-        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+        <li><a href="../reflexiones.html" class="nav__link">Reflexiones</a></li>
       </ul>
     </nav>
   </header>
@@ -57,62 +56,347 @@
       <div class="container hero__content hero__content--compact">
         <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
         <h1 class="hero__title" id="mod-title">Gestión de Producción</h1>
-        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
-        <p class="hero__tagline">Diagnóstico y mejora del flujo de valor en la línea embotelladora: mapeo VSM, indicadores operativos, documentación de proceso (DAP) y experimentación en simulación para comparar escenarios AS-IS vs TO-BE.</p>
+        <p class="hero__subtitle">Prof. Carlos Julio Cortés R.</p>
+        <p class="hero__tagline">Diagnóstico y mejora del flujo de valor en la línea embotelladora: mapeo VSM, indicadores operativos, documentación de proceso (DAP) y experimentación en Tecnomatix Plant Simulation para comparar escenarios AS-IS vs TO-BE.</p>
       </div>
     </section>
 
     <article class="module-content">
       <div class="container">
-        <p class="module-content__intro">Aquí se concentran los entregables de caracterización del sistema actual, la propuesta de mejoras y la validación por simulación (p. ej. FlexSim) con métricas comparables entre referencias Coca-Cola, Monster y Agua 1L.</p>
+        <p class="module-content__intro reveal">Este módulo consolida el levantamiento en planta embotelladora de referencia (Bogotá), los diagramas analíticos de proceso y los indicadores AS-IS que alimentan el modelo de simulación y las propuestas de mejora.</p>
 
-        <section class="module-section" id="as-is" aria-labelledby="sec-as-is">
-          <h2 class="module-section__title" id="sec-as-is">Análisis AS-IS · Línea y cuellos de botella</h2>
-          <p class="module-section__lead">Mapas de flujo de valor, inventarios, tiempos de ciclo y takt frente a la demanda; identificación de desperdicios (sobreproducción, esperas, movimientos) en mezcla, llenado y empacado.</p>
-          <ul class="module-list">
-            <li>Diagramas VSM por familia de producto y zona de planta.</li>
-            <li>Tablero de KPIs AS-IS: OEE, utilización, cuellos y colas.</li>
-            <li>Anexo de datos y supuestos documentados (fuentes, periodo, línea base).</li>
-          </ul>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section reveal" id="layout-planta" aria-labelledby="sec-layout">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-layout">Vista de Planta</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <figure class="reveal" style="margin:1rem 0 1.5rem;text-align:center">
+            <img src="../img/diagramas/planta-layout-placeholder.svg" alt="Vista de planta: layout esquemático de la planta embotelladora con líneas 1-5, zonas de soporte y almacén" style="max-width:100%;height:auto;border-radius:8px">
+            <figcaption style="font-size:0.82rem;color:var(--text-muted);margin-top:0.5rem">Vista de planta esquemática. El diagrama completo está disponible en formato draw.io en el repositorio.</figcaption>
+          </figure>
         </section>
 
-        <section class="module-section" id="to-be" aria-labelledby="sec-to-be">
-          <h2 class="module-section__title" id="sec-to-be">Diseño TO-BE · Mejoras de flujo y escenarios</h2>
-          <p class="module-section__lead">Propuesta de layout, balanceo de línea, políticas de inventario y buffers; definición de indicadores objetivo y comparativo AS-IS vs TO-BE por producto.</p>
-          <div class="module-grid">
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section module-section--alt reveal" id="flujo-general" aria-labelledby="sec-flujo">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-flujo">Flujo General del Proceso</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <figure class="reveal" style="margin:1rem 0 1.5rem;text-align:center">
+            <img src="../img/diagramas/flujo-proceso-general.svg" alt="Flujo general de manufactura: 13 etapas desde Insumos hasta Despacho" style="max-width:100%;height:auto;border-radius:8px">
+            <figcaption style="font-size:0.82rem;color:var(--text-muted);margin-top:0.5rem">Flujo general de manufactura — desde insumos hasta despacho.</figcaption>
+          </figure>
+        </section>
+
+        <section class="module-section reveal" id="as-is" aria-labelledby="sec-contexto">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-contexto">Visita técnica y productos</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">A partir de la visita técnica a la planta embotelladora de referencia en Bogotá y los fundamentos teóricos abordados en el módulo, se seleccionaron tres referencias para el análisis: Gaseosa carbonatada (retornable 400ml), Bebida energética (lata 473ml) y Agua purificada (1L).</p>
+          <div class="module-stats reveal">
+            <div class="stat-card stat-card--dark">
+              <span class="stat-card__value">3</span>
+              <span class="stat-card__label">Productos analizados</span>
+            </div>
+            <div class="stat-card stat-card--dark">
+              <span class="stat-card__value">3</span>
+              <span class="stat-card__label">Líneas de producción</span>
+            </div>
+            <div class="stat-card stat-card--dark">
+              <span class="stat-card__value">15k–30k</span>
+              <span class="stat-card__label">u/h (rango por línea)</span>
+            </div>
           </div>
         </section>
 
-        <section class="module-section" id="dap-indicadores" aria-labelledby="sec-dap">
-          <h2 class="module-section__title" id="sec-dap">DAP e indicadores de proceso</h2>
-          <p class="module-section__lead">Documentación de actividades, recursos, entradas/salidas y puntos de medición; trazabilidad entre diagrama de operaciones de proceso y variables usadas en simulación y control.</p>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section module-section--alt reveal" id="dap" aria-labelledby="sec-dap">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-dap">Diagrama de Análisis de Proceso (DAP)</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">Se elaboraron Diagramas de Análisis de Proceso para cada producto, documentando operaciones, transportes, inspecciones y almacenamientos según la norma ASME.</p>
+
+          <figure class="reveal" style="margin:1.5rem 0 2rem;text-align:center">
+            <img src="../img/diagramas/dap-gaseosa-400ml.svg" alt="DAP — Gaseosa Carbonatada 400ml: diagrama de flujo con 22 etapas ASME (Operación, Transporte, Inspección, Almacenamiento)" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border)">
+            <figcaption style="font-size:0.82rem;color:var(--text-muted);margin-top:0.5rem">Diagrama Analítico de Proceso (DAP) — Gaseosa Carbonatada 400ml, notación ASME.</figcaption>
+          </figure>
+
+          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:1.5rem;">Gaseosa Carbonatada 400ml (25 pasos)</h3>
+          <p class="reveal"><strong>Resumen:</strong> O=16 · T=4 · I=5 · A=1</p>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Tiempo (s)</th>
+                  <th scope="col">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Saneamiento previo a cambio de sabor</td><td>7,200–10,800</td><td>O</td></tr>
+                <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>259.2</td><td>O</td></tr>
+                <tr><td>3</td><td>Tratamiento y purificación del agua</td><td>259.2</td><td>O</td></tr>
+                <tr><td>4</td><td>Control de calidad del agua</td><td>30</td><td>I</td></tr>
+                <tr><td>5</td><td>Refinamiento de azúcar</td><td>240</td><td>O</td></tr>
+                <tr><td>6</td><td>Preparación del jarabe simple (agua + azúcar)</td><td>259.2</td><td>O</td></tr>
+                <tr><td>7</td><td>Mezcla con concentrado (jarabe terminado)</td><td>259.2</td><td>O</td></tr>
+                <tr><td>8</td><td>Verificación del jarabe</td><td>20</td><td>I</td></tr>
+                <tr><td>9</td><td>Envío del jarabe a tanque de mezcla</td><td>100</td><td>T</td></tr>
+                <tr><td>10</td><td>Enfriamiento del jarabe</td><td>259.2</td><td>O</td></tr>
+                <tr><td>11</td><td>Carbonatación (mezcla con CO₂)</td><td>30</td><td>O</td></tr>
+                <tr><td>12</td><td>Envío a línea de llenado</td><td>8</td><td>T</td></tr>
+                <tr><td>13</td><td>Recepción de botellas de vidrio retornables</td><td>0.18</td><td>O</td></tr>
+                <tr><td>14</td><td>Rectificado de etiquetado</td><td>0.18</td><td>O</td></tr>
+                <tr><td>15</td><td>Lavado y desinfección de botellas</td><td>0.18</td><td>O</td></tr>
+                <tr><td>16</td><td>Inspección automática de botellas</td><td>0.18</td><td>I</td></tr>
+                <tr><td>17</td><td>Botellas limpias a llenadora</td><td>20</td><td>T</td></tr>
+                <tr><td>18</td><td>Llenado de bebida (400 ml)</td><td>0.18</td><td>O</td></tr>
+                <tr><td>19</td><td>Tapado con tapa corona</td><td>0.15</td><td>O</td></tr>
+                <tr><td>20</td><td>Verificación de nivel y sellado</td><td>0.10</td><td>I</td></tr>
+                <tr><td>21</td><td>Codificación de lote y fecha</td><td>0.12</td><td>O</td></tr>
+                <tr><td>22</td><td>Control final de calidad</td><td>30</td><td>I</td></tr>
+                <tr><td>23</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
+                <tr><td>24</td><td>Empaque en canastillas</td><td>4.32</td><td>O</td></tr>
+                <tr><td>25</td><td>Almacenamiento en bodega</td><td>255</td><td>A</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:2rem;">Bebida Energética 473ml — 10 operaciones clave</h3>
+          <p class="reveal"><strong>Resumen DAP completo:</strong> O=14 · T=4 · I=4 · A=1</p>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Tiempo (s)</th>
+                  <th scope="col">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>10</td><td>O</td></tr>
+                <tr><td>6</td><td>Preparación del jarabe base</td><td>120</td><td>O</td></tr>
+                <tr><td>7</td><td>Mezcla con concentrado de bebida energética</td><td>60</td><td>O</td></tr>
+                <tr><td>11</td><td>Carbonatación</td><td>30</td><td>O</td></tr>
+                <tr><td>13</td><td>Recepción de latas vacías</td><td>0.12</td><td>O</td></tr>
+                <tr><td>16</td><td>Llenado de bebida</td><td>0.12</td><td>O</td></tr>
+                <tr><td>17</td><td>Sellado de lata</td><td>0.12</td><td>O</td></tr>
+                <tr><td>18</td><td>Inspección de sellado</td><td>0.12</td><td>I</td></tr>
+                <tr><td>21</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
+                <tr><td>23</td><td>Almacenamiento producto terminado</td><td>172.8</td><td>A</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:2rem;">Agua Purificada 1L — 10 operaciones clave</h3>
+          <p class="reveal"><strong>Resumen DAP completo:</strong> O=12 · T=3 · I=4 · A=1</p>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Tiempo (s)</th>
+                  <th scope="col">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2</td><td>Recepción de agua cruda</td><td>10</td><td>O</td></tr>
+                <tr><td>4</td><td>Tratamiento y purificación</td><td>60</td><td>O</td></tr>
+                <tr><td>5</td><td>Control de calidad del agua</td><td>30</td><td>I</td></tr>
+                <tr><td>7</td><td>Recepción de preformas PET</td><td>10</td><td>O</td></tr>
+                <tr><td>8</td><td>Soplado de botellas</td><td>0.24</td><td>O</td></tr>
+                <tr><td>11</td><td>Llenado de agua</td><td>0.24</td><td>O</td></tr>
+                <tr><td>14</td><td>Etiquetado</td><td>0.24</td><td>O</td></tr>
+                <tr><td>16</td><td>Control final de calidad</td><td>10</td><td>I</td></tr>
+                <tr><td>17</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
+                <tr><td>19</td><td>Almacenamiento producto terminado</td><td>150</td><td>A</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flow-steps reveal" aria-hidden="true">
+            <span class="flow-step flow-step--op">O Operación</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step flow-step--transport">T Transporte</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step flow-step--inspect">I Inspección</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step flow-step--storage">A Almacenamiento</span>
+          </div>
         </section>
 
-        <section class="module-section" id="simulacion" aria-labelledby="sec-sim">
-          <h2 class="module-section__title" id="sec-sim">Simulación de eventos discretos</h2>
-          <p class="module-section__lead">Modelo 3D/lógico del subsistema seleccionado, experimentos (factorial o escenarios), resultados de throughput, WIP y utilización; anexos de corridas y validación frente a AS-IS.</p>
-          <ul class="module-list">
-            <li>Configuración de corridas y réplicas (estadística básica).</li>
-            <li>Comparativo visual AS-IS vs TO-BE (gráficos, tablas, capturas).</li>
-            <li>Supuestos de entrada y limitaciones del modelo.</li>
+        <section class="module-section reveal" id="kpi-as-is" aria-labelledby="sec-kpi">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-kpi">Indicadores AS-IS</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">Se calcularon indicadores clave para cada línea, encontrando OEE superiores al 94% en las tres referencias.</p>
+          <div class="module-stats reveal">
+            <div class="stat-card">
+              <span class="stat-card__value">94.1%</span>
+              <span class="stat-card__label">OEE Gaseosa</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__value">95.7%</span>
+              <span class="stat-card__label">OEE Energética</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__value">95.2%</span>
+              <span class="stat-card__label">OEE Agua</span>
+            </div>
+            <div class="stat-card stat-card--dark">
+              <span class="stat-card__value">97%</span>
+              <span class="stat-card__label">Disponibilidad</span>
+            </div>
+          </div>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Indicadores comparativos por referencia de producto</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Indicador</th>
+                  <th scope="col">Gaseosa 400ml</th>
+                  <th scope="col">Energética 473ml</th>
+                  <th scope="col">Agua Purificada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Demanda mínima</td><td>20,000 bot/h</td><td>30,000 latas/h</td><td>15,000 bot/h</td></tr>
+                <tr><td>Takt time</td><td>0.18 s/bot</td><td>0.12 s/lata</td><td>0.24 s/bot</td></tr>
+                <tr><td>Tiempo de ciclo</td><td>0.124 s</td><td>0.094 s</td><td>0.069 s</td></tr>
+                <tr><td>Tamaño de lote</td><td>1,440 bot</td><td>1,440 latas</td><td>640 bot</td></tr>
+                <tr><td>Tasa de producción</td><td>23,975 bot/h</td><td>30,337 latas/h</td><td>37,984 bot/h</td></tr>
+                <tr><td>Utilización</td><td>83.4%</td><td>82.4%</td><td>39.5%</td></tr>
+                <tr><td>Disponibilidad</td><td>97%</td><td>97%</td><td>97%</td></tr>
+                <tr><td>Quality Rate</td><td>97.0%</td><td>98.7%</td><td>98.1%</td></tr>
+                <tr class="data-table__highlight"><td>OEE</td><td>94.1%</td><td>95.7%</td><td>95.2%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="module-section module-section--alt reveal" id="vsm" aria-labelledby="sec-vsm">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-vsm">Value Stream Mapping (VSM)</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">Se elaboraron mapas de flujo de valor (VSM) estado actual para cada línea. La conclusión principal del equipo fue que <strong>el cuello de botella es logístico, no en las máquinas</strong>: los tiempos de movimiento y paletizado representan la mayor proporción de tiempo sin valor agregado.</p>
+          <div class="module-note reveal">
+            <strong>Lead times consolidados (Taller 1):</strong> Lead Time Gaseosa: 572s (VA 391s, NVA 181s) · Lead Time Energética: 465.8s (NVA 276s) · Lead Time Agua: 607.6s (NVA 432.6s)
+          </div>
+          <p class="reveal"><strong>Gaseosa 400ml.</strong> La etapa de lavado industrial toma ~120s de ciclo con 95% uptime. Con flujo de 5.55 bot/s, la llenadora y etiquetadora tardan 7s y 9s respectivamente (98% y 95% uptime). El Lead Time cierra en 572s, confirmando que la mejora debe enfocarse en almacenamiento y movimiento de producto terminado.</p>
+          <p class="reveal"><strong>Energética 473ml.</strong> Línea configurada a 30,000 latas/h (8.33 latas/s). Llenadora a 5s de ciclo, 98% uptime. 276s de NVA por producto esperando en bandas o pallets.</p>
+          <p class="reveal"><strong>Agua Purificada 1L.</strong> 15,000 bot/h. Soplado 3s, llenado 4s. NVA se disparó a 432.6s. Lead Time 607.6s.</p>
+        </section>
+
+        <section class="module-section reveal" id="to-be" aria-labelledby="sec-tobe">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-tobe">Diseño TO-BE</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">En esta sección se documentará la propuesta de proceso futuro: reducción de inventarios en tránsito, políticas de despacho y buffers, y escenarios de línea alineados al VSM futuro y a la simulación Tecnomatix Plant Simulation.</p>
+          <div class="module-note reveal">
+            El diseño TO-BE se enfocará en reducir los tiempos NVA logísticos identificados en el VSM actual, manteniendo la alta disponibilidad de las máquinas.
+          </div>
+          <figure class="reveal" style="margin:1.5rem 0;text-align:center">
+            <img src="../img/diagramas/vsm-tobe-placeholder.svg" alt="Value Stream Map TO-BE — pendiente de diseño en Fase 3" style="max-width:100%;height:auto;border-radius:8px">
+          </figure>
+          <div class="placeholder-card reveal">
+            <p class="placeholder-card__note"><strong>Próxima entrega:</strong> esta sección se completará con el modelo TO-BE y los resultados comparativos frente al AS-IS, validados en <strong>Tecnomatix Plant Simulation</strong> (escenarios de throughput, WIP y utilización de recursos).</p>
+          </div>
+        </section>
+
+        <section class="module-section module-section--alt reveal" id="simulacion" aria-labelledby="sec-sim">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-sim">Simulación de eventos discretos</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">El modelo de simulación permitirá cuantificar el impacto de cambios logísticos y de balanceo de línea antes de comprometer CAPEX, cerrando el ciclo entre diagnóstico VSM, DAP e indicadores.</p>
+          <ul class="module-list reveal">
+            <li>Corridas AS-IS calibradas frente a tiempos de proceso y colas observados.</li>
+            <li>Experimentos TO-BE (buffers, rutas internas, políticas de paletizado).</li>
+            <li>Anexo de supuestos, réplicas y validación estadística básica.</li>
           </ul>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+          <div class="placeholder-card reveal">
+            <p class="placeholder-card__note"><strong>En desarrollo:</strong> implementación y resultados en <strong>Tecnomatix Plant Simulation</strong> para comparar escenarios AS-IS vs TO-BE con KPIs alineados al módulo de producción y al EDT fase 5.</p>
+          </div>
+        </section>
+
+        <section class="video-showcase reveal" id="videos">
+          <h3 class="video-showcase__title">Videos del Módulo</h3>
+          <p class="video-showcase__lead">Material audiovisual de gestión de producción.</p>
+          <div class="video-grid">
+            <div class="video-card video-card--placeholder">
+              <div class="video-card__poster">
+                <p class="video-card__placeholder-text">Video en preparación</p>
+                <div class="video-card__play">
+                  <div class="video-card__play-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card__info">
+                <h4 class="video-card__name">Análisis AS-IS y simulación</h4>
+                <p class="video-card__meta">Pendiente · 2026</p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </article>
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
-      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
-      <p class="site-footer__block site-footer__block--right">Universidad</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="footer-col__brand">
+            <svg width="24" height="24" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="28" cy="12" r="3" fill="currentColor"/></svg>
+            FluxLine
+          </a>
+          <p>Automatización de Procesos de Manufactura</p>
+          <p>Grupo 4 · UNAL 2026-I</p>
+          <div class="footer-social">
+            <a href="https://github.com/sergiosinlimites/apm" target="_blank" rel="noopener" class="footer-social__link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+            <a href="https://drive.google.com/drive/u/2/folders/0AO2oxGaDvYBvUk9PVA" target="_blank" rel="noopener" class="footer-social__link" aria-label="Google Drive"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 5.93L11.14 9.5 7.71 3.5zm1.14 0l6.86 11.86h6.86L15.71 3.5H8.86zM2.29 16l3.43 5.93h13.71L22.86 16H2.29z"/></svg></a>
+            <a href="https://sergioandresbolanospenagos.atlassian.net/" target="_blank" rel="noopener" class="footer-social__link" aria-label="Jira"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.53 2c0 2.4 1.97 4.35 4.35h1.78v1.7c0 2.4 1.97 4.35 4.35V2.84a.84.84 0 00-.84-.84H11.53zM6.77 6.8a4.362 4.362 0 004.34 4.34h1.78v1.72a4.362 4.362 0 004.34 4.34V7.63a.84.84 0 00-.84-.84H6.77zM2 11.6a4.362 4.362 0 004.34 4.34h1.78v1.72c0 2.4 1.97 4.35 4.35 4.35V12.43a.84.84 0 00-.84-.84H2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Módulos</h4>
+          <ul class="footer-col__links">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="produccion.html">Producción</a></li>
+            <li><a href="planeacion.html">Planeación</a></li>
+            <li><a href="robotica.html">Robótica</a></li>
+            <li><a href="digital-factory.html">Digital Factory</a></li>
+            <li><a href="control.html">Control (PLC)</a></li>
+            <li><a href="scada.html">SCADA</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Proyecto</h4>
+          <ul class="footer-col__links">
+            <li><a href="../asignatura.html">Asignatura</a></li>
+            <li><a href="../contacto.html">Contáctenos</a></li>
+            <li><a href="../reflexiones.html">Reflexiones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Legal</h4>
+          <ul class="footer-col__links">
+            <li><a href="../privacidad.html">Política de Privacidad</a></li>
+            <li><a href="../terminos.html">Términos de Servicio</a></li>
+            <li><a href="../cookies.html">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FluxLine · Grupo 4 APM · Dpto. Ing. Mecánica y Mecatrónica · Universidad Nacional de Colombia</p>
+      </div>
     </div>
-    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
   </footer>
 
   <script src="../js/main.js"></script>

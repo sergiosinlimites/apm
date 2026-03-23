@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300" role="img" aria-label="Placeholder: Vista de planta">
+  <title>Vista de Planta  Pendiente</title>
+  <rect width="800" height="300" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="20" y="20" width="200" height="120" rx="4" fill="none" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <text x="120" y="85" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Líneas 1-3</text>
+  <rect x="240" y="20" width="200" height="120" rx="4" fill="none" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <text x="340" y="85" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Líneas 4-5</text>
+  <rect x="460" y="20" width="160" height="120" rx="4" fill="none" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <text x="540" y="85" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Soporte</text>
+  <rect x="640" y="20" width="140" height="120" rx="4" fill="none" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <text x="710" y="85" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Almacén</text>
+  <rect x="20" y="160" width="760" height="60" rx="4" fill="none" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="6 3"/>
+  <text x="400" y="195" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Zona de Carga y Despacho</text>
+  <text x="400" y="265" font-family="Arial, sans-serif" font-size="13" fill="#64748B" text-anchor="middle" font-weight="600">Vista de Planta  Exportar desde draw.io (archivo: Planta Coca Cola.drawio)</text>
+  <text x="400" y="285" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Diagrama completo disponible en archivos-drive/</text>
+</svg>
