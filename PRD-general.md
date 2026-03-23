@@ -45,7 +45,7 @@ El nombre debe evocar manufactura de bebidas, automatización industrial y profe
 
 ## 2. Paleta de Colores
 
-Paleta basada en rojo industrial profundo (granate), distinto del rojo brillante de ABB (#FF000F) y Coca-Cola (#F40009). Tono cálido, sofisticado, no chillón.
+Paleta basada en rojo industrial profundo (granate), distinto del rojo brillante de ABB (#FF000F) y el rojo corporativo de referencia en bebidas carbonatadas (#F40009). Tono cálido, sofisticado, no chillón.
 
 ### Colores Primarios
 
@@ -138,13 +138,75 @@ Estructura típica de cada página de módulo:
 4. Comparativos (AS-IS vs TO-BE cuando aplique)
 5. Conclusiones del módulo
 
+### 2D. Descripción detallada por módulo
+
+**Módulo 1 — Introducción a la Automatización:**  
+Contextualización de la automatización en manufactura. Se analizan niveles de automatización, tecnologías de Industria 4.0, y cómo estas aplican al sector de bebidas de alto volumen. Se establece el marco teórico para el proyecto integrador.
+
+**Módulo 2 — Gestión de Producción y Automatización:**  
+A partir de la visita técnica a la planta embotelladora de referencia, se elaboran los diagnósticos del sistema productivo actual:
+
+- Diagramas de Operaciones de Proceso (DOP) para cada producto
+- Diagramas de Análisis de Proceso (DAP) con tiempos estimados
+- Layout de planta y diagrama de flujo de materiales (norma ASME)
+- Mapa de Flujo de Valor (VSM) estado actual por línea
+- Cálculo de indicadores (Takt time, OEE, utilización, disponibilidad, MTBF, MTTR)
+- Identificación de cuellos de botella (la conclusión del equipo fue que el cuello de botella es logístico, no en las máquinas)
+- Simulación de eventos discretos en Tecnomatix Plant Simulation para validar y comparar escenarios AS-IS vs TO-BE
+
+**Módulo 3 — Planeación y Evaluación de Proyectos:**  
+Se aplican herramientas de gestión de proyectos siguiendo metodología PMI:
+
+- EDT (Estructura de Desglose del Trabajo) con 88 entregables en 11 fases
+- Cronograma con duración de 96 días
+- Análisis de Precios Unitarios (APU) para costeo
+- Presupuesto CAPEX/OPEX
+- Evaluación económica: VPN, TIR, ROI, Payback
+- Flujo de caja y sensibilidad financiera
+
+**Módulo 4 — Celdas Robotizadas:**  
+Diseño de celda de manufactura robotizada para una operación identificada como candidata a automatización. Incluye:
+
+- Justificación técnica de la robotización
+- Selección de robot y herramienta (EOAT)
+- Layout de celda y elementos periféricos
+- Simulación de trayectorias en RobotStudio
+- Análisis de seguridad industrial de la celda
+
+**Módulo 5 — Digital Factory (Gemelo Digital):**  
+Comisionamiento virtual de la línea diseñada:
+
+- Modelado 3D del sistema
+- Virtualización de sensores y actuadores
+- Integración con emulador de PLC (Logix Emulate)
+- Validación y verificación virtual de la fábrica
+
+**Módulo 6 — Controladores Industriales (PLC):**  
+Diseño de la lógica de control secuencial:
+
+- Filosofía de control del sistema
+- Grafcet con estados y transiciones
+- Programación Ladder en Studio 5000
+- Interlocks, permisos y gestión de recetas
+- Manejo de fallas y recuperación
+
+**Módulo 7 — SCADA:**  
+Implementación del sistema de supervisión:
+
+- Estándar HMI según ISA-101
+- Diseño de pantallas de operador
+- Modelo de tags SCADA
+- Implementación en Ignition
+- Alarmas, eventos e historización
+- Comunicación OPC con el PLC
+
 ---
 
 ## 3. Contexto del Proyecto
 
 ### 3.1 Descripción General
 
-Proyecto académico de la materia **Automatización de Procesos de Manufactura (APM)** enfocado en el **sector de bebidas**. El caso de estudio se basa en la visita técnica a la **planta de Coca-Cola FEMSA en Bogotá**, donde se levantó información de las líneas de producción, procesos, tiempos, indicadores y layout de planta.
+Proyecto académico de la materia **Automatización de Procesos de Manufactura (APM)** enfocado en el **sector de bebidas**. El caso de estudio se basa en la visita técnica a una **planta embotelladora de referencia en Bogotá**, donde se levantó información de las líneas de producción, procesos, tiempos, indicadores y layout de planta.
 
 El proyecto abarca el ciclo completo de ingeniería de automatización: desde el levantamiento del estado actual (AS-IS) hasta el diseño futuro (TO-BE), incluyendo simulación, diseño de control industrial (PLC/Ladder), gemelo digital, celda robotizada y sistema SCADA (Ignition).
 
@@ -154,9 +216,9 @@ Tres productos diferenciados por envase, formato, velocidad de línea e inspecci
 
 | # | Producto | Formato | Envase | Velocidad mín. | Takt Time |
 |---|----------|---------|--------|----------------|-----------|
-| 1 | Coca-Cola Clásica 400ml | Retornable | Vidrio | 20,000 bot/h | 0.18 s/bot |
-| 2 | Monster Energy 473ml | Lata | Aluminio | 30,000 latas/h | 0.12 s/lata |
-| 3 | Agua embotellada 1L | No retornable | PET (soplado) | 15,000 bot/h | 0.24 s/bot |
+| 1 | Gaseosa carbonatada 400ml | Retornable | Vidrio | 20,000 bot/h | 0.18 s/bot |
+| 2 | Bebida energética 473ml | Lata | Aluminio | 30,000 latas/h | 0.12 s/lata |
+| 3 | Agua purificada 1L | No retornable | PET (soplado) | 15,000 bot/h | 0.24 s/bot |
 
 ### 3.3 Layout de Planta (del diagrama .drawio)
 
@@ -198,7 +260,44 @@ Etiquetado → Inspección → Empaque → Embalaje → Paletizado → Almacén 
 
 ## 4. EDT - Estructura de Desglose del Trabajo
 
-> Fuente: `EDT_Cronograma.xlsx` — datos reales del proyecto.
+> Fuente: `EDT_Cronograma.xlsx` — datos reales del proyecto.  
+> Cronograma reprogramado: ver `reprogramacion/reprogramacion_apm_marzo2026.md` para fechas actualizadas, ruta crítica, festivos y alineación con calendario de clases.
+
+### 4.0 Cronograma Reprogramado (corte 22-mar-2026)
+
+El cronograma base fue reprogramado para alinear con las ventanas reales de sustentación y corregir violaciones de dependencias. Se divide en dos bloques:
+
+**Sustentación intermedia (25–27 mar 2026 · 10% integrador):**
+
+| ID | Actividad | Inicio | Fin | Días EDT | Ítems EDT |
+|----|-----------|--------|-----|----------|-----------|
+| H-F1 | Fase 1 — Alcance técnico | 11-feb | 27-feb | 8 | 1.1–1.8 |
+| H-F2 | Fase 2 — Levantamiento AS-IS | 13-feb | 10-mar | 10 | 2.1–2.10 |
+| H-F3 | Fase 3 — Diseño TO-BE | 10-mar | 18-mar | 7 | 3.1–3.7 |
+| H-F6 | Fase 6 — Viabilidad y planeación | 04-mar | 22-mar | 11 | 6.1–6.11 |
+| H-CMP | Consolidación y paquete intermedio | 22-mar | 23-mar | 2 | Cierre 6.x |
+| H-AFN | Afinación para sustentación | 24-mar | 27-mar | 4 | Guion, ensayo |
+| H-INT | Ventana sustentación intermedia | 25-mar | 27-mar | 3 | — |
+
+**Ruta crítica intermedia:** H-F1 → H-F2 → H-F3 → H-CMP → H-AFN → H-INT
+
+**Post-intermedia y sustentación final (20–22 may 2026 · 60% integrador):**
+
+| ID | Actividad | Inicio | Fin | Días háb. | Predecesoras | Ítems EDT |
+|----|-----------|--------|-----|-----------|--------------|-----------|
+| T-Arq | Arquitectura (Fase 4) | 28-mar | 07-abr | 8 | H-INT | 4.1–4.7 |
+| T-Rob | Celda robotizada (Fase 7) | 28-mar | 07-abr | 8 | H-INT | 7.1–7.8 |
+| T-Sim | Simulación (Fase 5) | 28-mar | 09-abr | 10 | H-INT | 5.1–5.8 |
+| T-PLC | Control PLC (Fase 8) | 08-abr | 16-abr | 9 | T-Arq | 8.1–8.7 |
+| T-DF | Gemelo digital (Fase 9) | 17-abr | 25-abr | 9 | T-PLC, T-Rob | 9.1–9.5 |
+| T-SCADA | SCADA (Fase 10) | 22-abr | 09-may | 17 | T-Arq, T-PLC | 10.1–10.7 |
+| T-Int | Integración E2E (Fase 11 parcial) | 10-may | 15-may | 6 | T-DF, T-SCADA | 11.1–11.2 |
+| T-Cierre | Cierre académico | 10-may | 19-may | 10 | T-SCADA | 11.3–11.5 |
+| H-Fin | Sustentación final | 20-may | 22-may | 3 | T-Int, T-Cierre | — |
+
+**Ruta crítica final:** T-Arq → T-PLC → T-SCADA → T-Int → H-Fin (40 días hábiles)
+
+**Festivos descontados:** Semana Santa (01–03 abr), Día del Trabajo (01 may).
 
 ### 4.1 Resumen por Fase
 
@@ -362,6 +461,33 @@ Etiquetado → Inspección → Empaque → Embalaje → Paletizado → Almacén 
 | 11.8 | Sustentación final preparada | 1 | Hito |
 | 11.9 | Reflexiones de aprendizaje consolidadas | 1 | |
 
+### 4.3 Cronograma Reprogramado (marzo 2026)
+
+> **Documento de referencia completo:** `reprogramacion/reprogramacion_apm_marzo2026.md`
+
+El cronograma original fue reprogramado el 22-mar-2026 para alinear fechas con el calendario de clases, corregir dependencias y descontar festivos (Semana Santa 01–03-abr, Día del Trabajo 01-may).
+
+**Hitos clave:**
+
+| Hito | Fecha |
+|------|-------|
+| Entrega materiales intermedia | 23-mar-2026 |
+| Sustentación intermedia | 25–27-mar-2026 |
+| Inicio bloque post-intermedia (Arq + Rob + Sim en paralelo) | 28-mar-2026 |
+| Semana Santa (no hábil) | 01–03-abr-2026 |
+| Inicio PLC (alineado con clase) | 08-abr-2026 |
+| Inicio Digital Factory + SCADA (paralelos) | 17-abr / 22-abr-2026 |
+| Día del Trabajo (no hábil) | 01-may-2026 |
+| Fin SCADA (ruta crítica) | 09-may-2026 |
+| Integración y cierre | 10–19-may-2026 |
+| Sustentación final | 20–22-may-2026 |
+
+**Ruta crítica final:** Arquitectura (8d) → PLC (9d) → SCADA (17d) → Integración (6d) = **40 días hábiles** de trabajo en cadena.
+
+**Paralelismos aplicados:**
+- Bloque A: Arquitectura ‖ Robótica ‖ Simulación (misma predecesora, equipos distintos)
+- Bloque C: Digital Factory ‖ SCADA (independientes según PRD, ambos post-PLC)
+
 ---
 
 ## 5. Diccionario EDT
@@ -396,18 +522,120 @@ Etiquetado → Inspección → Empaque → Embalaje → Paletizado → Almacén 
 | 2.9 | Fallas típicas y parámetros de mantenimiento | Se documentan fallas recurrentes y variables de mantenimiento. | Las fallas y parámetros principales están identificados. | Tabla de fallas y mantenimiento. |
 | 2.10 | Modelo conceptual de simulación documentado | Se formula conceptualmente el modelo de simulación. | El modelo describe entidades, recursos, colas, reglas y supuestos. | Documento del modelo conceptual. |
 
-### Fases 3–11: Definiciones completas
+### Fase 3: Diseño Futuro del Proceso Definido
 
-> Las definiciones completas de las fases 3 a 11 están disponibles en `archivos-drive/extracted/EDT_Explicado.xlsx`. El diccionario cubre **88 entregables** con descripción, criterio de cierre y evidencia esperada para cada uno. Consultar el archivo fuente para las fases:
-> - Fase 3: Diseño futuro del proceso
-> - Fase 4: Arquitectura de automatización e instrumentación
-> - Fase 5: Evaluación productiva por simulación
-> - Fase 6: Viabilidad técnico-económica
-> - Fase 7: Celda robotizada
-> - Fase 8: Sistema de control industrial
-> - Fase 9: Gemelo digital
-> - Fase 10: Supervisión SCADA
-> - Fase 11: Cierre académico y entregables
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 3.1 | Objetivos de mejora aprobados | Se formulan metas de mejora del sistema en desempeño, calidad, tiempos o seguridad. | Los objetivos están definidos y validados por el equipo. | Lista de objetivos de mejora. |
+| 3.2 | Propuesta Lean/preautomatización formulada | Se define un conjunto de mejoras previas o complementarias a la automatización. | Existe una propuesta de mejora con sustento técnico. | Documento de propuesta Lean/preautomatización. |
+| 3.3 | VSM estado futuro elaborado | Se construye el mapa de flujo de valor del estado futuro. | El VSM futuro representa la propuesta de mejora de forma consistente. | VSM TO-BE. |
+| 3.4 | Estrategia multiproducto definida | Se plantea cómo operará la línea con varios productos y parámetros diferenciados. | La lógica general de operación multiproducto está documentada. | Documento o tabla de estrategia multiproducto. |
+| 3.5 | Estrategia de cambio de formato definida | Se define cómo se ejecutarán los cambios de producto o formato. | La estrategia de set-up y cambio de formato está documentada. | Procedimiento o esquema de cambio de formato. |
+| 3.6 | Estrategia de fallas y recuperación definida | Se define cómo responderá el sistema ante paros, fallas y recuperación operativa. | Existe una lógica general de manejo y recuperación ante fallas. | Documento de estrategia de fallas y recuperación. |
+| 3.7 | Estrategia de rechazo y reproceso definida | Se establece el tratamiento de producto no conforme, rechazo y posible reproceso. | La ruta de manejo del rechazo y reproceso está definida. | Esquema de rechazo/reproceso o matriz de decisión. |
+
+### Fase 4: Arquitectura de Automatización e Instrumentación Definida
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 4.1 | Arquitectura ISA-95 documentada | Se define la estructura del sistema según niveles ISA-95 y sus funciones. | Los niveles y funciones aplicables están documentados. | Diagrama o documento de arquitectura ISA-95. |
+| 4.2 | Arquitectura de comunicaciones definida | Se establece cómo se comunicarán PLC, SCADA, gemelo digital y demás componentes. | Existe un esquema claro de comunicación entre sistemas. | Diagrama de comunicaciones. |
+| 4.3 | Topología de red industrial definida | Se define la estructura de red industrial, segmentación y conexiones principales. | La topología propuesta está representada y justificada. | Diagrama de red industrial. |
+| 4.4 | Lista de E/S y tags consolidada | Se consolida el listado de señales de entrada, salida y tags del sistema. | Las señales principales están identificadas y organizadas. | Lista de E/S y tags. |
+| 4.5 | PFD/P&ID del sistema elaborados | Se elaboran los diagramas de flujo de proceso e instrumentación del sistema. | Se dispone de diagramas coherentes con el proceso y la automatización planteada. | PFD y P&ID del sistema. |
+| 4.6 | Matriz de señales y alarmas elaborada | Se organizan señales, rangos, tipos de dato, alarmas y criticidad. | Existe una matriz usable para control y supervisión. | Matriz de señales y alarmas. |
+| 4.7 | Requisitos de historización, eventos y lotes definidos | Se define qué variables, eventos y registros de lote deben almacenarse. | La información mínima a registrar está especificada. | Especificación de historización, eventos y lotes. |
+
+### Fase 5: Evaluación Productiva por Simulación Completada
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 5.1 | Modelo AS-IS implementado | Se implementa en simulación el estado actual del proceso. | El modelo AS-IS corre y representa la lógica base del sistema. | Archivo del modelo AS-IS. |
+| 5.2 | Modelo AS-IS validado | Se verifica la consistencia del modelo AS-IS frente al proceso analizado. | El modelo validado es aceptable para análisis de desempeño. | Registro o informe de validación AS-IS. |
+| 5.3 | Escenarios AS-IS simulados | Se ejecutan diferentes escenarios del sistema actual. | Existen resultados de simulación para escenarios representativos. | Reporte de escenarios AS-IS. |
+| 5.4 | Desempeño AS-IS cuantificado | Se cuantifican indicadores del estado actual con base en simulación. | Los resultados numéricos del desempeño AS-IS están consolidados. | Tabla o reporte de desempeño AS-IS. |
+| 5.5 | Escenarios TO-BE diseñados | Se definen los escenarios del sistema futuro a evaluar. | Los escenarios TO-BE están descritos y listos para simulación. | Documento de escenarios TO-BE. |
+| 5.6 | Modelo TO-BE simulado | Se simula el sistema mejorado. | El modelo TO-BE corre y genera resultados comparables. | Archivo del modelo TO-BE y resultados. |
+| 5.7 | OEE y KPIs por escenario calculados | Se calculan indicadores de desempeño por escenario. | Cada escenario tiene sus KPIs y OEE reportados. | Tabla comparativa de KPIs y OEE. |
+| 5.8 | Comparativo AS-IS vs TO-BE consolidado | Se comparan resultados del sistema actual y futuro. | Existe un análisis consolidado de mejoras y trade-offs. | Informe o tabla comparativa AS-IS vs TO-BE. |
+
+### Fase 6: Viabilidad Técnico-Económica Sustentada
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 6.1 | EDT y diccionario EDT aprobados | Se formaliza la EDT del proyecto junto con su diccionario. | La EDT y su diccionario están completos y revisados por el equipo. | EDT final y diccionario EDT. |
+| 6.2 | Cronograma base del proyecto estructurado | Se organiza la secuencia del proyecto con duraciones, dependencias e hitos. | Existe un cronograma base claro y coherente. | Gantt o cronograma base. |
+| 6.3 | Plan de recursos consolidado | Se identifican recursos humanos, técnicos y de soporte requeridos. | Los recursos principales del proyecto están consolidados. | Tabla de recursos. |
+| 6.4 | Presupuesto CAPEX/OPEX consolidado | Se consolidan costos de inversión y costos operativos de la solución. | El presupuesto está estructurado por rubros principales. | Tabla de presupuesto CAPEX/OPEX. |
+| 6.5 | Evidencias de precios recopiladas | Se reúnen cotizaciones, referencias o soportes de precios. | Los valores usados tienen soporte identificable. | Cotizaciones, capturas o referencias de precio. |
+| 6.6 | Flujo de caja documentado | Se construye el flujo de caja con supuestos y resultados financieros base. | El flujo de caja es coherente con el presupuesto y la solución. | Hoja de cálculo de flujo de caja. |
+| 6.7 | Indicadores financieros calculados | Se calculan indicadores financieros de evaluación del proyecto. | Los indicadores financieros están calculados y explicados. | Tabla de VPN, TIR, ROI, Payback u otros. |
+| 6.8 | Sensibilidad financiera elaborada | Se analiza el efecto de cambios en supuestos críticos. | Se presentan escenarios comparables con su impacto financiero. | Análisis de sensibilidad o escenarios. |
+| 6.9 | Propuesta de valor formulada | Se define el valor que la solución ofrece al cliente o empresa. | La propuesta de valor está expresada de forma clara y concreta. | Canvas, ficha o texto de propuesta de valor. |
+| 6.10 | Oferta comercial estructurada | Se plantea la oferta al cliente con alcance, beneficios y justificación. | La oferta es comprensible y consistente con la solución propuesta. | Documento de oferta comercial. |
+| 6.11 | Modelo de negocio resumido definido | Se resume el modelo de negocio asociado a la solución. | El esquema de cliente, problema, solución, costos e ingresos está definido. | Resumen de modelo de negocio o canvas. |
+
+### Fase 7: Celda Robotizada Diseñada y Validada
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 7.1 | Justificación de robotización sustentada | Se argumenta técnicamente la pertinencia de robotizar parte del proceso. | La robotización queda justificada frente al problema del proceso. | Documento de justificación técnica. |
+| 7.2 | Robot y herramienta de toma seleccionados | Se seleccionan el robot y el sistema de agarre adecuados. | La selección está sustentada con criterios técnicos. | Ficha de selección de robot y EOAT. |
+| 7.3 | Layout de celda elaborado | Se diseña la distribución física de la celda robotizada. | El layout representa ubicación, flujo y accesos básicos. | Plano o layout de la celda. |
+| 7.4 | Sensores y periféricos de celda definidos | Se definen los elementos auxiliares necesarios para la celda. | Existe un listado funcional de sensores y periféricos. | Tabla de sensores y periféricos. |
+| 7.5 | Tiempos de celda cuantificados | Se calculan o estiman tiempos de ciclo y operación de la celda. | Los tiempos son suficientes para evaluar desempeño de la celda. | Tabla de tiempos de celda. |
+| 7.6 | Simulación RobotStudio validada | Se valida el funcionamiento de la celda en RobotStudio o similar. | La simulación reproduce la operación prevista sin errores críticos. | Archivo de simulación y evidencia de validación. |
+| 7.7 | Medidas de seguridad de celda definidas | Se establecen medidas de seguridad física y lógica de la celda. | La propuesta de seguridad es coherente con la operación robotizada. | Documento o plano de seguridad de celda. |
+| 7.8 | Riesgos de celda evaluados | Se analizan riesgos asociados a la celda y sus mitigaciones. | Existe evaluación de riesgos con controles propuestos. | Matriz de riesgos de celda. |
+
+### Fase 8: Sistema de Control Industrial Validado
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 8.1 | Filosofía de control definida | Se establecen modos de operación y principios generales del control. | La filosofía de control está documentada y es coherente con el sistema. | Documento de filosofía de control. |
+| 8.2 | Grafcet del sistema elaborado | Se representa la lógica secuencial del sistema mediante Grafcet. | El Grafcet cubre los estados y secuencias principales. | Diagrama Grafcet. |
+| 8.3 | Interlocks y permisos definidos | Se documentan enclavamientos, permisos y bloqueos de operación. | Los interlocks y permisos clave están identificados. | Matriz o tabla de interlocks y permisos. |
+| 8.4 | Lógica Ladder implementada | Se implementa la secuencia de control en Ladder. | La lógica Ladder corre y refleja la secuencia definida. | Programa Ladder. |
+| 8.5 | Gestión de recetas implementada | Se implementa el manejo de recetas o parámetros por producto. | El sistema permite aplicar o seleccionar recetas definidas. | Evidencia funcional de recetas en control. |
+| 8.6 | Manejo de fallas implementado | Se implementa la lógica de respuesta ante fallas y recuperación. | El sistema reconoce y gestiona fallas principales. | Programa, matriz o evidencia funcional de fallas. |
+| 8.7 | Validación funcional del control completada | Se verifica el comportamiento del control en condiciones normales y de excepción. | El control cumple funcionalmente lo esperado. | Protocolo o reporte de validación funcional. |
+
+### Fase 9: Gemelo Digital Integrado Validado
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 9.1 | Modelo 3D del sistema desarrollado | Se desarrolla la representación tridimensional del sistema. | El modelo 3D es suficiente para integración y validación. | Archivo o capturas del modelo 3D. |
+| 9.2 | Sensores y actuadores virtuales integrados | Se incorporan elementos virtuales de sensado y actuación al modelo. | Los elementos virtuales están conectados al comportamiento del sistema. | Evidencia de integración de señales virtuales. |
+| 9.3 | Integración con Logix Emulate implementada | Se integra el modelo virtual con el entorno de emulación de control. | Existe intercambio funcional de señales entre modelo y emulador. | Evidencia de conexión con Logix Emulate. |
+| 9.4 | Pruebas integradas ejecutadas | Se realizan pruebas del sistema integrado modelo-control-señales. | Las pruebas se ejecutan y documentan con resultados claros. | Registro o informe de pruebas integradas. |
+| 9.5 | Validación funcional del sistema completada | Se valida el comportamiento global del sistema integrado. | El sistema integrado se comporta de forma aceptable frente a lo esperado. | Informe de validación funcional del gemelo digital. |
+
+### Fase 10: Supervisión SCADA Implementada
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 10.1 | Estándar HMI ISA-101 definido | Se definen criterios visuales y de navegación para la HMI. | Existe una guía base de diseño HMI consistente. | Documento de estándar HMI. |
+| 10.2 | Pantallas HMI diseñadas | Se diseñan las pantallas de supervisión requeridas por el sistema. | El conjunto de pantallas necesarias está diseñado. | Mockups, vistas o pantallas diseñadas. |
+| 10.3 | Modelo de tags SCADA estructurado | Se organiza la estructura lógica de variables y equipos del SCADA. | La estructura de tags es usable para implementación. | Árbol o tabla de tags SCADA. |
+| 10.4 | SCADA en Ignition implementado | Se implementa el sistema de supervisión en Ignition. | El proyecto SCADA está montado y operativo a nivel funcional base. | Proyecto Ignition o capturas funcionales. |
+| 10.5 | Comunicación OPC operativa | Se habilita la comunicación OPC entre control y supervisión. | Las variables se intercambian correctamente entre ambas capas. | Evidencia de tags comunicando por OPC. |
+| 10.6 | Alarmas, eventos e historización configurados | Se configuran alarmas, registro de eventos e historización mínima. | El sistema registra y muestra alarmas, eventos y datos históricos clave. | Configuración y evidencia funcional de alarmas/eventos/histórico. |
+| 10.7 | Interacción del operador habilitada | Se habilitan acciones del operador desde el SCADA. | El operador puede ejecutar las interacciones previstas. | Evidencia funcional de interacción operador-SCADA. |
+| 10.8 | Validación funcional con gemelo digital completada | Se valida el SCADA junto con el gemelo digital y el control. | La supervisión funciona de forma integrada con el entorno virtual. | Protocolo o evidencia de validación integrada. |
+
+### Fase 11: Cierre Académico y Entregables del Curso
+
+| Código | Entregable | Descripción | Criterio de cierre | Evidencia |
+|--------|-----------|-------------|-------------------|-----------|
+| 11.1 | Criterios de aceptación definidos | Se establecen criterios mínimos para aceptar los principales entregables del proyecto. | Los criterios de aceptación están claros y documentados. | Lista o matriz de criterios de aceptación. |
+| 11.2 | Pruebas integrales end-to-end ejecutadas | Se realizan pruebas completas del sistema integrado. | Las pruebas integrales se ejecutan y documentan. | Registro de pruebas end-to-end. |
+| 11.3 | Cuadro resumen final consolidado | Se consolida la información final comparativa del proyecto. | El cuadro final reúne indicadores, tiempos, costos y resultados principales. | Cuadro resumen final. |
+| 11.4 | Repositorio GitHub curado | Se organiza el repositorio con archivos, evidencias y documentación del proyecto. | El repositorio está completo, ordenado y usable. | Enlace o capturas del repositorio. |
+| 11.5 | Sitio web del proyecto completado | Se completa el sitio web del proyecto con las secciones requeridas. | El sitio está listo y contiene la información principal del proyecto. | Sitio web publicado o capturas. |
+| 11.6 | Video de proyecto producido | Se produce el video final de presentación y demostración del proyecto. | El video cumple contenido y formato esperados. | Archivo o enlace del video. |
+| 11.7 | Sustentación intermedia preparada | Se preparan materiales y narrativa para la sustentación intermedia. | La presentación intermedia está lista para exponer. | Diapositivas y guion de sustentación intermedia. |
+| 11.8 | Sustentación final preparada | Se preparan materiales y defensa técnica para la sustentación final. | La presentación final y sus soportes están listos. | Diapositivas y guion de sustentación final. |
+| 11.9 | Reflexiones de aprendizaje consolidadas | Se consolidan aprendizajes, dificultades y recomendaciones del proceso. | La reflexión final del equipo está redactada y organizada. | Documento de reflexiones de aprendizaje. |
 
 ---
 
@@ -417,7 +645,7 @@ Etiquetado → Inspección → Empaque → Embalaje → Paletizado → Almacén 
 
 ### 6.1 Resumen por Producto
 
-| Indicador | Coca-Cola Retornable | Monster Energy (lata) | Agua 1L (PET) |
+| Indicador | Gaseosa carbonatada 400ml (retornable) | Bebida energética 473ml (lata) | Agua purificada 1L (PET) |
 |-----------|---------------------|----------------------|----------------|
 | Demanda mínima | 20,000 bot/h | 30,000 latas/h | 15,000 bot/h |
 | Takt time | 0.18 s/bot | 0.12 s/lata | 0.24 s/bot |
@@ -449,26 +677,105 @@ OEE = Disponibilidad × Performance Efficiency × Quality Rate
 
 ## 7. Diagramas Analíticos de Proceso (DAP)
 
-> Fuente: `DAP.xlsx` — datos reales del proyecto. Se documenta el Flow Process Chart para cada producto.
+> Fuente: `DAP.xlsx` — datos reales del proyecto. Flow Process Chart para cada producto.
 
-### 7.1 Coca-Cola 400ml Retornable (25 operaciones)
+### 7.1 Gaseosa carbonatada 400 ml retornable (25 operaciones)
 
-**Flujo:** Saneamiento → Recepción agua → Tratamiento → Control calidad agua → Refinamiento azúcar → Jarabe simple → Mezcla concentrado → Verificación jarabe → Envío a tanque → Enfriamiento → Carbonatación → Envío a línea → Recepción botellas → Rectificado etiquetado → Lavado/desinfección → Inspección automática → Transporte a llenadora → Llenado 400ml → Tapado corona → Verificación nivel/sellado → Codificación lote → Control final → Transporte bodega → Empaque canastillas → Almacenamiento
+| # | Descripción | Cantidad | Dist. (m) | Tiempo (s) | Tipo | Observaciones |
+|---|------------|----------|-----------|-----------|------|---------------|
+| 1 | Saneamiento previo a cambio de sabor | Única vez | — | 7,200–10,800 | O | Depende del producto anterior |
+| 2 | Recepción de agua de red o pozo | 1 Lote | 50 | 259.2 | O | Agua acueducto |
+| 3 | Tratamiento y purificación del agua | 1 Lote | — | 259.2 | O | Filtración, cloración, UV |
+| 4 | Control de calidad del agua | 1 muestra | — | 30 | I | pH, conductividad |
+| 5 | Refinamiento de azúcar | 1 lote | — | 240 | O | |
+| 6 | Preparación del jarabe simple (agua + azúcar) | 1 Lote | — | 259.2 | O | Disolución azúcar |
+| 7 | Mezcla con concentrado (jarabe terminado) | 1 Lote | — | 259.2 | O | |
+| 8 | Verificación del jarabe | 1 muestra | — | 20 | I | Medición de °Brix |
+| 9 | Envío del jarabe a tanque de mezcla | 1 Lote | 6 | 100 | T | Bombeo por tubería |
+| 10 | Enfriamiento del jarabe | 1 Lote | — | 259.2 | O | |
+| 11 | Carbonatación (mezcla con CO₂) | 1 Lote | — | 30 | O | Proceso en carbonatador |
+| 12 | Envío a línea de llenado | 1 Lote | 8 | 8 | T | |
+| 13 | Recepción de botellas de vidrio retornables | 1 Botella | — | 0.18 | O | |
+| 14 | Rectificado de etiquetado | 1 Botella | — | 0.18 | O | Corrección de impresión cuando necesario |
+| 15 | Lavado y desinfección de botellas | 1 Botella | — | 0.18 | O | Lavadora industrial |
+| 16 | Inspección automática de botellas | 1 Botella | — | 0.18 | I | Cámaras detectan defectos |
+| 17 | Botellas limpias a llenadora | 1 Botella | 20 | 20 | T | |
+| 18 | Llenado de bebida (400 ml) | 1 Botella | — | 0.18 | O | |
+| 19 | Tapado con tapa corona | 1 Botella | — | 0.15 | O | |
+| 20 | Verificación de nivel y sellado | 1 Botella | — | 0.10 | I | Sensor o visión artificial |
+| 21 | Codificación de lote y fecha | 1 Botella | — | 0.12 | O | |
+| 22 | Control final de calidad | 1 Muestra | — | 30 | I | |
+| 23 | Transporte a bodega | 1 botella | 100 | 100 | T | Bandas muy largas |
+| 24 | Empaque en canastillas | 24 botellas | — | 4.32 | O | |
+| 25 | Almacenamiento en bodega | 1 lote | — | 255 | A | 1,440 u en palets |
 
-| Tipo | Cantidad |
-|------|----------|
-| Operaciones (O) | 16 |
-| Transportes (T) | 4 |
-| Inspecciones (I) | 4 |
-| Almacenamientos (A) | 1 |
+**Resumen:** O=16 · T=4 · I=5 · A=1
 
-### 7.2 Monster Energy Lata (23 operaciones)
+### 7.2 Bebida energética 473 ml lata (23 operaciones)
 
-**Flujo:** Saneamiento → Recepción agua → Tratamiento → Control calidad → Refinamiento azúcar → Jarabe base (cafeína, aditivos) → Mezcla concentrado Monster → Verificación → Transporte tanque → Enfriamiento → Carbonatación → Transporte línea → Recepción latas vacías → Enjuague latas → Transporte llenadora → Llenado → Sellado → Inspección sellado → Codificación → Control peso → Transporte bodega → Empaque packs → Almacenamiento
+| # | Descripción | Cantidad | Dist. (m) | Tiempo (s) | Tipo | Observaciones |
+|---|------------|----------|-----------|-----------|------|---------------|
+| 1 | Saneamiento previo a cambio de sabor | Única vez | — | 10,800 | O | Depende del producto anterior |
+| 2 | Recepción de agua de red o pozo | 1 Lote | 50 | 10 | O | Agua acueducto |
+| 3 | Tratamiento y purificación de agua | 1 Lote | — | 60 | O | Osmosis inversa |
+| 4 | Control de calidad del agua | 1 muestra | — | 30 | I | pH, conductividad |
+| 5 | Refinamiento de azúcar | 1 lote | — | 60 | O | |
+| 6 | Preparación del jarabe base | 1 Lote | — | 120 | O | Mezcla azúcar, cafeína, aditivos |
+| 7 | Mezcla con concentrado de bebida energética | 1 Lote | — | 60 | O | |
+| 8 | Verificación de jarabe | 1 muestra | — | 20 | I | Control °Brix |
+| 9 | Transporte a tanque de mezcla | 1 Lote | 6 | 15 | T | |
+| 10 | Enfriamiento de bebida | 1 Lote | — | 40 | O | |
+| 11 | Carbonatación | 1 Lote | — | 30 | O | |
+| 12 | Transporte a línea de llenado | 1 Lote | 8 | 8 | T | |
+| 13 | Recepción de latas vacías | 1 Lata | — | 0.12 | O | Latas de aluminio nuevas |
+| 14 | Enjuague de latas | 1 Lata | — | 0.12 | O | Aire ionizado o agua estéril |
+| 15 | Transporte a llenadora | 1 Lata | 4 | 4 | T | |
+| 16 | Llenado de bebida | 1 Lata | — | 0.12 | O | |
+| 17 | Sellado de lata | 1 Lata | — | 0.12 | O | |
+| 18 | Inspección de sellado | 1 Lata | — | 0.12 | I | |
+| 19 | Codificación de lote y fecha | 1 Lata | — | 0.12 | O | |
+| 20 | Control de peso | 1 Lata | — | 0.12 | I | Báscula |
+| 21 | Transporte a bodega | 1 Lata | 100 | 100 | T | Bandas muy largas |
+| 22 | Empaque en bandejas o packs | 12 Latas | — | 1.44 | O | Empaque termoencogible |
+| 23 | Almacenamiento producto terminado | 1 lote | — | 172.8 | A | 1,440 u en palet |
 
-### 7.3 Agua Embotellada 1L PET (19 operaciones)
+**Resumen:** O=14 · T=4 · I=4 · A=1
 
-**Flujo:** Saneamiento → Recepción agua cruda → Filtración primaria → Tratamiento/purificación → Control calidad → Transporte tanque → Recepción preformas PET → Soplado botellas → Inspección → Transporte llenadora → Llenado → Colocación tapa → Inspección nivel/tapa → Etiquetado → Codificación → Control final → Transporte bodega → Empaque packs → Almacenamiento
+### 7.3 Agua purificada 1 L PET (19 operaciones)
+
+| # | Descripción | Cantidad | Dist. (m) | Tiempo (s) | Tipo | Observaciones |
+|---|------------|----------|-----------|-----------|------|---------------|
+| 1 | Saneamiento previo a cambio de producto | Única vez | — | 7,200–10,800 | O | Depende del producto anterior |
+| 2 | Recepción de agua cruda | 1 lote | 50 | 10 | O | Agua acueducto |
+| 3 | Filtración primaria | 1 lote | — | 40 | O | Remoción de partículas |
+| 4 | Tratamiento y purificación | 1 lote | — | 60 | O | |
+| 5 | Control de calidad del agua | 1 muestra | — | 30 | I | pH, conductividad, microbiología |
+| 6 | Transporte a tanque de almacenamiento | 1 lote | 6 | 15 | T | |
+| 7 | Recepción de preformas PET | 1 lote | — | 10 | O | |
+| 8 | Soplado de botellas | 1 botella | — | 0.24 | O | Moldeo por soplado |
+| 9 | Inspección de botellas | 1 botella | — | 0.24 | I | |
+| 10 | Transporte a llenadora | 1 botella | 4 | 4 | T | |
+| 11 | Llenado de agua | 1 botella | — | 0.24 | O | |
+| 12 | Colocación de tapa | 1 botella | — | 0.24 | O | |
+| 13 | Inspección de nivel y tapa | 1 botella | — | 0.24 | I | Sensor de nivel |
+| 14 | Etiquetado | 1 botella | — | 0.24 | O | |
+| 15 | Codificación lote y fecha | 1 botella | — | 0.24 | O | |
+| 16 | Control final de calidad | 1 muestra | — | 10 | I | |
+| 17 | Transporte a bodega | 10 botellas | 100 | 100 | T | Bandas muy largas |
+| 18 | Empaque en packs | 10 botellas | — | 2.4 | O | Empaque termoencogible |
+| 19 | Almacenamiento producto terminado | 1 lote | — | 150 | A | 640 u en palet |
+
+**Resumen:** O=12 · T=3 · I=4 · A=1
+
+### 7.4 Leyenda de tipos
+
+| Símbolo | Tipo | Significado |
+|---------|------|-------------|
+| O | ○ | Operación |
+| T | ➪ | Transporte |
+| I | □ | Inspección |
+| D | D | Pausa / Demora |
+| A | ▽ | Almacenamiento |
 
 ---
 
@@ -519,7 +826,7 @@ La EDT de producción modela los entregables del proceso productivo (no del proy
 
 | Herramienta | Uso | Fase EDT |
 |-------------|-----|----------|
-| **FlexSim** | Simulación de procesos AS-IS y TO-BE | 5 |
+| **Tecnomatix Plant Simulation (Siemens)** | Simulación de eventos discretos AS-IS y TO-BE | 2, 5 |
 | **Studio 5000 / RSLogix** | Programación Ladder para PLC Allen-Bradley | 8 |
 | **Logix Emulate** | Emulación de controlador para pruebas sin hardware | 8, 9 |
 | **RobotStudio (ABB)** | Simulación de celda robotizada | 7 |
@@ -610,6 +917,8 @@ Los agentes pueden usar Model Context Protocol (MCP) servers cuando sea necesari
 
 > Fuente: `archivos-drive/` — archivos reales del Google Drive del equipo.
 
+> **Nota:** Algunos nombres de archivo conservan nomenclatura histórica del respaldo en Drive; la columna «Contenido» describe el entregable con denominaciones de producto genéricas.
+
 | Archivo | Tipo | Contenido |
 |---------|------|-----------|
 | `Planta Coca Cola.png` | Imagen | Foto/diagrama de la planta |
@@ -618,13 +927,13 @@ Los agentes pueden usar Model Context Protocol (MCP) servers cuando sea necesari
 | `EDT_Cronograma.xlsx` | Excel | EDT con cronograma y duración por tarea |
 | `EDT_Explicado.xlsx` | Excel | Diccionario EDT con criterios y evidencias |
 | `DAP.xlsx` | Excel | Diagramas Analíticos de Proceso (3 productos) |
-| `Cálculos indicadores.xlsx` | Excel | Indicadores de producción (Coca-Cola, Monster, Agua) |
+| `Cálculos indicadores.xlsx` | Excel | Indicadores de producción (gaseosa 400ml, bebida energética 473ml, agua 1L) |
 | `Cálculos indicadores - Anexo.xlsx` | Excel | Indicadores complementarios |
 | `Diagramas VSM (final).pdf` | PDF | Value Stream Mapping final |
 | `Diagrama en blanco (1).pdf` | PDF | Plantilla de diagrama |
-| `DiagramaCocaFinal.jpg` | Imagen | Diagrama de operaciones Coca-Cola |
-| `DiagramaMonsterFinal.jpg` | Imagen | Diagrama de operaciones Monster |
-| `DiagramaBotellaAgua.jpg` | Imagen | Diagrama de operaciones Agua |
+| `DiagramaCocaFinal.jpg` | Imagen | Diagrama de operaciones gaseosa carbonatada 400ml |
+| `DiagramaMonsterFinal.jpg` | Imagen | Diagrama de operaciones bebida energética 473ml |
+| `DiagramaBotellaAgua.jpg` | Imagen | Diagrama de operaciones agua purificada 1L |
 | `Comenzar a planear su proyecto.docx` | Word | Documento de planeación inicial |
 | `Documento sin título.docx` | Word | Notas de selección de productos y análisis |
 | `Taller_1___Grupo_4.pdf` | PDF | Taller 1 entregado |
@@ -640,13 +949,13 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [x] Configurar paleta de colores (granate `#A8201A` como primario)
 - [x] Organizar estructura de carpetas del repositorio
 - [x] Configurar `.cursor/` con reglas, skills y agents (depurado de Aerosophia)
-- [x] Sincronizar `archivos-drive/` con Google Drive (rclone → `unal:APM`)
+- [x] Sincronizar `archivos-drive/` con Google Drive (rclone → Unidad Compartida APM_Grupo4)
 - [x] Crear `.gitignore` apropiado
 - [x] Hacer commit inicial
 
 ### Fase 1: Alcance Técnico (EDT 1.x)
-- [x] 1.1 Definir familia de bebidas: Sector Bebidas (Coca-Cola FEMSA Bogotá)
-- [x] 1.2 Definir portafolio: Coca-Cola 400ml retornable, Monster 473ml lata, Agua 1L PET
+- [x] 1.1 Definir familia de bebidas: Sector Bebidas (planta embotelladora de referencia en Bogotá)
+- [x] 1.2 Definir portafolio: Gaseosa carbonatada 400ml retornable, bebida energética 473ml lata, agua purificada 1L PET
 - [x] 1.3 Especificar envases: Vidrio retornable, Aluminio lata, PET soplado
 - [ ] 1.4 Documentar recetas y parámetros críticos por producto `[PRUEBA: pendiente datos de recetas reales]`
 - [ ] 1.5 Identificar transformaciones térmicas/químicas por producto
@@ -655,7 +964,7 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [x] 1.8 Establecer indicadores por producto (Takt time, OEE, etc.)
 
 ### Fase 2: Levantamiento AS-IS (EDT 2.x)
-- [x] 2.1 Consolidar levantamiento técnico (visita Coca-Cola Bogotá)
+- [x] 2.1 Consolidar levantamiento técnico (visita planta embotelladora de referencia, Bogotá)
 - [x] 2.2 Elaborar diagrama general del proceso (layout .drawio)
 - [x] 2.3 Definir flujo de materiales e información
 - [ ] 2.4 Caracterizar estaciones, equipos y recursos `[PRUEBA: pendiente detalle de equipos reales]`
@@ -685,7 +994,7 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [ ] 4.7 Definir requisitos de historización, eventos y lotes
 
 ### Fase 5: Simulación (EDT 5.x)
-- [ ] 5.1 Implementar modelo AS-IS en FlexSim
+- [ ] 5.1 Implementar modelo AS-IS en Tecnomatix Plant Simulation
 - [ ] 5.2 Validar modelo AS-IS
 - [ ] 5.3 Simular escenarios AS-IS
 - [ ] 5.4 Cuantificar desempeño AS-IS
@@ -750,9 +1059,9 @@ Este checklist guía la ejecución del proyecto. Cada item debe marcarse `[x]` a
 - [ ] 11.4 Curar repositorio GitHub
 - [x] 11.5a Landing page del sitio web (hero, proceso, productos, indicadores, fases, equipo)
 - [x] 11.5b Reestructurar sitio web a arquitectura modular (7 páginas de módulo creadas con placeholder)
-- [ ] 11.5c Llenar contenido Módulo 1: Introducción a la Automatización
-- [ ] 11.5d Llenar contenido Módulo 2: Gestión y evaluación de la producción
-- [ ] 11.5e Llenar contenido Módulo 3: Planeación y Evaluación de proyectos
+- [x] 11.5c Llenar contenido Módulo 1: Introducción a la Automatización
+- [x] 11.5d Llenar contenido Módulo 2: Gestión y evaluación de la producción
+- [x] 11.5e Llenar contenido Módulo 3: Planeación y Evaluación de proyectos
 - [ ] 11.5f Llenar contenido Módulo 4: Celdas de manufactura robotizadas
 - [ ] 11.5g Llenar contenido Módulo 5: Digital Factory
 - [ ] 11.5h Llenar contenido Módulo 6: Controladores industriales (PLC)
@@ -825,9 +1134,9 @@ apm/
 
 ### Configuración actual: `rclone` v1.73.2
 
-Instalado en `~/.local/bin/rclone`. Remote configurado: `unal` (Google Drive personal).
+Instalado en `~/.local/bin/rclone`. Remote configurado: `unal` (Unidad Compartida **APM_Grupo4**, team_drive ID `0AO2oxGaDvYBvUk9PVA`).
 
-La carpeta del proyecto en Drive es **`unal:APM`**.
+La raíz del remote `unal:` apunta directamente al contenido de la unidad compartida.
 
 **Descargar Drive → local:**
 ```bash
