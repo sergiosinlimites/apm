@@ -52,7 +52,7 @@
   }
 
   function toggleDropdown(ev) {
-    if (!isMobileNavLayout() || !navDropdown || !navDropdownBtn) return;
+    if (!navDropdown || !navDropdownBtn) return;
     ev.preventDefault();
     ev.stopPropagation();
     var willOpen = !navDropdown.classList.contains("nav__dropdown--open");
@@ -69,7 +69,7 @@
   }
 
   document.addEventListener("click", function (ev) {
-    if (!isMobileNavLayout() || !navDropdown) return;
+    if (!navDropdown) return;
     if (!navDropdown.contains(ev.target)) {
       closeDropdown();
     }
