@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Introducción a la Automatización — FluxLine · Industria 4.0 y niveles de automatización.">
+  <meta name="description" content="Introducción a la Automatización — FluxLine · Industria 4.0, ISA-95 y herramientas del proyecto. Planta embotelladora de referencia · Bogotá.">
   <title>Introducción a la Automatización · FluxLine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +28,9 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__list" id="nav-menu">
-        <li><a href="../index.html#inicio" class="nav__link">Inicio</a></li>
-        <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
-        <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
-        <li><a href="../index.html#indicadores" class="nav__link">Indicadores</a></li>
+        <li><a href="../index.html#inicio" class="nav__link">Presentación</a></li>
+        <li><a href="../contacto.html" class="nav__link">Contáctenos</a></li>
+        <li><a href="../asignatura.html" class="nav__link">Asignatura</a></li>
         <li class="nav__item nav__dropdown" data-nav-dropdown>
           <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
             Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
@@ -46,7 +45,7 @@
             <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
           </ul>
         </li>
-        <li><a href="../index.html#equipo" class="nav__link">Equipo</a></li>
+        <li><a href="../reflexiones.html" class="nav__link">Reflexiones</a></li>
       </ul>
     </nav>
   </header>
@@ -57,38 +56,94 @@
       <div class="container hero__content hero__content--compact">
         <p class="hero__eyebrow">Módulo evaluativo · APM 2026-I</p>
         <h1 class="hero__title" id="mod-title">Introducción a la Automatización</h1>
-        <p class="hero__subtitle">Prof. Luis Miguel Mendez</p>
-        <p class="hero__tagline">Marco conceptual de la automatización industrial aplicada al sector de bebidas: alineación con Industria 4.0, niveles jerárquicos de control y tecnologías habilitadoras para el caso Coca-Cola FEMSA Bogotá.</p>
+        <p class="hero__subtitle">Prof. Luis Miguel Méndez</p>
+        <p class="hero__tagline">Marco conceptual de la automatización industrial aplicada al sector de bebidas: alineación con Industria 4.0, niveles jerárquicos de control y tecnologías habilitadoras para el caso de estudio: Planta embotelladora · Bogotá.</p>
       </div>
     </section>
 
     <article class="module-content">
       <div class="container">
-        <p class="module-content__intro">Este módulo consolida el lenguaje común del curso (PLC, SCADA, MES, IIoT) y delimita qué aspectos del proceso embotellador serán objeto de análisis y diseño en las fases posteriores.</p>
+        <p class="module-content__intro reveal">Este módulo consolida el lenguaje común del curso (PLC, SCADA, MES, IIoT) y delimita qué aspectos del proceso embotellador serán objeto de análisis y diseño en las fases posteriores.</p>
 
-        <section class="module-section" id="industria-40" aria-labelledby="sec-i40">
-          <h2 class="module-section__title" id="sec-i40">Industria 4.0 y el contexto del sector</h2>
-          <p class="module-section__lead">Integración vertical y horizontal, datos en tiempo real y flexibilidad de línea como palancas frente a la variabilidad de demanda y trazabilidad regulatoria.</p>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section reveal" id="industria-40" aria-labelledby="sec-i40">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-i40">Industria 4.0 y el sector</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">En manufactura de bebidas de alto volumen, la presión por costo unitario, trazabilidad regulatoria y rotación de SKU exige automatizar no solo el llenado, sino la captura de datos en tiempo real, la coordinación entre líneas y la visibilidad hacia planeación y mantenimiento. Industria 4.0 aporta el marco de integración, datos y flexibilidad para abordar ese reto sin perder seguridad ni calidad.</p>
+          <div class="zones grid-3 reveal">
+            <article class="zone-card reveal">
+              <h3 class="zone-card__title">Integración vertical</h3>
+              <p style="margin:0;font-size:0.95rem;line-height:1.55;color:var(--secondary-light);">Cadena de valor digital: sensores y actuadores → PLC → SCADA → MES → ERP, con trazabilidad de lote y eventos.</p>
+            </article>
+            <article class="zone-card reveal">
+              <h3 class="zone-card__title">Digitalización</h3>
+              <p style="margin:0;font-size:0.95rem;line-height:1.55;color:var(--secondary-light);">Gemelo digital, simulación de eventos discretos (Tecnomatix Plant Simulation) e historización para análisis de causa raíz y OEE.</p>
+            </article>
+            <article class="zone-card reveal">
+              <h3 class="zone-card__title">Flexibilidad</h3>
+              <p style="margin:0;font-size:0.95rem;line-height:1.55;color:var(--secondary-light);">Cambio de formato, recetas parametrizadas y estrategia multiproducto sobre la misma infraestructura de control.</p>
+            </article>
+          </div>
         </section>
 
-        <section class="module-section" id="niveles" aria-labelledby="sec-niveles">
-          <h2 class="module-section__title" id="sec-niveles">Niveles de automatización (campo a empresa)</h2>
-          <p class="module-section__lead">Desde sensores y actuadores en campo hasta planificación y KPIs corporativos: mapa de responsabilidades alineado a ISA-95 para el sistema embotellador.</p>
-          <ul class="module-list">
-            <li>Nivel 0–1: detección, accionamiento y lazos locales.</li>
-            <li>Nivel 2–3: supervisión, lotes, recetas y coordinación de línea.</li>
-            <li>Nivel 4: planificación, calidad y desempeño (OEE, scrap, cumplimiento).</li>
+        <section class="module-section module-section--alt reveal" id="niveles" aria-labelledby="sec-niveles">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-niveles">Niveles ISA-95 en el caso</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">La norma <strong>ISA-95</strong> modela la interfaz entre control en planta y sistemas de negocio como una pirámide: en la base, el proceso físico y la automatización; arriba, la coordinación de producción y los KPIs. En el embotellado de referencia, el proyecto cruza desde lazos de máquina hasta reportes de desempeño y trazabilidad de lote.</p>
+          <ul class="module-list reveal">
+            <li><strong>Nivel 0–1 (Campo):</strong> sensores (nivel, flujo, presión), variadores, válvulas y módulos de E/S; lazos locales de llenado, tapado y etiquetado.</li>
+            <li><strong>Nivel 2–3 (Supervisión y fabricación):</strong> PLC con secuencias y recetas; SCADA para operación, alarmas ISA-18.2, lotes y parámetros de línea; integración hacia MES para OEE y orden de trabajo.</li>
+            <li><strong>Nivel 4 (Negocio):</strong> planeación, gestión de calidad, costos y cumplimiento; KPIs agregados (OEE, scrap, cumplimiento de plan) alimentados por datos de planta.</li>
           </ul>
-          <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
         </section>
 
-        <section class="module-section" id="tecnologias" aria-labelledby="sec-tech">
-          <h2 class="module-section__title" id="sec-tech">Tecnologías aplicadas al caso de estudio</h2>
-          <p class="module-section__lead">Espacio reservado para diagramas de arquitectura, tabla comparativa de herramientas (simulación, PLC, gemelo digital, SCADA) y vínculo con los entregables por fase del EDT.</p>
-          <div class="module-grid">
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
-            <div class="placeholder-card"><p class="placeholder-card__note">Contenido en desarrollo — se actualizará con los entregables del módulo</p></div>
+        <section class="module-section reveal" id="tecnologias" aria-labelledby="sec-tech">
+          <header class="section__header reveal">
+            <h2 class="module-section__title" id="sec-tech">Herramientas del proyecto</h2>
+            <hr class="module-section__divider" aria-hidden="true">
+          </header>
+          <p class="module-section__lead reveal">Selección alineada al EDT: simulación y layout de planta en fases tempranas; control y supervisión en fases centrales; gemelo y SCADA para validación integrada.</p>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Herramientas industriales y uso en el proyecto FluxLine</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Herramienta</th>
+                  <th scope="col">Uso principal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Tecnomatix Plant Simulation (Siemens)</td><td>Simulación de eventos discretos AS-IS y TO-BE; validación de escenarios de línea y logística interna.</td></tr>
+                <tr><td>Studio 5000 / RSLogix</td><td>Programación Ladder para PLC Allen-Bradley; secuencias, interlocks y recetas.</td></tr>
+                <tr><td>RobotStudio (ABB)</td><td>Simulación de celda robotizada, trayectorias y tiempos de ciclo.</td></tr>
+                <tr><td>Ignition (Inductive Automation)</td><td>SCADA, HMI, historización, alarmas y comunicación OPC con control.</td></tr>
+                <tr><td>draw.io / diagrams.net</td><td>Diagramas de planta, PFD, P&ID, arquitectura y VSM.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="video-showcase reveal" id="videos">
+          <h3 class="video-showcase__title">Videos del Módulo</h3>
+          <p class="video-showcase__lead">Material audiovisual de introducción a la automatización.</p>
+          <div class="video-grid">
+            <div class="video-card video-card--placeholder">
+              <div class="video-card__poster">
+                <p class="video-card__placeholder-text">Video en preparación</p>
+                <div class="video-card__play">
+                  <div class="video-card__play-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card__info">
+                <h4 class="video-card__name">Introducción y contexto del proyecto</h4>
+                <p class="video-card__meta">Pendiente · 2026</p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -96,12 +151,54 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <p class="site-footer__block">FluxLine © 2026 · Grupo 4 APM</p>
-      <p class="site-footer__block site-footer__block--center">Automatización de Procesos de Manufactura · Prof. Luis Miguel Mendez</p>
-      <p class="site-footer__block site-footer__block--right">Universidad</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="footer-col__brand">
+            <svg width="24" height="24" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="28" cy="12" r="3" fill="currentColor"/></svg>
+            FluxLine
+          </a>
+          <p>Automatización de Procesos de Manufactura</p>
+          <p>Grupo 4 · UNAL 2026-I</p>
+          <div class="footer-social">
+            <a href="https://github.com/sergiosinlimites/apm" target="_blank" rel="noopener" class="footer-social__link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+            <a href="https://drive.google.com/drive/u/2/folders/0AO2oxGaDvYBvUk9PVA" target="_blank" rel="noopener" class="footer-social__link" aria-label="Google Drive"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 5.93L11.14 9.5 7.71 3.5zm1.14 0l6.86 11.86h6.86L15.71 3.5H8.86zM2.29 16l3.43 5.93h13.71L22.86 16H2.29z"/></svg></a>
+            <a href="https://sergioandresbolanospenagos.atlassian.net/" target="_blank" rel="noopener" class="footer-social__link" aria-label="Jira"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.53 2c0 2.4 1.97 4.35 4.35h1.78v1.7c0 2.4 1.97 4.35 4.35V2.84a.84.84 0 00-.84-.84H11.53zM6.77 6.8a4.362 4.362 0 004.34 4.34h1.78v1.72a4.362 4.362 0 004.34 4.34V7.63a.84.84 0 00-.84-.84H6.77zM2 11.6a4.362 4.362 0 004.34 4.34h1.78v1.72c0 2.4 1.97 4.35 4.35 4.35V12.43a.84.84 0 00-.84-.84H2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Módulos</h4>
+          <ul class="footer-col__links">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="produccion.html">Producción</a></li>
+            <li><a href="planeacion.html">Planeación</a></li>
+            <li><a href="robotica.html">Robótica</a></li>
+            <li><a href="digital-factory.html">Digital Factory</a></li>
+            <li><a href="control.html">Control (PLC)</a></li>
+            <li><a href="scada.html">SCADA</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Proyecto</h4>
+          <ul class="footer-col__links">
+            <li><a href="../asignatura.html">Asignatura</a></li>
+            <li><a href="../contacto.html">Contáctenos</a></li>
+            <li><a href="../reflexiones.html">Reflexiones</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Legal</h4>
+          <ul class="footer-col__links">
+            <li><a href="../privacidad.html">Política de Privacidad</a></li>
+            <li><a href="../terminos.html">Términos de Servicio</a></li>
+            <li><a href="../cookies.html">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FluxLine · Grupo 4 APM · Dpto. Ing. Mecánica y Mecatrónica · Universidad Nacional de Colombia</p>
+      </div>
     </div>
-    <p class="site-footer__tagline">Proyecto académico · Sector Bebidas · Caso Coca-Cola FEMSA Bogotá</p>
   </footer>
 
   <script src="../js/main.js"></script>
