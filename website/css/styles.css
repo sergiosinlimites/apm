@@ -1575,6 +1575,50 @@ section[id] {
   background: var(--primary);
 }
 
+.timeline-mini__item--active::before {
+  background: #f59e0b;
+}
+
+.timeline-mini__item--milestone {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-mini__item--milestone .timeline-mini__label {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.timeline-mini__item--milestone::before {
+  background: #8b5cf6;
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #8b5cf6;
+}
+
+.phase-header td {
+  background: var(--bg-alt, #f1f5f9);
+  padding-top: 1rem !important;
+  border-bottom: 2px solid var(--primary, #2563eb);
+}
+
+.cronograma-detail summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.cronograma-detail summary:hover {
+  text-decoration: underline;
+}
+
+.cronograma-detail .data-table td:last-child {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
 .timeline-mini__label {
   font-weight: 600;
   font-size: 0.9rem;
