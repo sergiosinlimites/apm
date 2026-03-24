@@ -598,7 +598,7 @@ a:hover {
   min-height: 0;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: calc(var(--header-height) + 1.75rem) 1.25rem 2.75rem;
+  padding: calc(var(--header-height) + 1.75rem) 10% 2.75rem;
 }
 
 .hero--compact .hero__bg::after {
@@ -607,9 +607,8 @@ a:hover {
 
 .hero__content--compact {
   text-align: left;
-  max-width: 720px;
+  width: min(780px, 80%);
   margin-inline: 0;
-  width: 100%;
 }
 
 .hero--compact .hero__title {
@@ -738,7 +737,7 @@ section[id] {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
 }
 
 .section--proceso {
@@ -746,7 +745,7 @@ section[id] {
 }
 
 .section--products {
-  background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+  background: var(--bg);
 }
 
 .section--indicators {
@@ -760,6 +759,10 @@ section[id] {
 .section--team {
   background: var(--white);
   padding-bottom: 5rem;
+}
+
+.section--business {
+  background: var(--white);
 }
 
 .section__header {
@@ -2512,6 +2515,287 @@ section[id] {
 
 .legal-content ul { padding-left: 1.5rem; }
 
+/* ——— Landing Apple-style (WEB-28) ——— */
+
+/* Secciones monocromas que alternan suavemente */
+.section--mono-light {
+  background: #F5F5F7;
+}
+
+.section--mono-white {
+  background: #FFFFFF;
+}
+
+/* Reto / problema cards */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .challenge-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+}
+
+.challenge-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 16px rgba(30, 41, 59, 0.05);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(30, 41, 59, 0.09);
+}
+
+.challenge-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: #F5F5F7;
+}
+
+.challenge-card__icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--primary);
+}
+
+.challenge-card__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 0.4rem;
+}
+
+.challenge-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.challenge-card__desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Hoja de ruta / roadmap */
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .roadmap { grid-template-columns: 1fr; gap: 1rem; }
+  .roadmap::before { display: none; }
+}
+
+.roadmap::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary-light));
+  z-index: 0;
+}
+
+.roadmap__step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 1rem 1.5rem;
+}
+
+.roadmap__step-num {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 3px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary);
+  box-shadow: 0 4px 20px rgba(168, 32, 26, 0.12);
+}
+
+.roadmap__step-phase {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 0.35rem;
+}
+
+.roadmap__step-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--secondary);
+  margin: 0 0 0.5rem;
+}
+
+.roadmap__step-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Productos simplificados */
+.product-simple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .product-simple-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
+}
+
+.product-simple-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 2.25rem 1.75rem 1.75rem;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
+}
+
+.product-simple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(30, 41, 59, 0.09);
+}
+
+.product-simple-card__icon {
+  width: 64px;
+  height: 76px;
+  margin: 0 auto 1.25rem;
+}
+
+.product-simple-card--primary .product-simple-card__icon { color: var(--primary); }
+.product-simple-card--success .product-simple-card__icon { color: var(--success); }
+.product-simple-card--info    .product-simple-card__icon { color: var(--info); }
+
+.product-simple-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin: 0 0 0.35rem;
+}
+
+.product-simple-card__sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.product-simple-card__tag {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #F5F5F7;
+  color: var(--secondary-light);
+}
+
+/* Modelo de negocio imagen */
+.biz-model-figure {
+  margin: 2.5rem 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.07);
+}
+
+.biz-model-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.biz-model-figure figcaption {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  background: #F5F5F7;
+  border-top: 1px solid #E2E8F0;
+}
+
+/* CTA final oscuro */
+.section--cta-dark {
+  background: var(--secondary);
+  padding: 5rem 0;
+}
+
+.section--cta-dark .section__title {
+  color: #FFFFFF;
+}
+
+.section--cta-dark .section__lead {
+  color: rgba(203, 213, 225, 0.85);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn--outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(248, 250, 252, 0.4);
+  color: rgba(248, 250, 252, 0.9);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.btn--outline-light:hover {
+  border-color: rgba(248, 250, 252, 0.9);
+  background: rgba(248, 250, 252, 0.08);
+  color: #FFFFFF;
+}
+
 /* ——— Diagram figures (WEB-24) ——— */
 .diagram-figure {
   margin: 0;
@@ -2571,9 +2855,6 @@ section[id] {
 }
 
 /* ——— Business model section (WEB-21) ——— */
-.section--business {
-  background: var(--white);
-}
 
 .business-grid {
   display: grid;
