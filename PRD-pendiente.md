@@ -1002,10 +1002,10 @@ En pantallas medianas (1200–1400px) el contenido ocupa casi el 100% del ancho,
 
 | Métrica | Valor inicial (2026-03-22) |
 |---------|----------------------------|
-| Total de ítems checkbox en este documento | **~145** (85 originales + ~25 Sprint 1 + ~35 Sprint 2) |
-| Ítems completados | **~25** (Sprint 1 / Prioridad 0 completado) |
-| Pendientes | **~120** |
-| Porcentaje de avance del backlog FluxLine | **~17%** |
+| Total de ítems checkbox en este documento | **~175** (85 originales + ~25 Sprint 1 + ~35 Sprint 2 + ~30 Sprint 3) |
+| Ítems completados | **~60** (Sprint 1 + Sprint 2 completados) |
+| Pendientes | **~115** |
+| Porcentaje de avance del backlog FluxLine | **~34%** |
 
 **Cómo actualizar:** contar casillas `[x]` / total. Los entregables ya terminados descritos en `PRD-general.md` **no** entran en este porcentaje (este archivo es solo lo pendiente).
 
@@ -1024,6 +1024,557 @@ En pantallas medianas (1200–1400px) el contenido ocupa casi el 100% del ancho,
 
 ---
 
+## Prioridad 0C — Sprint 3: Investor Pitch, Evaluación Económica y Galería de Imágenes
+
+*Sprint que transforma el sitio de una página académica a una plataforma de presentación para inversionistas. La idea central: "Somos un proyecto que busca inversionistas y necesitamos demostrar con cifras de ventas y de producción que la automatización es factible y rentable."*
+
+### Cambio conceptual de arquitectura del sitio
+
+**Antes (Sprint 2):**
+```
+index.html = Landing académica (hero técnico → proceso → productos → indicadores → módulos → fases)
+```
+
+**Después (Sprint 3):**
+```
+index.html = INVESTOR PITCH (hero de ventas → portafolio con cifras de mercado → modelo de negocio
+             → evaluación económica → CTA "Ver cómo lo haremos")
+                    ↓ enlace
+propuesta.html = PROPUESTA TÉCNICA (contenido actual reorganizado: proceso AS-IS → diagnóstico
+                 OEE → VSM → simulación → diseño TO-BE → CTA módulos)
+                    ↓ enlace
+modulos/*.html = DETALLE POR MÓDULO (sin cambios mayores, se enriquecen con imágenes)
+```
+
+El contenido actual de `index.html` (secciones #proceso, #productos, #indicadores, #fases, #modulos) NO se borra. Se **mueve** a una nueva página `propuesta.html` que sirve como la explicación técnica detallada del proyecto. La landing se reescribe como un pitch para inversionistas.
+
+---
+
+### WEB-20: Hero e inicio tipo "página de ventas" para inversionistas
+
+**Problema:** El hero actual dice "Transformamos la producción de bebidas con automatización inteligente" y muestra métricas técnicas (88 entregables, 95% OEE). Esto es bueno para ingenieros pero no para inversionistas. Falta el "hook" comercial: cifras de mercado, volumen de ventas, retorno.
+
+**Nuevo hero:**
+
+```
+Eyebrow:  Oportunidad de inversión · Sector Bebidas · Colombia
+Título:   Producimos 65,000 unidades por hora. Con tu inversión, llegaremos a 85,000.
+Subtítulo: Planta embotelladora de 3 líneas lista para escalar: gaseosas, energéticas
+           y agua purificada. Retorno estimado en XX meses.
+Métricas (3 columnas):
+  $X.X M COP    |  XX%        |  XX meses
+  Ventas anuales  ROI estimado   Payback
+CTA primario:  [Ver modelo de negocio]
+CTA secundario: [Conoce la propuesta técnica →]
+Nota: Proyecto académico · APM 2026-I · Universidad Nacional de Colombia
+```
+
+**Datos de ventas estimados para las métricas:**
+
+| Producto | Demanda (u/h) | Turnos/semana | Horas/turno | Cap. semanal | Precio est. (COP) | Ventas anuales est. (COP) |
+|----------|--------------|---------------|-------------|--------------|-------------------|--------------------------|
+| Gaseosa 400ml retornable | 20,000 | 21 | 7 | ~2.9M | $1,200 | ~$182B/año |
+| Energética 473ml lata | 30,000 | 21 | 7 | ~4.4M | $5,000 | ~$1,144B/año |
+| Agua 1L PET | 15,000 | 21 | 7 | ~2.2M | $1,500 | ~$171B/año |
+
+> **Nota**: Estos son cálculos brutos a capacidad máxima. Se ajustarán con datos reales de la evaluación económica del Drive (excel y PNGs). Si el equipo tiene cifras de precio unitario reales del APU, se usan esas. De lo contrario, se usan precios promedio de mercado Colombia 2025-2026.
+
+**Debajo del hero — Sección portafolio de productos (reinventada):**
+- 3 tarjetas de producto estilo "catálogo comercial" (no técnico):
+  - Imagen del producto (placeholder o icono SVG actual)
+  - Nombre comercial: "Gaseosa Retornable 400ml", "Bebida Energética 473ml", "Agua Purificada 1L"
+  - Precio de venta estimado
+  - Volumen de producción por hora
+  - Ventas anuales proyectadas
+  - CTA: "Ver ficha técnica →" que lleva a `propuesta.html#gaseosa` (etc.)
+
+**Criterio de aceptación:**
+- [ ] Hero comunica oportunidad de inversión, no solo métricas técnicas.
+- [ ] Al menos 3 cifras financieras visibles en el hero (ventas, ROI, payback).
+- [ ] 3 tarjetas de producto con precio y volumen de ventas estimado.
+- [ ] CTA principal lleva al modelo de negocio; CTA secundario a la propuesta técnica.
+
+---
+
+### WEB-21: Sección "Modelo de Negocio" en landing
+
+**Objetivo:** Mostrar al inversionista cómo funciona el negocio.
+
+**Contenido:**
+1. **Imagen del modelo de negocio** — Se espera un PNG/imagen del Drive que muestre el Business Model Canvas o equivalente. Se deja un placeholder responsivo hasta que la imagen esté disponible.
+2. **Texto descriptivo** (3–4 párrafos):
+   - Qué producimos (3 familias de bebidas)
+   - A quién vendemos (distribuidores, cadenas, mayoristas en Bogotá)
+   - Por qué automatizar (pasar de 75% OEE actual a 95%+, reducir NVA logístico)
+   - Ventaja competitiva (planta existente, tecnología probada, equipo UNAL)
+3. **Cifras clave en cards:**
+   - Capacidad instalada: 65,000 u/h (3 líneas combinadas)
+   - OEE actual: ~75% (supuesto) → OEE objetivo: 95%+
+   - Incremento de producción estimado: +26.7% (+17,333 u/h)
+   - Reducción de NVA logístico objetivo: -50%
+
+**Assets pendientes del Drive:**
+- [ ] Imagen de Business Model Canvas (PNG) — **el equipo debe subirla**.
+- Mientras no exista, usar placeholder con texto "Modelo de negocio — imagen pendiente".
+
+**Criterio de aceptación:**
+- [ ] Sección visible en landing entre hero y evaluación económica.
+- [ ] Space para imagen del modelo de negocio (placeholder o real).
+- [ ] Cifras de capacidad y mejora en cards visuales.
+
+---
+
+### WEB-22: Sección/Página "Evaluación Económica"
+
+**Objetivo:** Centralizar toda la información financiera del proyecto para inversionistas. Puede ser una sección larga en la landing O una página separada (`evaluacion.html`) enlazada desde el nav y la landing.
+
+**Recomendación:** Página separada `evaluacion.html` con enlace en el nav principal (reemplaza o se añade junto a un nuevo item "Inversión" o "Financiero").
+
+**Contenido:**
+
+| Subsección | Fuente de datos | Tipo de asset |
+|------------|----------------|---------------|
+| Resumen financiero (ROI, TIR, VPN, Payback) | Excel evaluación económica → PNGs en Drive | Imagen (PNG) + tabla resumen en HTML |
+| Análisis de Precios Unitarios (APU) | APU del Drive | Imagen (PNG) del desglose de costos |
+| Proyección de costos | Excel → PNGs | Imagen (gráficas de barras/líneas) |
+| Ventas anuales proyectadas | Excel → PNGs | Imagen (gráfica de proyección a 5-10 años) |
+| Flujo de caja | Excel → PNGs | Imagen (diagrama de flujo de caja) |
+
+**Estructura HTML:**
+```
+evaluacion.html
+├── Hero compacto ("Evaluación Económica")
+├── Sección: Resumen ejecutivo financiero
+│   ├── 4 stat cards: ROI, TIR, VPN, Payback (datos hardcoded o de imagen)
+│   └── Párrafo interpretativo
+├── Sección: Análisis de Precios Unitarios (APU)
+│   ├── Imagen del APU (placeholder hasta que se suba)
+│   └── Texto explicativo
+├── Sección: Proyección de costos
+│   ├── Imagen de gráficas de costos (placeholder)
+│   └── Tabla resumen CAPEX / OPEX
+├── Sección: Ventas anuales proyectadas
+│   ├── Imagen de proyección (placeholder)
+│   └── Tabla con ventas estimadas a 5 años
+├── Sección: Flujo de caja y retorno
+│   ├── Imagen de flujo de caja (placeholder)
+│   └── Conclusión para el inversionista
+└── CTA: "Ver propuesta técnica detallada →" (enlaza a propuesta.html)
+```
+
+**Assets pendientes del Drive (imágenes que el equipo debe subir como PNG):**
+- [ ] Tabla/gráfica de ROI, TIR, VPN, Payback
+- [ ] APU (Análisis de Precios Unitarios)
+- [ ] Proyección de costos (CAPEX/OPEX)
+- [ ] Gráfica de ventas anuales proyectadas
+- [ ] Flujo de caja
+
+**Navegación:** Añadir "Inversión" al nav principal (entre Asignatura y Módulos, o reemplazando Asignatura que se vuelve sub-item). Evaluar si el nav queda:
+```
+Presentación | Inversión | Propuesta | Módulos ▾ | Contáctenos
+```
+
+**Criterio de aceptación:**
+- [ ] Página `evaluacion.html` creada con estructura completa.
+- [ ] Placeholders claros para cada imagen financiera pendiente.
+- [ ] Al menos ROI, TIR, Payback como stat-cards con valores (aunque sean estimados).
+- [ ] Enlazada desde la landing y desde el nav principal.
+
+---
+
+### WEB-23: Mover contenido técnico actual a `propuesta.html`
+
+**Problema:** El contenido actual de `index.html` (secciones #proceso, #productos, #indicadores, #fases, #modulos, #cta-asignatura) es excelente pero es técnico/ingenieril. Ya no debe ser lo primero que vea un inversionista. Debe moverse a una página de "propuesta técnica" donde se demuestre CON DETALLE cómo se logra la mejora de 75% → 95%+ OEE.
+
+**Acción:**
+1. Crear `propuesta.html` (nueva página).
+2. **Mover** (no copiar) estas secciones de `index.html`:
+   - `#proceso` — El Proceso de Manufactura (pipeline)
+   - `#productos` — Portafolio de Productos (tarjetas técnicas)
+   - `#indicadores` — Indicadores de Producción AS-IS (tabla + gauges OEE)
+   - `#modulos` — Módulos del Curso (explorer grid)
+   - `#fases` — Fases del Proyecto (timeline)
+   - `#cta-asignatura` — CTA profesores
+3. En `index.html`, estas secciones se reemplazan por el contenido de ventas (WEB-20, WEB-21, WEB-22).
+4. En `propuesta.html`, añadir:
+   - Hero compacto: "Propuesta Técnica" / "Cómo mejoramos la producción de 75% a 95%+ OEE"
+   - Intro: párrafo de puente entre el pitch de ventas y el detalle técnico
+   - Todo el contenido movido
+   - CTA al final: "¿Interesado? Contáctenos →" y "Ver evaluación económica →"
+
+**Navegación:** Añadir "Propuesta" al nav como enlace a `propuesta.html`.
+
+**Criterio de aceptación:**
+- [ ] `propuesta.html` contiene todo el contenido técnico actual de index.html.
+- [ ] `index.html` ya no tiene secciones técnicas (proceso, indicadores, etc.).
+- [ ] Flujo de navegación: Landing (ventas) → Evaluación económica → Propuesta técnica → Módulos.
+- [ ] No se pierde ningún contenido; solo se reubica.
+
+---
+
+### WEB-24: Integración de imágenes del Drive en el sitio
+
+**Objetivo:** Incrustar todas las imágenes disponibles y preparar placeholders para las que el equipo debe subir.
+
+**Imágenes disponibles ahora (ya descargadas en `archivos-drive/`):**
+
+| Imagen | Archivo | Tamaño | Destino en el sitio | Acción |
+|--------|---------|--------|--------------------|----|
+| Vista de planta | `archivos-drive/Planta Coca Cola.png` | 5139×5952, 1.1MB | `produccion.html` sección Layout, `propuesta.html` sección proceso | Copiar a `website/img/` (comprimir a ~800px ancho, ~200KB) |
+| Diagrama operaciones Gaseosa | `archivos-drive/Diagramas de operaciones de proceso/DiagramaCocaFinal.jpg` | 66KB | `produccion.html` sección DAP | Copiar a `website/img/diagramas/` |
+| Diagrama operaciones Energética | `archivos-drive/Diagramas de operaciones de proceso/DiagramaMonsterFinal.jpg` | 63KB | `produccion.html` sección DAP | Copiar a `website/img/diagramas/` |
+| Diagrama operaciones Agua | `archivos-drive/Diagramas de operaciones de proceso/DiagramaBotellaAgua.jpg` | 43KB | `produccion.html` sección DAP | Copiar a `website/img/diagramas/` |
+| VSM (3 productos) | `archivos-drive/Diagramas VSM (final).pdf` | 174KB, 1 página | `produccion.html` sección VSM | Convertir PDF→PNG (o renderizar como imagen) y copiar |
+
+**Imágenes pendientes (el equipo debe subir al Drive):**
+
+| Imagen | Descripción | Destino |
+|--------|-------------|---------|
+| Simulación AS-IS (barras de estado) | Gráficas de barras de Tecnomatix mostrando "working", "setting up", "waiting", "blocked", "powering up/down", "failed", "stopped", "paused", "unplanned" por estación | `produccion.html` sección Simulación |
+| APU | Análisis de Precios Unitarios (desglose de costos) | `evaluacion.html` |
+| Modelo de negocio | Business Model Canvas o diagrama equivalente | `index.html` sección modelo |
+| Proyecciones financieras | ROI, TIR, VPN, Payback, flujo de caja (gráficas del Excel) | `evaluacion.html` |
+| Ventas anuales proyectadas | Gráfica de ventas estimadas a 5 años | `evaluacion.html`, `index.html` |
+
+**Procesamiento de imágenes:**
+- `Planta Coca Cola.png` (5139×5952) debe redimensionarse a ~1200px de ancho para web (usando ImageMagick `convert` o similar).
+- Los JPGs de diagramas de operaciones están en tamaño adecuado (~60KB).
+- El PDF de VSM debe convertirse a PNG (usando `pdftoppm` o `convert`).
+
+**Criterio de aceptación:**
+- [ ] Al menos 5 imágenes reales (no placeholders) visibles en el sitio.
+- [ ] Imágenes almacenadas en `website/img/` con nombres descriptivos.
+- [ ] Imágenes responsivas (`max-width: 100%; height: auto`).
+- [ ] Placeholders claros con texto "Imagen pendiente — [descripción]" para las que faltan.
+
+---
+
+### WEB-25: Archivo `.spp` de Tecnomatix Plant Simulation
+
+**Problema:** El archivo `CocaCola400mL 1.0.spp` es un formato binario propietario de Siemens Tecnomatix Plant Simulation. NO es posible visualizarlo en un navegador web.
+
+**Opciones evaluadas:**
+
+| Opción | Factibilidad | Resultado |
+|--------|-------------|-----------|
+| Renderizar .spp en el navegador | Imposible — formato binario propietario, no hay viewer web | Descartada |
+| Exportar screenshots desde Plant Simulation | El equipo puede abrir el .spp y exportar capturas PNG del modelo 3D/2D, resultados de simulación, gráficas de estado | **Recomendada** |
+| Exportar video/animación | El equipo puede grabar la animación de simulación como .mp4 | Opcional (se puede embeder en video-showcase) |
+| Enlace de descarga del .spp | Poner link al archivo en Drive para que quien tenga licencia lo abra | Complementario |
+
+**Acción recomendada:**
+1. El equipo exporta de Tecnomatix:
+   - Screenshot del modelo de planta (layout 2D)
+   - Gráfica de estados por estación (working, setting up, waiting, blocked, etc.)
+   - Resultados de throughput/OEE de la simulación AS-IS
+   - (Opcional) Video de la animación de simulación
+2. Subir las imágenes/videos al Drive.
+3. Incorporar en `produccion.html` sección "Simulación de eventos discretos" con las capturas.
+4. Añadir enlace de descarga al .spp en Drive como material complementario.
+
+**Mientras tanto:** Dejar placeholders en `produccion.html` con texto: "Capturas de simulación pendientes — el modelo AS-IS está implementado en Tecnomatix Plant Simulation (archivo CocaCola400mL 1.0.spp disponible en Drive)."
+
+**Criterio de aceptación:**
+- [ ] Sección de simulación en `produccion.html` con placeholders para screenshots.
+- [ ] Enlace funcional al .spp en Drive.
+- [ ] Cuando el equipo suba las capturas, se pueden insertar sin cambiar la estructura.
+
+---
+
+### WEB-26: Navegación final y flujo de conexión entre secciones
+
+**Problema:** Con las nuevas páginas (`propuesta.html`, `evaluacion.html`) y el cambio de enfoque del landing, la navegación debe reflejar el flujo inversionista → propuesta técnica → detalle.
+
+**Navegación propuesta:**
+
+| Posición | Enlace | Página |
+|----------|--------|--------|
+| 1 | Inicio | `index.html` (pitch inversionista) |
+| 2 | Inversión | `evaluacion.html` (evaluación económica) |
+| 3 | Propuesta | `propuesta.html` (cómo mejoramos la producción) |
+| 4 | Módulos ▾ | Dropdown existente (7 módulos) |
+| 5 | Contáctenos | `contacto.html` |
+
+`Asignatura` y `Reflexiones` pasan al footer y al dropdown (son relevantes para profesores pero no para inversionistas).
+
+**Flujo de CTAs a lo largo del sitio:**
+
+```
+index.html (Pitch)
+    ├── [Ver modelo de negocio] → #modelo-negocio (sección en index)
+    ├── [Ver evaluación económica] → evaluacion.html
+    └── [Conoce la propuesta técnica →] → propuesta.html
+
+evaluacion.html (Finanzas)
+    ├── [Ver detalle de producción] → propuesta.html
+    └── [Invertir / Contáctenos] → contacto.html
+
+propuesta.html (Técnico)
+    ├── [Ver módulo X] → modulos/X.html
+    ├── [Ver evaluación económica] → evaluacion.html
+    └── [Contáctenos] → contacto.html
+```
+
+**Criterio de aceptación:**
+- [ ] Nav actualizado en TODAS las páginas (index, evaluacion, propuesta, 7 módulos, contacto, asignatura, reflexiones, 3 legal).
+- [ ] Flujo de CTAs coherente: ventas → finanzas → técnico → detalle.
+- [ ] Asignatura y Reflexiones accesibles desde footer y desde Módulos dropdown (sub-items) o como enlaces secundarios.
+
+---
+
+### Inventario de assets para este sprint
+
+**Disponibles ahora (en el repositorio):**
+
+| Asset | Path | Estado |
+|-------|------|--------|
+| Planta layout (PNG, 5139×5952) | `archivos-drive/Planta Coca Cola.png` | Disponible, necesita resize |
+| Diagrama ops Gaseosa (JPG) | `archivos-drive/Diagramas de operaciones de proceso/DiagramaCocaFinal.jpg` | Disponible |
+| Diagrama ops Energética (JPG) | `archivos-drive/Diagramas de operaciones de proceso/DiagramaMonsterFinal.jpg` | Disponible |
+| Diagrama ops Agua (JPG) | `archivos-drive/Diagramas de operaciones de proceso/DiagramaBotellaAgua.jpg` | Disponible |
+| VSM (PDF, 1 pág) | `archivos-drive/Diagramas VSM (final).pdf` | Disponible, necesita PDF→PNG |
+| .spp simulación | `archivos-drive/Proyecto entrega 1/CocaCola400mL 1.0.spp` | Disponible (no viewable) |
+| DAP SVG generado | `website/img/diagramas/dap-gaseosa-400ml.svg` | Ya en sitio |
+| Flujo general SVG | `website/img/diagramas/flujo-proceso-general.svg` | Ya en sitio |
+
+**Pendientes (equipo debe subir al Drive como PNG/JPG):**
+
+| Asset | Responsable | Prioridad |
+|-------|-------------|-----------|
+| Screenshots simulación Tecnomatix (barras de estado por estación) | Equipo | Alta |
+| APU (Análisis de Precios Unitarios) | Equipo | Alta |
+| Business Model Canvas | Equipo | Media |
+| Gráficas financieras (ROI, TIR, VPN, Payback, flujo de caja) | Equipo (del Excel) | Alta |
+| Ventas anuales proyectadas (gráfica) | Equipo (del Excel) | Alta |
+
+---
+
+### Orden de ejecución recomendado
+
+```
+1. WEB-24 — Procesar imágenes disponibles (resize, PDF→PNG, copiar a website/img/)  — 20 min
+2. WEB-23 — Crear propuesta.html moviendo contenido técnico de index.html            — 30 min
+3. WEB-20 — Reescribir index.html como investor pitch                                — 40 min
+4. WEB-21 — Añadir sección modelo de negocio a index.html                            — 20 min
+5. WEB-22 — Crear evaluacion.html con estructura y placeholders                      — 30 min
+6. WEB-25 — Actualizar produccion.html con placeholders de simulación                — 15 min
+7. WEB-26 — Actualizar nav en TODAS las páginas                                      — 30 min
+```
+
+**Tiempo estimado total:** ~3 horas.
+
+**Bloqueos:**
+- Las imágenes financieras (APU, ROI, proyecciones) dependen de que el equipo las exporte del Excel y las suba al Drive.
+- Los screenshots de Tecnomatix dependen de que alguien con licencia abra el .spp.
+- Se puede avanzar con placeholders para todo lo que falta.
+
+---
+
+---
+
+## Prioridad 0D — Sprint 4: Rebranding, landing "Apple-style" e integración Drive
+
+> **Estado:** Pendiente de ejecución · Creado: 2026-03-24 · Versión PRD: 3.0
+
+### Contexto
+
+Con el Sprint 3 ejecutado, la arquitectura del sitio (Inicio / Inversión / Propuesta / Módulos / Contáctenos) ya está establecida. El Sprint 4 corrige problemas de identidad, diseño y contenido derivados de la revisión del equipo. La fuente oficial de imágenes y archivos cambia: **únicamente se usan los archivos del Drive en `unal:Archivos página`**; lo que está fuera de esa carpeta no debe aparecer en el sitio.
+
+---
+
+### WEB-27: Rebranding — "FluxLine" → "Gaseo S.A.S."
+
+**Problema:** El nombre del proyecto es "Gaseo S.A.S.", no "FluxLine".
+
+**Alcance del cambio:**
+
+| Dónde | Qué cambiar |
+|-------|------------|
+| Todos los `<title>` | "FluxLine ·" → "Gaseo S.A.S. ·" |
+| `.nav__brand` (logo text) | "FluxLine" → "Gaseo S.A.S." |
+| `.footer-col__brand` | "FluxLine" → "Gaseo S.A.S." |
+| `<meta description>` | Reemplazar menciones de "FluxLine" |
+| `footer-bottom` copyright | "© 2026 FluxLine" → "© 2026 Gaseo S.A.S." |
+| `index.html` — hero, textos | Eliminar cualquier mención de FluxLine |
+| `README.md` / `serve.py` | Actualizar comentarios (opcional, baja prioridad) |
+
+**Archivos afectados:** todos los HTML del sitio (16 archivos: index, evaluacion, propuesta, contacto, asignatura, reflexiones, privacidad, terminos, cookies, 7 módulos).
+
+**Criterio de aceptación:**
+- [ ] Ningún archivo HTML contiene la cadena "FluxLine" en contenido visible.
+- [ ] El logo en header y footer dice "Gaseo S.A.S.".
+- [ ] Titles de pestaña usan "Gaseo S.A.S.".
+
+---
+
+### WEB-28: Rediseño landing page — estilo "Apple", unicolor, scroll narrativo
+
+**Problema:** La landing actual tiene fondo degradado que cambia bruscamente a blanco entre secciones, lo que se ve "agresivo". El texto habla de "tú" (lenguaje invasivo) y hace afirmaciones de capacidad (65,000 u/h) que no están confirmadas.
+
+**Principios de diseño:**
+
+| Principio | Implementación |
+|-----------|---------------|
+| **Unicolor / monocromático** | Una paleta de grises claros (`#F5F5F7`, `#FBFBFD`, `#FFFFFF`) con el rojo de marca (`--primary`) solo como acento puntual. Sin cambios bruscos de fondo entre secciones. |
+| **Scroll narrativo** | Cada sección responde a una pregunta del visitante. La historia fluye verticalmente sin saltos visuales. |
+| **Lenguaje centrado en el proyecto** | Eliminar "tú" / "tu inversión". Hablar de "el proyecto", "la propuesta", "el equipo". |
+| **Sin afirmaciones de capacidad sin respaldo** | Eliminar "65,000 u/h", "85,000 u/h" y cualquier dato de número de líneas. |
+| **Contenido aspiracional pero honesto** | Mostrar el camino de mejora (75% → 95%+ OEE), no cifras de producción específicas. |
+
+**Estructura propuesta de `index.html`:**
+
+```
+1. Hero (oscuro, full-screen)
+   Eyebrow: "Proyecto académico · APM 2026-I · UNAL Grupo 4"
+   Título:  "Automatizamos una planta embotelladora de bebidas"
+   Sub:     "Un proyecto de ingeniería que propone mejorar la eficiencia
+             operativa de 75% a 95%+ OEE usando tecnología de Industria 4.0."
+   CTA:     [Explorar el proyecto] → propuesta.html
+   No CTA secundario invasivo.
+
+2. Sección: El reto (fondo #F5F5F7, sin bordes bruscos)
+   Tres cards de "problema":
+   - OEE actual estimado: ~75%
+   - Tiempo sin valor agregado: identificado en VSM
+   - Solución: automatización, control y simulación
+
+3. Sección: Nuestra hoja de ruta (fondo #FFFFFF)
+   Timeline horizontal o vertical de los 4 pasos clave:
+   AS-IS (diagnóstico) → TO-BE (diseño) → Implementación virtual → Validación económica
+   Cada paso con icono, título y una línea de descripción.
+   CTA al final: "Ver detalle técnico →" → propuesta.html
+
+4. Sección: Los productos (fondo #F5F5F7)
+   3 tarjetas SIMPLIFICADAS (sin datos de producción por hora):
+   - Nombre comercial + icono SVG
+   - Solo: tipo de envase, mercado objetivo
+   - Sin velocidades, sin Takt Time, sin volúmenes no confirmados
+   CTA sutil: "Ver indicadores →" → propuesta.html#indicadores
+
+5. Sección: Modelo de negocio (fondo #FFFFFF)
+   - Imagen del PDF "Modelo de negocio (inicial).pdf" (ya en Drive)
+   - Párrafo corto de contexto (3–4 líneas)
+   - Enlace: "Ver evaluación económica →" → evaluacion.html
+
+6. CTA final (fondo #F5F5F7 o dark)
+   "Conoce el detalle técnico"
+   Botones: [Propuesta técnica] [Evaluación económica] [Contáctenos]
+```
+
+**Sobre los márgenes del hero:**
+El hero (sección oscura a pantalla completa) del diseño actual no tiene márgenes laterales porque es full-width intencionalmente (como Apple.com). Los márgenes del 10% aplican al **contenido interno** (`.hero__content`) que ya usa `width: min(900px, 80%)`. Sin embargo, el problema reportado es en las secciones de contenido que usan `.container` con `width: min(1120px, 80%)`. En pantallas muy grandes esta puede ser insuficiente. Ver WEB-29.
+
+**Criterio de aceptación:**
+- [ ] Sin menciones de "65,000 u/h", "85,000 u/h" o número de líneas de producción.
+- [ ] Sin lenguaje en segunda persona ("tu", "tú").
+- [ ] Transiciones entre secciones suaves (mismo tono de gris claro, sin contrastes bruscos).
+- [ ] Scroll narrativo: cada sección responde a una pregunta lógica del visitante.
+- [ ] Modelo de negocio visible con el PDF convertido a imagen.
+
+---
+
+### WEB-29: Márgenes del 10% en secciones de escritorio (corrección definitiva)
+
+**Problema (confirmado):** A pesar de haberse mencionado en WEB-03 y WEB-18, los márgenes laterales del 10% en desktop no están funcionando correctamente en las secciones de contenido de todas las páginas. El `.container` usa `width: min(1120px, 80%)`, que en pantallas de ~1400px da 80% ≈ 1120px (correcto), pero en pantallas más grandes (1920px+) puede mostrar el contenido demasiado ancho.
+
+**Corrección:**
+
+```css
+.container {
+  width: min(1120px, 80%);  /* actual: correcto hasta ~1400px */
+  margin-inline: auto;
+}
+```
+
+El problema real es que el **hero compacto** y algunas secciones de módulo usan `.container` directamente como contenedor del hero, pero la clase `.hero--compact .hero__content--compact` no tiene `width: min(900px, 80%)` aplicado en todos los casos.
+
+**Acción específica:**
+1. Revisar que `.hero__content` (landing) tenga `width: min(900px, 80%); margin-inline: auto;` ✓ (ya está)
+2. Revisar que `.hero__content--compact` (páginas internas) tenga `width: min(720px, 80%); margin-inline: auto;` en lugar del `max-width: 720px` actual que no aplica margen relativo.
+3. Verificar en cada módulo que el contenido no toca los bordes en pantallas de 1440px.
+4. Ajustar `.nav` para que también use `width: min(1120px, 80%)` — ya lo tiene, pero confirmar que el header no tiene padding lateral propio que lo desborde.
+
+**Criterio de aceptación:**
+- [ ] En una ventana de 1440px, ningún contenido toca los bordes laterales.
+- [ ] El hero compacto de páginas internas tiene al menos 10% de margen lateral en desktop.
+- [ ] Los módulos respetan el mismo margen.
+
+---
+
+### WEB-30: Integración de archivos desde `unal:Archivos página` (política de imágenes)
+
+**Problema:** El equipo definió que **solo los archivos en la carpeta de Drive `unal:Archivos página`** son los aprobados para el sitio. Todo lo demás (imágenes fuera de esa carpeta, SVGs generados, etc.) puede quedarse como referencia pero **no debe mostrarse en el sitio** si no está aprobado ahí.
+
+**Estado actual de `unal:Archivos página` (sincronizado 2026-03-24):**
+
+| Archivo | Tamaño | Tipo | Destino en el sitio |
+|---------|--------|------|---------------------|
+| `Modelo de negocio (inicial).pdf` | 125 KB | PDF (1 pág, 1404×993px) | `index.html` §modelo-negocio → convertir a PNG |
+| `VSM Coca-Cola Retornable.pdf` | 37 KB | PDF (1 pág, 2813×1407px) | `propuesta.html` §vsm y `modulos/produccion.html` §vsm |
+
+**Archivos que deben mostrarse solo si están en `unal:Archivos página`:**
+
+| Sección del sitio | Archivo esperado | Estado |
+|-------------------|-----------------|--------|
+| `index.html` — modelo de negocio | `Modelo de negocio (inicial).pdf` → PNG | ✅ Disponible |
+| `propuesta.html` — VSM | `VSM Coca-Cola Retornable.pdf` → PNG | ✅ Disponible |
+| `modulos/produccion.html` — planta layout | Layout de planta oficial | ❌ No disponible aún |
+| `modulos/produccion.html` — VSM | `VSM Coca-Cola Retornable.pdf` → PNG | ✅ Disponible |
+| `modulos/produccion.html` — simulación Tecnomatix | Screenshots .spp | ❌ No disponible aún |
+| `evaluacion.html` — APU, ROI, TIR, costos, ventas | Imágenes del Excel | ❌ No disponible aún |
+
+**Acciones:**
+1. Convertir los 2 PDFs disponibles a PNG (ya tenemos `pdftoppm`).
+2. Sustituir la imagen de planta actual (`website/img/planta-layout.jpg`, que viene del archivo fuera de la carpeta aprobada) por un placeholder hasta que el equipo suba el layout oficial a `unal:Archivos página`.
+3. Sustituir el `vsm-final.png` actual (convertido del PDF anterior) por el nuevo `VSM Coca-Cola Retornable.pdf` convertido.
+4. Implementar comando de sincronización: `rclone copy "unal:Archivos página" archivos-drive/Archivos-pagina` como paso estándar antes de actualizar el sitio.
+
+**Criterio de aceptación:**
+- [ ] `Modelo de negocio (inicial).pdf` visible en `index.html`.
+- [ ] `VSM Coca-Cola Retornable.pdf` visible en `produccion.html` y `propuesta.html`.
+- [ ] `website/img/planta-layout.jpg` reemplazado por placeholder (imagen fuera de carpeta aprobada).
+- [ ] Todos los placeholders tienen texto claro indicando qué archivo debe subir el equipo a `unal:Archivos página`.
+
+---
+
+### Inventario de assets para Sprint 4
+
+**Disponibles en `unal:Archivos página` (sincronizado 2026-03-24):**
+
+| Archivo | Estado | Acción |
+|---------|--------|--------|
+| `Modelo de negocio (inicial).pdf` | ✅ Descargado | Convertir a PNG → `website/img/pagina/modelo-negocio.png` |
+| `VSM Coca-Cola Retornable.pdf` | ✅ Descargado | Convertir a PNG → `website/img/pagina/vsm-cocacola.png` |
+
+**Pendientes (equipo debe subir a `unal:Archivos página`):**
+
+| Asset | Descripción | Sección destino |
+|-------|-------------|-----------------|
+| Layout de planta oficial | Planta definitiva del proyecto | `produccion.html` §layout |
+| Screenshots Tecnomatix | Estados de estaciones, throughput | `produccion.html` §simulacion |
+| APU | Análisis de Precios Unitarios | `evaluacion.html` §apu |
+| Gráficas financieras | ROI, TIR, VPN, Payback, flujo de caja | `evaluacion.html` |
+| Ventas proyectadas | Gráfica a 5 años | `evaluacion.html` §ventas |
+
+---
+
+### Orden de ejecución recomendado
+
+```
+1. WEB-30 — Convertir PDFs a PNG, actualizar política de imágenes    — 15 min
+2. WEB-27 — Rebranding global "FluxLine" → "Gaseo S.A.S."            — 20 min
+3. WEB-29 — Corrección definitiva de márgenes al 10% en desktop      — 15 min
+4. WEB-28 — Rediseño landing: unicolor, scroll narrativo, sin datos   — 60 min
+```
+
+**Tiempo estimado total:** ~2 horas.
+
+**Bloqueos:**
+- El layout de planta definitivo, screenshots de Tecnomatix y datos financieros dependen de que el equipo los suba a `unal:Archivos página`.
+- Todo lo demás se puede ejecutar con lo que ya hay.
+
+---
+
 ## Control de cambios
 
 | Versión | Fecha | Cambio |
@@ -1031,3 +1582,5 @@ En pantallas medianas (1200–1400px) el contenido ocupa casi el 100% del ancho,
 | 1.0 | 2026-03-22 | Creación del PRD pendiente a partir del backlog acordado |
 | 1.1 | 2026-03-22 | Añadida Prioridad 0 — 9 mejoras web (WEB-01 a WEB-09): header colors, profesores, márgenes, padding, EDT completa, Jira, módulos cards, video showcase, deep links |
 | 1.2 | 2026-03-22 | Añadida Prioridad 0B — Sprint 2: 10 tareas (WEB-10 a WEB-19): reestructura nav, contacto, asignatura, reflexiones, footer, legal, diagramas, Jira live, hero margins, hero redesign |
+| 2.0 | 2026-03-23 | Reestructura mayor — Prioridad 0C Sprint 3 (WEB-20 a WEB-26): landing como investor pitch, evaluación económica, propuesta técnica separada, integración de imágenes, .spp de Tecnomatix, navegación final |
+| 3.0 | 2026-03-24 | Sprint 4 (WEB-27 a WEB-30): rebranding a Gaseo S.A.S., landing Apple-style unicolor con scroll narrativo, márgenes 10% definitivos, política de imágenes basada en unal:Archivos página |
