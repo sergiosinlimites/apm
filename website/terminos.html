@@ -27,10 +27,11 @@
         <span class="nav__toggle-bar"></span>
         <span class="visually-hidden">Abrir menú</span>
       </button>
+      <!-- [REMOVAL-015] Menú anterior (Presentación, Asignatura, Reflexiones en barra) sustituido por Inicio/Inversión/Propuesta/Módulos/Contáctenos -->
       <ul class="nav__list" id="nav-menu">
-        <li><a href="index.html#inicio" class="nav__link">Presentación</a></li>
-        <li><a href="contacto.html" class="nav__link">Contáctenos</a></li>
-        <li><a href="asignatura.html" class="nav__link">Asignatura</a></li>
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="evaluacion.html" class="nav__link">Inversión</a></li>
+        <li><a href="propuesta.html" class="nav__link">Propuesta</a></li>
         <li class="nav__item nav__dropdown" data-nav-dropdown>
           <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
             Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
@@ -45,7 +46,7 @@
             <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/scada.html">SCADA</a></li>
           </ul>
         </li>
-        <li><a href="reflexiones.html" class="nav__link">Reflexiones</a></li>
+        <li><a href="contacto.html" class="nav__link">Contáctenos</a></li>
       </ul>
     </nav>
   </header>
@@ -120,9 +121,12 @@
         <div class="footer-col">
           <h4 class="footer-col__heading">Proyecto</h4>
           <ul class="footer-col__links">
+            <!-- [REMOVAL-016] Enlaces de pie «Proyecto» ampliados con Inversión y Propuesta Técnica -->
+            <li><a href="evaluacion.html">Inversión</a></li>
+            <li><a href="propuesta.html">Propuesta Técnica</a></li>
             <li><a href="asignatura.html">Asignatura</a></li>
-            <li><a href="contacto.html">Contáctenos</a></li>
             <li><a href="reflexiones.html">Reflexiones</a></li>
+            <li><a href="contacto.html">Contáctenos</a></li>
           </ul>
         </div>
         <div class="footer-col">
