@@ -2511,3 +2511,116 @@ section[id] {
 }
 
 .legal-content ul { padding-left: 1.5rem; }
+
+/* ——— Diagram figures (WEB-24) ——— */
+.diagram-figure {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.diagram-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.diagram-figure__caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+/* ——— Image placeholders (WEB-22/24) ——— */
+.img-placeholder {
+  border: 2px dashed var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+  padding: 2.5rem 1.5rem;
+}
+
+.img-placeholder__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.img-placeholder__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.img-placeholder__text {
+  margin: 0;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+/* ——— Business model section (WEB-21) ——— */
+.section--business {
+  background: var(--white);
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.business-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.business-text h3:first-child { margin-top: 0; }
+
+.business-text p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--secondary-light);
+  margin: 0 0 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .business-grid { grid-template-columns: 1fr; }
+}
+
+/* ——— Invest CTA section (WEB-20) ——— */
+.section--cta-invest {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+  padding: 4rem 0 5rem;
+}
+
+/* ——— Product card CTA link (WEB-20) ——— */
+.product-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.product-card__cta:hover { color: var(--primary-dark); }
