@@ -28,9 +28,9 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__list" id="nav-menu">
-        <li><a href="../index.html#inicio" class="nav__link">Presentación</a></li>
-        <li><a href="../contacto.html" class="nav__link">Contáctenos</a></li>
-        <li><a href="../asignatura.html" class="nav__link">Asignatura</a></li>
+        <li><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li><a href="../evaluacion.html" class="nav__link">Inversión</a></li>
+        <li><a href="../propuesta.html" class="nav__link">Propuesta</a></li>
         <li class="nav__item nav__dropdown" data-nav-dropdown>
           <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
             Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
@@ -45,7 +45,7 @@
             <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="scada.html">SCADA</a></li>
           </ul>
         </li>
-        <li><a href="../reflexiones.html" class="nav__link">Reflexiones</a></li>
+        <li><a href="../contacto.html" class="nav__link">Contáctenos</a></li>
       </ul>
     </nav>
   </header>
@@ -70,9 +70,9 @@
             <h2 class="module-section__title" id="sec-layout">Vista de Planta</h2>
             <hr class="module-section__divider" aria-hidden="true">
           </header>
-          <figure class="reveal" style="margin:1rem 0 1.5rem;text-align:center">
-            <img src="../img/diagramas/planta-layout-placeholder.svg" alt="Vista de planta: layout esquemático de la planta embotelladora con líneas 1-5, zonas de soporte y almacén" style="max-width:100%;height:auto;border-radius:8px">
-            <figcaption style="font-size:0.82rem;color:var(--text-muted);margin-top:0.5rem">Vista de planta esquemática. El diagrama completo está disponible en formato draw.io en el repositorio.</figcaption>
+          <figure class="diagram-figure reveal">
+            <img src="../img/planta-layout.jpg" alt="Vista de planta: layout general de la planta embotelladora con 7 líneas de producción, zonas de soporte y almacén" class="diagram-figure__img" loading="lazy">
+            <figcaption class="diagram-figure__caption">Vista de planta (layout general). 7 líneas de producción, zonas de soporte y almacén.</figcaption>
           </figure>
         </section>
 
@@ -300,8 +300,9 @@
           <div class="module-note reveal">
             El diseño TO-BE se enfocará en reducir los tiempos NVA logísticos identificados en el VSM actual, manteniendo la alta disponibilidad de las máquinas.
           </div>
-          <figure class="reveal" style="margin:1.5rem 0;text-align:center">
-            <img src="../img/diagramas/vsm-tobe-placeholder.svg" alt="Value Stream Map TO-BE — pendiente de diseño en Fase 3" style="max-width:100%;height:auto;border-radius:8px">
+          <figure class="diagram-figure reveal">
+            <img src="../img/diagramas/vsm-final.png" alt="Value Stream Map AS-IS consolidado — 3 productos" class="diagram-figure__img" loading="lazy">
+            <figcaption class="diagram-figure__caption">VSM AS-IS consolidado. El diseño TO-BE se completará en la Fase 3.</figcaption>
           </figure>
           <div class="placeholder-card reveal">
             <p class="placeholder-card__note"><strong>Próxima entrega:</strong> esta sección se completará con el modelo TO-BE y los resultados comparativos frente al AS-IS, validados en <strong>Tecnomatix Plant Simulation</strong> (escenarios de throughput, WIP y utilización de recursos).</p>
@@ -313,14 +314,37 @@
             <h2 class="module-section__title" id="sec-sim">Simulación de eventos discretos</h2>
             <hr class="module-section__divider" aria-hidden="true">
           </header>
-          <p class="module-section__lead reveal">El modelo de simulación permitirá cuantificar el impacto de cambios logísticos y de balanceo de línea antes de comprometer CAPEX, cerrando el ciclo entre diagnóstico VSM, DAP e indicadores.</p>
+          <p class="module-section__lead reveal">El modelo de simulación permite cuantificar el impacto de cambios logísticos y de balanceo de línea antes de comprometer CAPEX, cerrando el ciclo entre diagnóstico VSM, DAP e indicadores.</p>
           <ul class="module-list reveal">
             <li>Corridas AS-IS calibradas frente a tiempos de proceso y colas observados.</li>
             <li>Experimentos TO-BE (buffers, rutas internas, políticas de paletizado).</li>
             <li>Anexo de supuestos, réplicas y validación estadística básica.</li>
           </ul>
+
+          <h3 class="module-section__subtitle reveal">Resultados AS-IS — Estados de las estaciones</h3>
+          <p class="module-section__lead reveal">La siguiente gráfica muestra los estados de cada estación del modelo AS-IS: working, setting up, waiting, blocked, powering up/down, failed, stopped, paused y unplanned.</p>
+          <div class="img-placeholder reveal">
+            <div class="img-placeholder__inner">
+              <svg viewBox="0 0 48 48" fill="none" class="img-placeholder__icon"><rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M4 32l12-10 8 6 12-12 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="18" r="4" fill="currentColor" opacity="0.3"/></svg>
+              <p class="img-placeholder__text">Gráfica de barras de estados por estación (Tecnomatix Plant Simulation) — pendiente de exportar por el equipo desde el archivo .spp</p>
+            </div>
+          </div>
+
+          <h3 class="module-section__subtitle reveal">Throughput y OEE simulados</h3>
+          <div class="img-placeholder reveal">
+            <div class="img-placeholder__inner">
+              <svg viewBox="0 0 48 48" fill="none" class="img-placeholder__icon"><rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M4 32l12-10 8 6 12-12 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="18" r="4" fill="currentColor" opacity="0.3"/></svg>
+              <p class="img-placeholder__text">Resultados de throughput y OEE de la simulación AS-IS — pendiente de exportar por el equipo</p>
+            </div>
+          </div>
+
+          <div class="module-note reveal">
+            <strong>Archivo de simulación:</strong> El modelo AS-IS completo está implementado en Tecnomatix Plant Simulation (<code>CocaCola400mL 1.0.spp</code>).
+            <a href="https://drive.google.com/drive/u/2/folders/0AO2oxGaDvYBvUk9PVA" target="_blank" rel="noopener" style="color:var(--primary-dark);font-weight:600">Descargar desde Google Drive →</a>
+          </div>
+
           <div class="placeholder-card reveal">
-            <p class="placeholder-card__note"><strong>En desarrollo:</strong> implementación y resultados en <strong>Tecnomatix Plant Simulation</strong> para comparar escenarios AS-IS vs TO-BE con KPIs alineados al módulo de producción y al EDT fase 5.</p>
+            <p class="placeholder-card__note"><strong>Próximos pasos:</strong> El equipo debe abrir el archivo <code>.spp</code> en Tecnomatix Plant Simulation y exportar: (1) screenshot del layout 2D del modelo, (2) gráfica de estados por estación, (3) resultados de throughput/OEE, y opcionalmente (4) video de la animación de simulación.</p>
           </div>
         </section>
 
@@ -379,9 +403,11 @@
         <div class="footer-col">
           <h4 class="footer-col__heading">Proyecto</h4>
           <ul class="footer-col__links">
+            <li><a href="../evaluacion.html">Inversión</a></li>
+            <li><a href="../propuesta.html">Propuesta Técnica</a></li>
             <li><a href="../asignatura.html">Asignatura</a></li>
-            <li><a href="../contacto.html">Contáctenos</a></li>
             <li><a href="../reflexiones.html">Reflexiones</a></li>
+            <li><a href="../contacto.html">Contáctenos</a></li>
           </ul>
         </div>
         <div class="footer-col">
