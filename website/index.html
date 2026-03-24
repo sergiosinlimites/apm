@@ -197,14 +197,15 @@
           <article class="product-simple-card product-simple-card--info reveal">
             <div class="product-simple-card__icon" aria-hidden="true">
               <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 4h20l6 8v60a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V12l6-8Z" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M20 24h24M20 36h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M28 48h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="32" cy="12" rx="20" ry="8" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M12 12v52c0 4 9 8 20 8s20-4 20-8V12" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M32 4V0M28 2h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 36h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="product-simple-card__name">Agua Purificada</h3>
-            <p class="product-simple-card__sub">No retornable 1 L · PET</p>
-            <span class="product-simple-card__tag">Consumo diario</span>
+            <h3 class="product-simple-card__name">Garrafón de Agua</h3>
+            <p class="product-simple-card__sub">20 L · Polietileno (PE)</p>
+            <span class="product-simple-card__tag">Gran Volumen (GV)</span>
           </article>
         </div>
 
@@ -223,8 +224,8 @@
         </header>
 
         <figure class="biz-model-figure reveal">
-          <img src="img/pagina/modelo-negocio.png" alt="Business Model Canvas — Modelo de negocio inicial de Gaseo S.A.S." loading="lazy">
-          <figcaption>Modelo de negocio inicial · Fuente: equipo Gaseo S.A.S. APM 2026-I</figcaption>
+          <div data-osd-src="img/pagina/modelo-negocio.png" style="width:100%;height:500px;border-radius:12px;overflow:hidden" role="img" aria-label="Business Model Canvas — Modelo de negocio inicial de Gaseo S.A.S."></div>
+          <figcaption>Modelo de negocio inicial · Fuente: equipo Gaseo S.A.S. APM 2026-I — Usa scroll o pinch para hacer zoom</figcaption>
         </figure>
 
         <div style="text-align:center; margin-top:2rem" class="reveal">
@@ -307,5 +308,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/openseadragon.min.js"></script>
+  <script src="js/osd-init.js"></script>
 </body>
 </html>
