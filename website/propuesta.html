@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FluxLine — Propuesta técnica: cómo mejoramos la producción de 75% a 95%+ OEE mediante automatización industrial.">
+  <title>Propuesta Técnica · FluxLine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html" class="nav__brand" aria-label="FluxLine — Inicio">
+        <svg class="nav__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="28" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <span class="nav__logo-text">FluxLine</span>
+      </a>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="evaluacion.html" class="nav__link">Inversión</a></li>
+        <li><a href="propuesta.html" class="nav__link" aria-current="page">Propuesta</a></li>
+        <li class="nav__item nav__dropdown" data-nav-dropdown>
+          <button type="button" class="nav__dropdown-toggle" id="nav-modules-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-modules-menu">
+            Módulos <span class="nav__dropdown-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav__dropdown-menu" id="nav-modules-menu" role="menu">
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/introduccion.html">Introducción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/produccion.html">Producción</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/planeacion.html">Planeación</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/robotica.html">Robótica</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/digital-factory.html">Digital Factory</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/control.html">Control (PLC)</a></li>
+            <li role="none"><a role="menuitem" class="nav__link nav__link--sub" href="modulos/scada.html">SCADA</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html" class="nav__link">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--compact" id="inicio">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content hero__content--compact">
+        <p class="hero__eyebrow">Detalle técnico</p>
+        <h1 class="hero__title">Propuesta Técnica</h1>
+        <p class="hero__subtitle">Cómo mejoramos la producción de 75% a 95%+ OEE</p>
+        <p class="hero__tagline">Control digital, robótica integrada y gemelo digital aplicados a una planta embotelladora de 3 líneas con capacidad combinada de 65,000 u/h.</p>
+      </div>
+    </section>
+
+    <section class="section section--proceso" id="proceso">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">El Proceso de Manufactura</h2>
+          <p class="section__lead">Flujo general desde insumos hasta despacho.</p>
+        </header>
+
+        <div class="pipeline reveal" role="img" aria-label="Cadena de proceso: Insumos hasta Despacho">
+          <div class="pipeline__track">
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Insumos</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Clarificación</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Jarabe</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Mezcla</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Carbonatación</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Llenado</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Sellado</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Etiquetado</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Inspección</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Empaque</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Embalaje</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Paletizado</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step"><span class="pipeline__dot"></span><span class="pipeline__label">Almacén</span></div>
+            <div class="pipeline__arrow" aria-hidden="true"></div>
+            <div class="pipeline__step pipeline__step--end"><span class="pipeline__dot"></span><span class="pipeline__label">Despacho</span></div>
+          </div>
+        </div>
+
+        <div class="zones grid-3 reveal">
+          <article class="zone-card">
+            <h3 class="zone-card__title">Líneas de Producción</h3>
+            <ul class="zone-card__list">
+              <li>Línea 1</li>
+              <li>Línea 2</li>
+              <li>Línea 3</li>
+              <li>Línea 4</li>
+              <li>Línea 5</li>
+              <li>Línea 6</li>
+              <li>Línea 7</li>
+            </ul>
+          </article>
+          <article class="zone-card">
+            <h3 class="zone-card__title">Zonas de Soporte</h3>
+            <ul class="zone-card__list">
+              <li>Clarificación azúcar</li>
+              <li>Jarabe</li>
+              <li>Agua</li>
+              <li>Laboratorio</li>
+              <li>Admin</li>
+            </ul>
+          </article>
+          <article class="zone-card">
+            <h3 class="zone-card__title">Empaque y Despacho</h3>
+            <ul class="zone-card__list">
+              <li>Empaque</li>
+              <li>Embalaje</li>
+              <li>Paletizado</li>
+              <li>Almacén</li>
+              <li>Carga camiones</li>
+            </ul>
+          </article>
+        </div>
+
+        <figure class="diagram-figure reveal">
+          <img src="img/planta-layout.jpg" alt="Vista de planta — Layout general de la planta embotelladora" class="diagram-figure__img" loading="lazy">
+          <figcaption class="diagram-figure__caption">Vista de planta (layout general). 7 líneas de producción, zonas de soporte y almacén.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--products" id="productos">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Portafolio de Productos — Ficha Técnica</h2>
+          <p class="section__lead">Tres referencias representativas del caso de estudio.</p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product-card product-card--primary reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8h24l4 12v52a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V20l4-12Z" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M18 28h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="32" cy="10" rx="14" ry="4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="product-card__name">Gaseosa Carbonatada 400ml</h3>
+            <dl class="product-card__specs">
+              <div><dt>Formato</dt><dd>Retornable</dd></div>
+              <div><dt>Envase</dt><dd>Vidrio</dd></div>
+              <div><dt>Velocidad</dt><dd>20,000 bot/h</dd></div>
+              <div><dt>Takt Time</dt><dd>0.18 s/bot</dd></div>
+              <div><dt>OEE</dt><dd><strong>94.1%</strong></dd></div>
+            </dl>
+          </article>
+
+          <article class="product-card product-card--success reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="32" cy="16" rx="22" ry="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 16v40c0 6 10 12 22 12s22-6 22-12V16" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M32 28v24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="product-card__name">Bebida Energética 473ml</h3>
+            <dl class="product-card__specs">
+              <div><dt>Formato</dt><dd>Lata</dd></div>
+              <div><dt>Envase</dt><dd>Aluminio</dd></div>
+              <div><dt>Velocidad</dt><dd>30,000 latas/h</dd></div>
+              <div><dt>Takt Time</dt><dd>0.12 s/lata</dd></div>
+              <div><dt>OEE</dt><dd><strong>95.7%</strong></dd></div>
+            </dl>
+          </article>
+
+          <article class="product-card product-card--info reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4h20l6 8v60a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V12l6-8Z" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M20 24h24M20 36h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M28 48h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="product-card__name">Agua Purificada 1L</h3>
+            <dl class="product-card__specs">
+              <div><dt>Formato</dt><dd>No retornable</dd></div>
+              <div><dt>Envase</dt><dd>PET (soplado)</dd></div>
+              <div><dt>Velocidad</dt><dd>15,000 bot/h</dd></div>
+              <div><dt>Takt Time</dt><dd>0.24 s/bot</dd></div>
+              <div><dt>OEE</dt><dd><strong>95.2%</strong></dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="diagrams-row reveal" style="margin-top:2.5rem">
+          <h3 class="section__title" style="font-size:1.35rem; text-align:left; margin-bottom:1.25rem">Diagramas de Operaciones de Proceso</h3>
+          <div class="grid-3">
+            <figure class="diagram-figure">
+              <img src="img/diagramas/diagrama-ops-gaseosa.jpg" alt="Diagrama de operaciones — Gaseosa 400ml" class="diagram-figure__img" loading="lazy">
+              <figcaption class="diagram-figure__caption">DOP — Gaseosa Carbonatada 400ml</figcaption>
+            </figure>
+            <figure class="diagram-figure">
+              <img src="img/diagramas/diagrama-ops-energetica.jpg" alt="Diagrama de operaciones — Energética 473ml" class="diagram-figure__img" loading="lazy">
+              <figcaption class="diagram-figure__caption">DOP — Bebida Energética 473ml</figcaption>
+            </figure>
+            <figure class="diagram-figure">
+              <img src="img/diagramas/diagrama-ops-agua.jpg" alt="Diagrama de operaciones — Agua 1L" class="diagram-figure__img" loading="lazy">
+              <figcaption class="diagram-figure__caption">DOP — Agua Purificada 1L</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--indicators" id="indicadores">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Indicadores de Producción (AS-IS)</h2>
+          <p class="section__lead">Comparativo de desempeño entre las tres referencias.</p>
+        </header>
+
+        <div class="table-wrap reveal">
+          <table class="data-table">
+            <caption class="visually-hidden">Indicadores comparativos Gaseosa 400ml, Energética 473ml y Agua purificada</caption>
+            <thead>
+              <tr>
+                <th scope="col">Indicador</th>
+                <th scope="col">Gaseosa 400ml</th>
+                <th scope="col">Energética 473ml</th>
+                <th scope="col">Agua Purificada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Demanda mínima</td><td>20,000 bot/h</td><td>30,000 latas/h</td><td>15,000 bot/h</td></tr>
+              <tr><td>Takt time</td><td>0.18 s/bot</td><td>0.12 s/lata</td><td>0.24 s/bot</td></tr>
+              <tr><td>Tiempo de ciclo</td><td>0.124 s</td><td>0.094 s</td><td>0.069 s</td></tr>
+              <tr><td>Tamaño de lote</td><td>1,440 bot</td><td>1,440 latas</td><td>640 bot</td></tr>
+              <tr><td>Tasa de producción</td><td>23,975 bot/h</td><td>30,337 latas/h</td><td>37,984 bot/h</td></tr>
+              <tr><td>Utilización</td><td>83.4%</td><td>82.4%</td><td>39.5%</td></tr>
+              <tr><td>Disponibilidad</td><td>97%</td><td>97%</td><td>97%</td></tr>
+              <tr><td>Quality Rate</td><td>97.0%</td><td>98.7%</td><td>98.1%</td></tr>
+              <tr class="data-table__highlight"><td>OEE</td><td>94.1%</td><td>95.7%</td><td>95.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="oee-gauges reveal">
+          <div class="oee-gauge oee-gauge--primary">
+            <svg class="oee-gauge__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="oee-gauge__bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"/>
+              <circle class="oee-gauge__progress" cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round"
+                data-pct="94.1" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="oee-gauge__label">
+              <span class="oee-gauge__value" data-oee="94.1">94.1%</span>
+              <span class="oee-gauge__name">Gaseosa 400ml</span>
+            </div>
+          </div>
+          <div class="oee-gauge oee-gauge--success">
+            <svg class="oee-gauge__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="oee-gauge__bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"/>
+              <circle class="oee-gauge__progress" cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round"
+                data-pct="95.7" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="oee-gauge__label">
+              <span class="oee-gauge__value" data-oee="95.7">95.7%</span>
+              <span class="oee-gauge__name">Energética 473ml</span>
+            </div>
+          </div>
+          <div class="oee-gauge oee-gauge--info">
+            <svg class="oee-gauge__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="oee-gauge__bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"/>
+              <circle class="oee-gauge__progress" cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round"
+                data-pct="95.2" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="oee-gauge__label">
+              <span class="oee-gauge__value" data-oee="95.2">95.2%</span>
+              <span class="oee-gauge__name">Agua Purificada</span>
+            </div>
+          </div>
+        </div>
+        <p class="oee-note reveal">Los anillos representan el OEE global (AS-IS) por producto.</p>
+
+        <figure class="diagram-figure reveal" style="margin-top:2.5rem">
+          <img src="img/diagramas/vsm-final.png" alt="Value Stream Map — 3 productos" class="diagram-figure__img" loading="lazy">
+          <figcaption class="diagram-figure__caption">Value Stream Map consolidado (AS-IS) — Gaseosa, Energética y Agua.</figcaption>
+        </figure>
+
+        <div style="text-align:center" class="reveal">
+          <a href="modulos/produccion.html#indicadores" class="section__crosslink">Ver análisis completo en Producción →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--explorer" id="modulos">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Módulos del Curso</h2>
+          <p class="section__lead">7 módulos evaluativos que componen el proyecto integrador.</p>
+        </header>
+
+        <div class="explorer-grid">
+          <a href="modulos/introduccion.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+            <p class="explorer-card__number">Módulo 1</p>
+            <h3 class="explorer-card__title">Introducción a la Automatización</h3>
+            <p class="explorer-card__prof">Prof. Luis Miguel Méndez</p>
+            <p class="explorer-card__desc">Niveles de automatización, tecnologías de Industria 4.0 e indicadores de desempeño aplicados al proyecto integrador.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/produccion.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2"/><path d="M20 20l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <p class="explorer-card__number">Módulo 2</p>
+            <h3 class="explorer-card__title">Gestión y Evaluación de la Producción</h3>
+            <p class="explorer-card__prof">Prof. Carlos Julio Cortés R.</p>
+            <p class="explorer-card__desc">VSM, simulación de eventos discretos en Tecnomatix, KPIs de producción, MES y ERP aplicados al caso de estudio.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/planeacion.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/><path d="M16 8v16M12.5 12c1.5-2 7-1 7 2.5S13 18 13 21s5.5 3.5 7 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="explorer-card__number">Módulo 3</p>
+            <h3 class="explorer-card__title">Planeación y Evaluación</h3>
+            <p class="explorer-card__prof">Prof. Luis Miguel Méndez</p>
+            <p class="explorer-card__desc">EDT, cronograma del integrador, indicadores de gestión y evaluación económica de alternativas de automatización.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/robotica.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><path d="M6 26V14l6-4 6 4v12" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2" fill="currentColor"/><path d="M18 18h8v8H18z" stroke="currentColor" stroke-width="2"/></svg>
+            <p class="explorer-card__number">Módulo 4</p>
+            <h3 class="explorer-card__title">Celdas de Manufactura Robotizadas</h3>
+            <p class="explorer-card__prof">Prof. Ricardo Ramirez H.</p>
+            <p class="explorer-card__desc">Justificación, diseño de celdas, selección de robots, simulación en RobotStudio y seguridad industrial.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/digital-factory.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><path d="M8 10l8-4 8 4v12l-8 4-8-4V10z" stroke="currentColor" stroke-width="2"/><path d="M16 6v20M8 10l8 4 8-4" stroke="currentColor" stroke-width="1.5"/></svg>
+            <p class="explorer-card__number">Módulo 5</p>
+            <h3 class="explorer-card__title">Tecnologías Modernas (Digital Factory)</h3>
+            <p class="explorer-card__prof">Prof. Ubaldo García Zaragoza</p>
+            <p class="explorer-card__desc">Comisionamiento virtual, gemelo digital, virtualización de actuadores y sensores, y validación de fábrica.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/control.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 14h4M18 14h6M10 20h12" stroke="currentColor" stroke-width="1.5"/></svg>
+            <p class="explorer-card__number">Módulo 6a</p>
+            <h3 class="explorer-card__title">Control Industrial (PLC)</h3>
+            <p class="explorer-card__prof">Prof. Víctor Hugo Grisales</p>
+            <p class="explorer-card__desc">Arquitectura PLC, programación Ladder/Grafcet, gestión de recetas y validación funcional del control secuencial.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+          <a href="modulos/scada.html" class="explorer-card reveal">
+            <svg class="explorer-card__icon" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 10h24M12 24h8" stroke="currentColor" stroke-width="2"/></svg>
+            <p class="explorer-card__number">Módulo 6b</p>
+            <h3 class="explorer-card__title">Supervisión SCADA</h3>
+            <p class="explorer-card__prof">Prof. Víctor Hugo Grisales</p>
+            <p class="explorer-card__desc">Diseño HMI ISA-101, implementación en Ignition, comunicación OPC, alarmas, eventos e historización.</p>
+            <span class="explorer-card__link">Ver módulo →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--phases" id="fases">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Fases del Proyecto</h2>
+          <p class="section__subtitle">11 fases · 88 entregables · 96 días</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 1</span>
+              <h3 class="timeline__title">Alcance Técnico</h3>
+              <p class="timeline__meta">8 días</p>
+              <p class="timeline__desc">Definición de límites del sistema y requisitos iniciales.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-1">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2"/><path d="M20 20l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 2</span>
+              <h3 class="timeline__title">Análisis AS-IS</h3>
+              <p class="timeline__meta">10 días</p>
+              <p class="timeline__desc">Caracterización del estado actual y cuellos de botella.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-2">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M6 24l12-16 8 6 6-4v12H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 3</span>
+              <h3 class="timeline__title">Diseño TO-BE</h3>
+              <p class="timeline__meta">7 días</p>
+              <p class="timeline__desc">Propuesta de mejoras y escenarios futuros.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-3">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="12" r="3" fill="currentColor"/><circle cx="24" cy="8" r="3" fill="currentColor"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M11 13l11-3M11 14l11 8M24 11l0 11" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 4</span>
+              <h3 class="timeline__title">Arquitectura</h3>
+              <p class="timeline__meta">8 días</p>
+              <p class="timeline__desc">Estructura funcional y niveles ISA-95.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-4">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M4 24h24M8 20v4M16 16v8M24 12v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 5</span>
+              <h3 class="timeline__title">Simulación</h3>
+              <p class="timeline__meta">10 días</p>
+              <p class="timeline__desc">Modelado y experimentación en entorno de simulación.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-5">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/><path d="M16 8v16M12.5 12c1.5-2 7-1 7 2.5S13 18 13 21s5.5 3.5 7 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 6</span>
+              <h3 class="timeline__title">Viabilidad Económica</h3>
+              <p class="timeline__meta">11 días</p>
+              <p class="timeline__desc">Análisis de costos, beneficios y retorno.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-6">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M6 26V14l6-4 6 4v12" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2" fill="currentColor"/><path d="M18 18h8v8H18z" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 7</span>
+              <h3 class="timeline__title">Celda Robotizada</h3>
+              <p class="timeline__meta">8 días</p>
+              <p class="timeline__desc">Integración robótica y layout de celda.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-7">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 14h4M18 14h6M10 20h12" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 8</span>
+              <h3 class="timeline__title">Control Industrial</h3>
+              <p class="timeline__meta">9 días</p>
+              <p class="timeline__desc">PLC, ladder y lógica de control.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-8">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M8 10l8-4 8 4v12l-8 4-8-4V10z" stroke="currentColor" stroke-width="2"/><path d="M16 6v20M8 10l8 4 8-4" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 9</span>
+              <h3 class="timeline__title">Gemelo Digital</h3>
+              <p class="timeline__meta">8 días</p>
+              <p class="timeline__desc">Modelo virtual y sincronización con planta.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-9">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 10h24M12 24h8" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 10</span>
+              <h3 class="timeline__title">SCADA</h3>
+              <p class="timeline__meta">8 días</p>
+              <p class="timeline__desc">Supervisión, alarmas e interfaces HMI.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-10">Ver en planeación →</a>
+            </div>
+          </li>
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__card">
+              <div class="timeline__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><path d="M8 12l8-6 8 6v14H8V12z" stroke="currentColor" stroke-width="2"/><path d="M12 22l4 4 4-4" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <span class="timeline__phase">Fase 11</span>
+              <h3 class="timeline__title">Cierre Académico</h3>
+              <p class="timeline__meta">9 días</p>
+              <p class="timeline__desc">Consolidación de entregables y presentación final.</p>
+              <a class="timeline__link" href="modulos/planeacion.html#fase-11">Ver en planeación →</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="cta-final" style="text-align:center">
+      <div class="container">
+        <h2 class="section__title reveal">¿Interesado en este proyecto?</h2>
+        <p class="section__lead reveal">Revisa la evaluación económica completa o contáctanos directamente.</p>
+        <div class="hero__ctas reveal" style="margin-top:1.5rem">
+          <a href="evaluacion.html" class="btn btn--primary" style="margin-top:0">Ver evaluación económica</a>
+          <a href="contacto.html" class="hero__secondary-cta" style="color:var(--primary)">Contáctenos →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-col__brand">
+            <svg width="24" height="24" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="2" y="8" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 18h8M18 18h12M6 14v8M14 14v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="28" cy="12" r="3" fill="currentColor"/></svg>
+            FluxLine
+          </a>
+          <p>Automatización de Procesos de Manufactura</p>
+          <p>Grupo 4 · UNAL 2026-I</p>
+          <div class="footer-social">
+            <a href="https://github.com/sergiosinlimites/apm" target="_blank" rel="noopener" class="footer-social__link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+            <a href="https://drive.google.com/drive/u/2/folders/0AO2oxGaDvYBvUk9PVA" target="_blank" rel="noopener" class="footer-social__link" aria-label="Google Drive">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 5.93L11.14 9.5 7.71 3.5zm1.14 0l6.86 11.86h6.86L15.71 3.5H8.86zM2.29 16l3.43 5.93h13.71L22.86 16H2.29z"/></svg>
+            </a>
+            <a href="https://sergioandresbolanospenagos.atlassian.net/" target="_blank" rel="noopener" class="footer-social__link" aria-label="Jira">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.53 2c0 2.4 1.97 4.35 4.35 4.35h1.78v1.7c0 2.4 1.97 4.35 4.35 4.35V2.84a.84.84 0 00-.84-.84H11.53zM6.77 6.8a4.362 4.362 0 004.34 4.34h1.78v1.72a4.362 4.362 0 004.34 4.34V7.63a.84.84 0 00-.84-.84H6.77zM2 11.6a4.362 4.362 0 004.34 4.34h1.78v1.72c0 2.4 1.97 4.35 4.35 4.35V12.43a.84.84 0 00-.84-.84H2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Módulos</h4>
+          <ul class="footer-col__links">
+            <li><a href="modulos/introduccion.html">Introducción</a></li>
+            <li><a href="modulos/produccion.html">Producción</a></li>
+            <li><a href="modulos/planeacion.html">Planeación</a></li>
+            <li><a href="modulos/robotica.html">Robótica</a></li>
+            <li><a href="modulos/digital-factory.html">Digital Factory</a></li>
+            <li><a href="modulos/control.html">Control (PLC)</a></li>
+            <li><a href="modulos/scada.html">SCADA</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Proyecto</h4>
+          <ul class="footer-col__links">
+            <li><a href="evaluacion.html">Inversión</a></li>
+            <li><a href="propuesta.html">Propuesta Técnica</a></li>
+            <li><a href="asignatura.html">Asignatura</a></li>
+            <li><a href="reflexiones.html">Reflexiones</a></li>
+            <li><a href="contacto.html">Contáctenos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Legal</h4>
+          <ul class="footer-col__links">
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos de Servicio</a></li>
+            <li><a href="cookies.html">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FluxLine · Grupo 4 APM · Dpto. Ing. Mecánica y Mecatrónica · Universidad Nacional de Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
