@@ -37,3 +37,6 @@ archivos-drive/extracted/
 
 # LibreOffice lock files
 .~lock.*#
+
+# Archivos privados del equipo
+archivos-drive/APM_Grupo4/privado/

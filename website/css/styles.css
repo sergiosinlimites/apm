@@ -311,6 +311,12 @@ a:hover {
   background: rgba(250, 208, 208, 0.45);
 }
 
+.nav__dropdown-separator {
+  height: 1px;
+  margin: 0.375rem 0.75rem;
+  background: var(--slate-200, #E2E8F0);
+}
+
 @media (min-width: 881px) {
   .nav__dropdown.nav__dropdown--open .nav__dropdown-menu {
     opacity: 1;
@@ -1372,6 +1378,14 @@ section[id] {
 .team-card__avatar--5 { background: linear-gradient(135deg, var(--secondary-light), var(--secondary)); }
 .team-card__avatar--6 { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
 
+.team-card__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--slate-200, #E2E8F0);
+}
+
 .team-card__name {
   margin: 0;
   font-size: 1rem;
@@ -1385,6 +1399,33 @@ section[id] {
   font-size: 0.9rem;
   color: var(--text-muted);
   font-weight: 500;
+}
+
+.team-card__desc {
+  font-size: 0.85rem;
+  color: var(--slate-500, #64748B);
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.4;
+}
+
+.team-card__links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.team-card__link {
+  color: var(--slate-500, #64748B);
+  transition: color 0.2s;
+}
+
+.team-card__link:hover {
+  color: var(--primary, #A8201A);
+}
+
+.team-card__link svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* ——— Footer ——— */
@@ -2327,6 +2368,39 @@ section[id] {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+.investor-cta-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--slate-50, #F8FAFC);
+  border: 1px solid var(--slate-200, #E2E8F0);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.investor-cta-card__icon {
+  color: var(--primary, #A8201A);
+  margin-bottom: 1rem;
+}
+
+.investor-cta-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary, #1E293B);
+  margin-bottom: 0.75rem;
+}
+
+.investor-cta-card__desc {
+  color: var(--slate-500, #64748B);
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.investor-cta-card .btn {
+  margin-top: 0;
 }
 
 .form-field {
