@@ -1021,7 +1021,6 @@ En pantallas medianas (1200–1400px) el contenido ocupa casi el 100% del ancho,
 | Calendario de **sustentaciones** (10% + 60%) | Alto impacto en nota | Adelantar 11.6–11.8 en el cronograma 6.2–6.3 |
 | Sobrecarga paralela (simulación + PLC + SCADA) | Retrasos en cadena | Priorizar P1 y repartir roles en 6.3 |
 | Contenido web **11.5*** dependiente de módulos | Sitio desactualizado | Regla: no publicar página hasta tener fase fuente “listo para revisión” |
-
 ---
 
 ## Prioridad 0C — Sprint 3: Investor Pitch, Evaluación Económica y Galería de Imágenes

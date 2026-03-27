@@ -64,349 +64,396 @@
     </section>
 
     <article class="module-content">
-      <!-- [REMOVAL-021] Placeholders y secciones genéricas sustituidos por datos del informe evaluacion-economica-v2.pdf -->
+      <!-- [REMOVAL-024] Modelo monolínea y sensibilidades precio/envase sustituidos por evaluación multiproducto (WACC 18%) según evaluacion-multiproducto-final.pdf -->
       <div class="container">
 
-        <div class="module-note reveal" style="margin-bottom:2rem">
-          <strong>Alcance:</strong> Esta evaluación económica detallada aplica a la <strong>línea de Gaseosa Carbonatada Retornable 400 mL</strong> (1 línea de producción continua, escenario TO-BE con OEE = 0.95). Las líneas de Bebida Energética y Garrafón 20L están pendientes de evaluación individual.
-          <br><br>
-          <a href="docs/evaluacion-economica-v2.pdf" target="_blank" rel="noopener" style="color:var(--primary-dark);font-weight:600">Descargar informe completo (PDF, 31 páginas) →</a>
-        </div>
+        <section class="module-section" id="nota-alcance">
+          <div class="module-note reveal">
+            <strong>Alcance:</strong> Esta evaluación aplica al <strong>negocio industrial multiproducto de bebidas y agua</strong>: <strong>tres líneas productivas</strong> (carbonatada retornable 400&nbsp;mL, energizante en lata 355&nbsp;mL, agua PET 1&nbsp;L), términos nominales en COP, horizonte 5 años y <strong>WACC 18%</strong> efectivo anual.
+            <br><br>
+            <a href="docs/evaluacion-multiproducto-final.pdf" target="_blank" rel="noopener" style="color:var(--primary-dark);font-weight:600">Descargar informe completo (PDF final, multiproducto) →</a>
+            <br>
+            <a href="docs/evaluacion-economica-v2.pdf" target="_blank" rel="noopener" style="color:var(--text-muted);font-weight:500;font-size:0.95rem">Referencia secundaria: modelo monolínea (evaluacion-economica-v2.pdf) →</a>
+          </div>
+        </section>
 
-        <section class="module-section" id="resumen">
-          <h2 class="module-section__title">Indicadores Financieros</h2>
+        <section class="module-section" id="indicadores">
+          <h2 class="module-section__title">Indicadores financieros consolidados</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Resultados del modelo empresarial con inversión total de $25,000 MM COP, horizonte de 5 años y tasa de descuento del 12% e.a.</p>
+          <p class="module-section__lead">Modelo con inversión total <strong>141,252 MM COP</strong>, horizonte 5 años, <strong>WACC 18%</strong> e.a. y valor terminal (VT) incluido en VPN. <strong>EBITDA</strong> estacionario consolidado: <strong>138,973 MM</strong> (30.4%). <strong>FCL</strong> estacionario consolidado: <strong>93,064 MM</strong>.</p>
 
           <div class="module-stats">
             <div class="stat-card">
-              <span class="stat-card__value">244.6%</span>
-              <span class="stat-card__label">ROI anual</span>
+              <span class="stat-card__value">+108,878 MM</span>
+              <span class="stat-card__label">VPN (18%, 5 años + VT)</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__value">~251%</span>
-              <span class="stat-card__label">TIR</span>
+              <span class="stat-card__value">≈38%</span>
+              <span class="stat-card__label">TIR global (anual)</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__value">$201,935M</span>
-              <span class="stat-card__label">VPN (12%, 5 años)</span>
+              <span class="stat-card__value">≈48.9%</span>
+              <span class="stat-card__label">ROI global</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__value">~4.8 meses</span>
-              <span class="stat-card__label">Payback simple</span>
+              <span class="stat-card__value">≈28 meses</span>
+              <span class="stat-card__label">Payback global</span>
             </div>
+          </div>
+        </section>
+
+        <section class="module-section" id="lineas">
+          <h2 class="module-section__title">Tres líneas productivas</h2>
+          <hr class="module-section__divider">
+          <p class="module-section__lead">Capacidades nominales, formatos, OEE AS-IS / TO-BE, producción anual TO-BE, precios Ex-Works y CapEx de maquinaria por línea.</p>
+
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Parámetros por línea productiva</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Parámetro</th>
+                  <th scope="col">L1 — Carbonatada 400&nbsp;mL</th>
+                  <th scope="col">L2 — Energizante 355&nbsp;mL</th>
+                  <th scope="col">L3 — Agua PET 1&nbsp;L</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Capacidad</td><td>20,000 bot/h</td><td>30,000 latas/h</td><td>15,000 bot/h</td></tr>
+                <tr><td>Formato</td><td>Envase retornable</td><td>Lata de aluminio</td><td>PET soplado</td></tr>
+                <tr><td>OEE TO-BE</td><td>0.95</td><td>0.92</td><td>0.90</td></tr>
+                <tr><td>OEE AS-IS</td><td>0.80</td><td>0.78</td><td>0.75</td></tr>
+                <tr><td>Producción anual TO-BE</td><td>136.8 M u</td><td>198 M u</td><td>97.2 M u</td></tr>
+                <tr><td>Precio Ex-Works</td><td>850 COP/bot</td><td>1,350 COP/lata</td><td>750 COP/bot</td></tr>
+                <tr class="data-table__highlight"><td>CapEx maquinaria (MM COP)</td><td>18,000</td><td>35,000</td><td>25,000</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
         <section class="module-section" id="inversion">
-          <h2 class="module-section__title">Estructura de Inversión</h2>
+          <h2 class="module-section__title">Estructura de inversión consolidada</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Inversión total del proyecto: CapEx industrial + capital de trabajo en flota de envases retornables.</p>
+          <p class="module-section__lead">Inversión total <strong>141,252 MM COP</strong>: CapEx por línea, infraestructura compartida, flota retornable L1, capital de trabajo operativo y costos preoperativos.</p>
 
           <div class="grid-3 reveal" style="margin-bottom:1.5rem">
             <div class="stat-card stat-card--dark">
-              <span class="stat-card__value">$18,000M</span>
-              <span class="stat-card__label">CapEx (72%)</span>
+              <span class="stat-card__value">78,000 MM</span>
+              <span class="stat-card__label">CapEx maquinaria (L1+L2+L3)</span>
             </div>
             <div class="stat-card stat-card--dark">
-              <span class="stat-card__value">~$7,000M</span>
-              <span class="stat-card__label">Capital de trabajo (28%)</span>
+              <span class="stat-card__value">45,868 MM</span>
+              <span class="stat-card__label">Capital de trabajo operativo</span>
             </div>
             <div class="stat-card stat-card--dark">
-              <span class="stat-card__value">$25,000M</span>
+              <span class="stat-card__value">141,252 MM</span>
               <span class="stat-card__label">Inversión total (I₀)</span>
             </div>
           </div>
 
-          <div class="module-note reveal">
-            <strong>CapEx:</strong> Incluye llenadora, taponadora, lavadora CIP, etiquetadora, paletizadora robotizada, SCADA/PLC, compresor CO₂, sistema de refrigeración e infraestructura. <strong>Capital de trabajo:</strong> Flota de ~6.84 millones de botellas retornables (20 ciclos de uso promedio).
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Desglose de inversión total</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Componente</th>
+                  <th scope="col">Valor (MM COP)</th>
+                  <th scope="col">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CapEx maquinaria L1</td><td>18,000</td><td>12.7%</td></tr>
+                <tr><td>CapEx maquinaria L2</td><td>35,000</td><td>24.8%</td></tr>
+                <tr><td>CapEx maquinaria L3</td><td>25,000</td><td>17.7%</td></tr>
+                <tr><td>Infraestructura compartida</td><td>10,000</td><td>7.1%</td></tr>
+                <tr><td>Flota envases retornables L1</td><td>7,000</td><td>5.0%</td></tr>
+                <tr><td>Capital de trabajo operativo</td><td>45,868</td><td>32.5%</td></tr>
+                <tr><td>Costos preoperativos</td><td>384</td><td>0.3%</td></tr>
+                <tr class="data-table__highlight"><td><strong>TOTAL</strong></td><td><strong>141,252</strong></td><td><strong>100%</strong></td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
         <section class="module-section" id="apu">
-          <h2 class="module-section__title">Análisis de Precios Unitarios (APU)</h2>
+          <h2 class="module-section__title">Análisis de precios unitarios (APU)</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Costo de producción por botella a capacidad nominal (20,000 bot/h). El OEE afecta el volumen producido, no el costo unitario estándar.</p>
+          <p class="module-section__lead">Costos y márgenes por unidad en año estacionario (plena operación), según el modelo multiproducto.</p>
 
+          <h3 class="module-section__subtitle reveal">L1 — Carbonatada 400&nbsp;mL</h3>
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">APU consolidado — Gaseosa Carbonatada 400mL Retornable</caption>
+              <caption class="visually-hidden">APU L1 carbonatada</caption>
               <thead>
                 <tr>
-                  <th scope="col">Componente</th>
+                  <th scope="col">Concepto</th>
                   <th scope="col">COP/bot</th>
-                  <th scope="col">% Prod.</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Materia prima directa</td><td>464.00</td><td>79.08%</td></tr>
-                <tr><td>&emsp;Agua tratada</td><td>4.00</td><td>0.68%</td></tr>
-                <tr><td>&emsp;Azúcar</td><td>160.00</td><td>27.27%</td></tr>
-                <tr><td>&emsp;Concentrado de sabor</td><td>100.00</td><td>17.04%</td></tr>
-                <tr><td>&emsp;CO₂ (grado alimenticio)</td><td>20.00</td><td>3.41%</td></tr>
-                <tr><td>&emsp;Tapa corona</td><td>80.00</td><td>13.63%</td></tr>
-                <tr><td>&emsp;Etiqueta</td><td>100.00</td><td>17.04%</td></tr>
-                <tr><td>Envase retornable (20 ciclos)</td><td>60.00</td><td>10.22%</td></tr>
-                <tr><td>Lavado del envase</td><td>30.00</td><td>5.11%</td></tr>
-                <tr><td>Mano de obra directa</td><td>3.13</td><td>0.53%</td></tr>
-                <tr><td>Depreciación (CapEx)</td><td>12.50</td><td>2.13%</td></tr>
-                <tr><td>Energía eléctrica (300 kW)</td><td>9.00</td><td>1.53%</td></tr>
-                <tr><td>Mantenimiento (4% CapEx)</td><td>5.00</td><td>0.85%</td></tr>
-                <tr><td>Personal indirecto (CIF)</td><td>1.56</td><td>0.27%</td></tr>
-                <tr><td>Infraestructura (CIF)</td><td>0.55</td><td>0.09%</td></tr>
-                <tr><td>Logística directa (CIF)</td><td>0.86</td><td>0.15%</td></tr>
-                <tr class="data-table__highlight"><td>Costo de producción</td><td>586.60</td><td>100%</td></tr>
-                <tr><td>SGA (15% sobre ingresos)</td><td>225.00</td><td>—</td></tr>
-                <tr class="data-table__highlight"><td>Costo total (prod. + SGA)</td><td>811.60</td><td>—</td></tr>
+                <tr><td>Costo producción APU (sin depreciación)</td><td>583.69</td></tr>
+                <tr><td>Depreciación</td><td>13.16</td></tr>
+                <tr class="data-table__highlight"><td>Costo APU total</td><td>596.85</td></tr>
+                <tr><td>SGA (15%)</td><td>127.50</td></tr>
+                <tr class="data-table__highlight"><td>Costo total</td><td>724.35</td></tr>
+                <tr><td>Precio EXW</td><td>850.00</td></tr>
+                <tr class="data-table__highlight"><td>Margen</td><td>125.65 (14.8%)</td></tr>
               </tbody>
             </table>
           </div>
 
-          <div class="module-note reveal">
-            <strong>Margen operativo unitario:</strong> $1,500 (precio Ex-Works) − $811.60 (costo total) = <strong>$688.40 COP/botella</strong>. La materia prima domina la estructura de costos (79%), con azúcar + concentrado representando el 44.3% del APU.
+          <h3 class="module-section__subtitle reveal">L2 — Energizante 355&nbsp;mL</h3>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">APU L2 energizante</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Concepto</th>
+                  <th scope="col">COP/lata</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data-table__highlight"><td>Costo APU total</td><td>743.99</td></tr>
+                <tr><td>SGA (13%)</td><td>175.50</td></tr>
+                <tr class="data-table__highlight"><td>Costo total</td><td>919.49</td></tr>
+                <tr><td>Precio EXW</td><td>1,350.00</td></tr>
+                <tr class="data-table__highlight"><td>Margen</td><td>430.51 (31.9%)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="module-section__subtitle reveal">L3 — Agua PET 1&nbsp;L</h3>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">APU L3 agua</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Concepto</th>
+                  <th scope="col">COP/bot</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data-table__highlight"><td>Costo APU total</td><td>349.39</td></tr>
+                <tr><td>SGA (14%)</td><td>105.00</td></tr>
+                <tr class="data-table__highlight"><td>Costo total</td><td>454.39</td></tr>
+                <tr><td>Precio EXW</td><td>750.00</td></tr>
+                <tr class="data-table__highlight"><td>Margen</td><td>295.61 (39.4%)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="video-embed reveal">
+            <h4>Video explicativo: Análisis de Precios Unitarios</h4>
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/f3RiWIVRrMw" title="Análisis de Precios Unitarios (APU)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
           </div>
         </section>
 
         <section class="module-section" id="resultados">
-          <h2 class="module-section__title">Estado de Resultados Proyectado</h2>
+          <h2 class="module-section__title">Estado de resultados consolidado</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Escenario TO-BE (OEE = 0.95) — Producción anual de 136.8 millones de botellas.</p>
+          <p class="module-section__lead">Año 4 — plena capacidad (100% de la curva de rampa). Distribución de ingresos y margen EBITDA consolidado.</p>
 
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Estado de resultados — Escenario TO-BE</caption>
+              <caption class="visually-hidden">Estado de resultados año 4</caption>
               <thead>
                 <tr>
                   <th scope="col">Concepto</th>
-                  <th scope="col">MM COP/año</th>
-                  <th scope="col">% Ingresos</th>
+                  <th scope="col">MM COP</th>
+                  <th scope="col">%</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Ingresos (1,500 COP/bot × 136.8M)</td><td>205,200</td><td>100.0%</td></tr>
-                <tr><td>(−) Costos operativos</td><td>(78,537)</td><td>38.3%</td></tr>
-                <tr><td>(−) SGA (15%)</td><td>(30,780)</td><td>15.0%</td></tr>
-                <tr class="data-table__highlight"><td>EBITDA</td><td>95,883</td><td>46.7%</td></tr>
-                <tr><td>(−) Depreciación</td><td>(1,800)</td><td>0.9%</td></tr>
-                <tr><td>EBIT</td><td>94,083</td><td>45.8%</td></tr>
-                <tr><td>(−) Impuesto renta (35%)</td><td>(32,929)</td><td>16.0%</td></tr>
-                <tr><td>Utilidad neta</td><td>61,154</td><td>29.8%</td></tr>
-                <tr><td>(+) Depreciación</td><td>1,800</td><td>—</td></tr>
-                <tr class="data-table__highlight"><td>Flujo de caja libre (FCL)</td><td>62,954</td><td>—</td></tr>
+                <tr><td>Ingresos L1</td><td>116,280</td><td>25.5%</td></tr>
+                <tr><td>Ingresos L2</td><td>267,300</td><td>58.6%</td></tr>
+                <tr><td>Ingresos L3</td><td>72,900</td><td>16.0%</td></tr>
+                <tr class="data-table__highlight"><td><strong>INGRESOS TOTALES</strong></td><td><strong>456,480</strong></td><td><strong>100%</strong></td></tr>
+                <tr><td>Costo de ventas</td><td>(255,110)</td><td>55.9%</td></tr>
+                <tr><td>Utilidad bruta</td><td>201,370</td><td>44.1%</td></tr>
+                <tr><td>SGA</td><td>(62,397)</td><td>13.7%</td></tr>
+                <tr class="data-table__highlight"><td><strong>EBITDA</strong></td><td><strong>138,973</strong></td><td><strong>30.4%</strong></td></tr>
+                <tr><td>Depreciación</td><td>(8,800)</td><td>1.9%</td></tr>
+                <tr><td>EBIT</td><td>130,173</td><td>28.5%</td></tr>
+                <tr><td>Impuesto renta (35%)</td><td>(45,561)</td><td>10.0%</td></tr>
+                <tr><td><strong>Utilidad neta</strong></td><td><strong>84,613</strong></td><td>18.5%</td></tr>
+                <tr><td>(+) Depreciación</td><td>8,800</td><td></td></tr>
+                <tr class="data-table__highlight"><td><strong>FCL consolidado</strong></td><td><strong>93,413</strong></td><td></td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
         <section class="module-section" id="flujo-caja">
-          <h2 class="module-section__title">Flujo de Caja Proyectado (5 años)</h2>
+          <h2 class="module-section__title">Flujo de caja libre y curva de rampa</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Flujo de caja libre proyectado con tasa de descuento del 12% efectivo anual.</p>
+          <p class="module-section__lead">Proyección a 5 años con rampa de demanda: 50% año 1, 70% año 2, 85% año 3, 100% años 4–5. Año 0: desembolso de inversión total.</p>
 
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Flujo de caja libre proyectado a 5 años</caption>
+              <caption class="visually-hidden">FCL cinco años con rampa</caption>
               <thead>
                 <tr>
                   <th scope="col">Año</th>
-                  <th scope="col">Inversión (MM)</th>
-                  <th scope="col">FCL (MM)</th>
-                  <th scope="col">FCL descontado (12%)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>0</td><td>−25,000</td><td>—</td><td>—</td></tr>
-                <tr><td>1</td><td>—</td><td>62,954</td><td>56,209</td></tr>
-                <tr><td>2</td><td>—</td><td>62,954</td><td>50,187</td></tr>
-                <tr><td>3</td><td>—</td><td>62,954</td><td>44,809</td></tr>
-                <tr><td>4</td><td>—</td><td>62,954</td><td>40,008</td></tr>
-                <tr><td>5</td><td>—</td><td>62,954</td><td>35,722</td></tr>
-                <tr class="data-table__highlight"><td>Total</td><td>—</td><td>314,770</td><td>226,935</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="module-section" id="sensibilidad">
-          <h2 class="module-section__title">Sensibilidad al OEE</h2>
-          <hr class="module-section__divider">
-          <p class="module-section__lead">Impacto del nivel de OEE sobre la producción, ingresos y VPN del proyecto.</p>
-
-          <div class="table-wrap reveal">
-            <table class="data-table">
-              <caption class="visually-hidden">Sensibilidad al OEE</caption>
-              <thead>
-                <tr>
-                  <th scope="col">OEE</th>
-                  <th scope="col">Prod. (M bot)</th>
+                  <th scope="col">Factor</th>
                   <th scope="col">Ingresos (MM)</th>
                   <th scope="col">EBITDA (MM)</th>
-                  <th scope="col">VPN (MM)</th>
+                  <th scope="col">FCL (MM)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>70%</td><td>100.8</td><td>151,200</td><td>49,983</td><td>141,887</td></tr>
-                <tr><td>75%</td><td>108.0</td><td>162,000</td><td>57,200</td><td>165,837</td></tr>
-                <tr><td>80%</td><td>115.2</td><td>172,800</td><td>64,418</td><td>189,787</td></tr>
-                <tr><td>85%</td><td>122.4</td><td>183,600</td><td>71,636</td><td>213,737</td></tr>
-                <tr class="data-table__highlight"><td>95% (TO-BE)</td><td>136.8</td><td>205,200</td><td>95,883</td><td>201,935</td></tr>
+                <tr><td>0</td><td>—</td><td>—</td><td>—</td><td>−141,252</td></tr>
+                <tr><td>1</td><td>50%</td><td>228,240</td><td>63,580</td><td>44,407</td></tr>
+                <tr><td>2</td><td>70%</td><td>337,415</td><td>98,810</td><td>67,306</td></tr>
+                <tr><td>3</td><td>85%</td><td>437,519</td><td>128,340</td><td>86,501</td></tr>
+                <tr><td>4</td><td>100%</td><td>488,234</td><td>138,753</td><td>93,269</td></tr>
+                <tr class="data-table__highlight"><td>5</td><td>100%</td><td>522,410</td><td>146,048</td><td>98,011 + VT 49,368</td></tr>
               </tbody>
             </table>
           </div>
 
-          <div class="module-note reveal">
-            <strong>OEE AS-IS actual (~74%):</strong> Con los OEE actuales (Gaseosa 71.4%, Energética 77.4%, Garrafón 73.4%), la mejora al 95% representa el diferencial de valor que justifica la inversión en automatización. Cada punto porcentual de OEE adicional genera ~6,650 MM COP de FCL anual.
-          </div>
-        </section>
-
-        <section class="module-section" id="escenarios">
-          <h2 class="module-section__title">Escenario de Penetración de Mercado</h2>
-          <hr class="module-section__divider">
-          <p class="module-section__lead">Comparación entre el modelo base (100% de capacidad vendida) y una curva de penetración gradual (50% → 95%).</p>
-
+          <p class="module-section__lead reveal" style="margin-top:1.25rem">Indicadores por línea (año estacionario / asignación del modelo):</p>
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Modelo base vs. curva de demanda</caption>
+              <caption class="visually-hidden">Indicadores por línea</caption>
               <thead>
                 <tr>
                   <th scope="col">Indicador</th>
-                  <th scope="col">Base (100%)</th>
-                  <th scope="col">Curva (50%→95%)</th>
-                  <th scope="col">Δ</th>
+                  <th scope="col">L1</th>
+                  <th scope="col">L2</th>
+                  <th scope="col">L3</th>
+                  <th scope="col">Consolidado</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>VPN (12%, 5 años)</td><td>201,935 MM</td><td>148,804 MM</td><td>−26.3%</td></tr>
-                <tr><td>TIR</td><td>~251%</td><td>~152%</td><td>−99 p.p.</td></tr>
-                <tr><td>Payback simple</td><td>~4.8 meses</td><td>~9.4 meses</td><td>+4.6 meses</td></tr>
+                <tr><td>Inversión (MM)</td><td>39,056</td><td>64,414</td><td>37,782</td><td>141,252</td></tr>
+                <tr><td>EBITDA (MM)</td><td>18,990</td><td>88,744</td><td>31,239</td><td>138,973</td></tr>
+                <tr><td>Margen EBITDA</td><td>16.3%</td><td>33.2%</td><td>42.8%</td><td>30.4%</td></tr>
+                <tr><td>FCL (MM)</td><td>12,974</td><td>58,909</td><td>21,181</td><td>93,064</td></tr>
+                <tr><td>TIR</td><td>≈22%</td><td>≈55%</td><td>≈35%</td><td>≈38%</td></tr>
+                <tr><td>ROI</td><td>29.0%</td><td>76.8%</td><td>40.0%</td><td>48.9%</td></tr>
+                <tr><td>Payback</td><td>≈36 m</td><td>≈16 m</td><td>≈25 m</td><td>≈28 m</td></tr>
               </tbody>
             </table>
           </div>
 
           <div class="module-note reveal">
-            <strong>Conclusión:</strong> El proyecto es viable en ambos escenarios (VPN > 0). La brecha de 53,131 MM COP entre escenarios cuantifica el valor de una estrategia comercial efectiva para acelerar la penetración de mercado.
+            <strong>Nota:</strong> La línea 2 (energizante) concentra ~<strong>63%</strong> del FCL consolidado y actúa como motor financiero del sistema. El FCL del año 1 representa ~<strong>47.7%</strong> del FCL estacionario (44,407 / 93,064), coherente con la rampa de penetración.
           </div>
         </section>
 
-        <section class="module-section" id="sensibilidad-precio">
-          <h2 class="module-section__title">Sensibilidad al Precio de Venta</h2>
+        <section class="module-section" id="sensibilidad-wacc">
+          <h2 class="module-section__title">Sensibilidad al WACC</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Impacto de variaciones del ±20% en el precio Ex-Works sobre los indicadores del proyecto (producción anual: 136.8M bot).</p>
+          <p class="module-section__lead">VPN (MM COP) según distintas tasas de descuento. La tasa base del modelo es <strong>18%</strong>; a la TIR global (~38%) el VPN se anula.</p>
 
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Sensibilidad al precio de venta</caption>
+              <caption class="visually-hidden">Sensibilidad WACC</caption>
               <thead>
                 <tr>
-                  <th scope="col">Escenario</th>
-                  <th scope="col">Precio (COP)</th>
-                  <th scope="col">Ingresos (MM)</th>
-                  <th scope="col">SGA (MM)</th>
-                  <th scope="col">EBITDA (MM)</th>
+                  <th scope="col">WACC</th>
                   <th scope="col">VPN (MM)</th>
+                  <th scope="col">Decisión</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Pesimista (−20%)</td><td>1,200</td><td>164,160</td><td>24,624</td><td>60,999</td><td>95,267</td></tr>
-                <tr class="data-table__highlight"><td>Base</td><td>1,500</td><td>205,200</td><td>30,780</td><td>95,883</td><td>201,935</td></tr>
-                <tr><td>Optimista (+20%)</td><td>1,800</td><td>246,240</td><td>36,936</td><td>130,767</td><td>308,603</td></tr>
+                <tr><td>10%</td><td>+211,300</td><td>Invertir</td></tr>
+                <tr><td>12%</td><td>+166,840</td><td>Invertir</td></tr>
+                <tr><td>15%</td><td>+138,210</td><td>Invertir</td></tr>
+                <tr class="data-table__highlight"><td>18% (base)</td><td>+108,878</td><td>Invertir</td></tr>
+                <tr><td>20%</td><td>+86,340</td><td>Invertir</td></tr>
+                <tr><td>38% (TIR)</td><td>0</td><td>Indiferencia</td></tr>
               </tbody>
             </table>
-          </div>
-
-          <div class="module-note reveal">
-            <strong>Conclusión:</strong> El proyecto mantiene VPN positivo incluso con una caída del 20% en el precio. Sin embargo, esta reducción genera una caída del ~36% en el EBITDA, lo que subraya que el precio de venta es la variable de mayor impacto sobre la rentabilidad.
           </div>
         </section>
 
-        <section class="module-section" id="sensibilidad-envase">
-          <h2 class="module-section__title">Sensibilidad a Ciclos de Vida del Envase</h2>
+        <section class="module-section" id="sensibilidad-oee">
+          <h2 class="module-section__title">Sensibilidad al OEE (multilínea)</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Impacto del número de ciclos de uso del envase retornable sobre el costo unitario y el flujo de caja libre.</p>
+          <p class="module-section__lead">Combinaciones de OEE por línea y efecto sobre el <strong>FCL consolidado</strong> (MM COP). El escenario TO-BE alinea con los OEE objetivo por línea.</p>
 
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Sensibilidad a ciclos del envase</caption>
+              <caption class="visually-hidden">Sensibilidad OEE tres líneas</caption>
               <thead>
                 <tr>
-                  <th scope="col">Ciclos (N)</th>
-                  <th scope="col">Costo envase (COP/bot)</th>
-                  <th scope="col">APU (COP)</th>
-                  <th scope="col">Margen (COP)</th>
-                  <th scope="col">FCL TO-BE (MM)</th>
+                  <th scope="col">OEE L1</th>
+                  <th scope="col">OEE L2</th>
+                  <th scope="col">OEE L3</th>
+                  <th scope="col">FCL consolidado (MM)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>10</td><td>120.00</td><td>646.60</td><td>628.40</td><td>54,743</td></tr>
-                <tr><td>15</td><td>80.00</td><td>606.60</td><td>668.40</td><td>58,848</td></tr>
-                <tr class="data-table__highlight"><td>20 (base)</td><td>60.00</td><td>586.60</td><td>688.40</td><td>62,954</td></tr>
-                <tr><td>25</td><td>48.00</td><td>574.60</td><td>700.40</td><td>65,007</td></tr>
+                <tr><td>0.80</td><td>0.78</td><td>0.75</td><td>73,800 (AS-IS)</td></tr>
+                <tr><td>0.85</td><td>0.83</td><td>0.82</td><td>82,100</td></tr>
+                <tr class="data-table__highlight"><td>0.95</td><td>0.92</td><td>0.90</td><td>93,064 (TO-BE)</td></tr>
               </tbody>
             </table>
-          </div>
-
-          <div class="module-note reveal">
-            <strong>Impacto:</strong> Si los ciclos efectivos se reducen de 20 a 10 (por pérdidas, roturas o robo), el FCL anual cae ~8,211 MM COP (−13%). La tasa de pérdida de botellas es un KPI financiero crítico.
           </div>
         </section>
 
         <section class="module-section" id="riesgos">
-          <h2 class="module-section__title">Riesgos del Modelo</h2>
+          <h2 class="module-section__title">Riesgos del modelo</h2>
           <hr class="module-section__divider">
-          <p class="module-section__lead">Factores que pueden afectar la rentabilidad proyectada del modelo empresarial.</p>
+          <p class="module-section__lead">Matriz de riesgos del informe: probabilidad, impacto y mitigación.</p>
 
-          <div class="risk-grid reveal">
-            <article class="risk-card">
-              <h3 class="risk-card__title">OEE alto y sostenido</h3>
-              <p class="risk-card__desc">Mantener un OEE de 0.95 requiere mantenimiento preventivo riguroso ($720 MM/año) y logística inversa estable. Un OEE promedio de 0.85 reduce el FCL en ~6,000 MM COP/año.</p>
-            </article>
-            <article class="risk-card">
-              <h3 class="risk-card__title">Ciclos de vida del envase</h3>
-              <p class="risk-card__desc">La reducción de ciclos efectivos tiene doble impacto: aumenta el costo unitario y puede generar requerimientos extraordinarios de reposición de flota no contemplados.</p>
-            </article>
-            <article class="risk-card">
-              <h3 class="risk-card__title">Absorción del mercado</h3>
-              <p class="risk-card__desc">Colocar 136.8M botellas/año (~375,000/día) requiere red de distribución madura. Una subutilización del 20% reduce el FCL en ~16,000 MM COP/año.</p>
-            </article>
-            <article class="risk-card">
-              <h3 class="risk-card__title">Precio de materias primas</h3>
-              <p class="risk-card__desc">Azúcar y concentrado representan el 44.3% del APU. La volatilidad de precios internacionales y el riesgo cambiario pueden erosionar el margen de contribución.</p>
-            </article>
-            <article class="risk-card">
-              <h3 class="risk-card__title">Regulación fiscal</h3>
-              <p class="risk-card__desc">El Impuesto Nacional al Consumo de Bebidas Azucaradas (INCBA) puede modificar la estructura de precios del mercado o reducir la demanda del segmento.</p>
-            </article>
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Matriz de riesgos</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Riesgo</th>
+                  <th scope="col">Prob.</th>
+                  <th scope="col">Impacto</th>
+                  <th scope="col">Mitigación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Reforma Ley 2277 (umbral azúcar)</td><td>Media</td><td>Crítico</td><td>Reformulación a 0 azúcar añadido</td></tr>
+                <tr><td>Penetración Año 1 &lt; 40%</td><td>Media</td><td>Alto</td><td>Pre-venta; contratos distribución</td></tr>
+                <tr><td>Alza aluminio &gt; 20% (L2)</td><td>Alta</td><td>Medio</td><td>Contratos precio fijo semestral</td></tr>
+                <tr><td>OEE &lt; 0.75 en líneas</td><td>Media</td><td>Alto</td><td>Plan TPM intensivo Año 1</td></tr>
+                <tr><td>KW operativo excede proyección</td><td>Baja</td><td>Medio</td><td>Líneas de crédito rotativo</td></tr>
+                <tr><td>Devaluación COP/USD &gt; 20%</td><td>Alta</td><td>Medio</td><td>Coberturas cambiarias (forwards)</td></tr>
+                <tr><td>Competencia marcas consolidadas</td><td>Alta</td><td>Alto</td><td>Estrategia precio/canal diferenciada</td></tr>
+                <tr><td>Incumplimiento INVIMA (BPM)</td><td>Baja</td><td>Crítico</td><td>Sistema calidad ISO 22000</td></tr>
+                <tr><td>WACC real &gt; 22%</td><td>Baja</td><td>Medio</td><td>Estructurar deuda para reducir WACC</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
         <section class="module-section" id="conclusiones">
-          <h2 class="module-section__title">Conclusiones y Recomendaciones</h2>
+          <h2 class="module-section__title">Conclusiones y recomendaciones</h2>
           <hr class="module-section__divider">
 
-          <div class="module-note reveal" style="margin-bottom:1.5rem">
-            <strong>Viabilidad confirmada:</strong> Con inversión total de $25,000 MM COP, el proyecto genera un VPN de ~$201,935 MM al 12% de descuento en 5 años. Los indicadores (TIR ~251%, ROI 244.6%, Payback ~4.8 meses) sitúan al proyecto en categoría de alta rentabilidad para manufactura de consumo masivo.
+          <div class="reveal">
+            <ol style="padding-left:1.25rem; line-height:1.85; color:var(--secondary-light); margin-top:0">
+              <li><strong>Negocio viable:</strong> VPN <strong>+108,878 MM COP</strong>, TIR ~<strong>38%</strong> anual, payback ~<strong>28 meses</strong> (WACC 18%, 5 años + VT).</li>
+              <li><strong>Ley 2277/2022</strong> es el riesgo regulatorio más crítico — reformulación a ≤6&nbsp;g/100&nbsp;mL obligatoria.</li>
+              <li><strong>WACC 18%</strong> es parámetro crítico de valoración; un WACC del 12% <strong>sobreestimaba</strong> la robustez frente al costo de capital.</li>
+              <li>La <strong>curva de rampa</strong> condiciona el FCL en los tres primeros años; el FCL del año 1 es ~<strong>47.7%</strong> del estacionario.</li>
+              <li>La <strong>línea 2 (energizante)</strong> es el motor financiero (~63% del FCL consolidado).</li>
+              <li><strong>SMMLV 2026:</strong> impacto moderado (&lt;0.7% costo total) gracias a la alta automatización.</li>
+              <li><strong>Recomendación:</strong> avanzar a etapa de <strong>prefactibilidad</strong> con el modelo multiproducto validado.</li>
+            </ol>
           </div>
 
-          <div class="reveal">
-            <h3 style="font-size:1.1rem; margin-bottom:0.75rem; color:var(--secondary)">Recomendaciones estratégicas</h3>
-            <ol style="padding-left:1.25rem; line-height:1.8; color:var(--secondary-light)">
-              <li>Ejecutar el plan de mantenimiento preventivo al 4% del CapEx ($720 MM/año) como condición no negociable para sostener el OEE objetivo.</li>
-              <li>Gestionar activamente el precio de venta con contratos a mediano plazo con distribuidores clave.</li>
-              <li>Monitorear el KPI de ciclos efectivos del envase mensualmente; establecer alertas si el promedio cae por debajo de 18 ciclos.</li>
-              <li>Implementar cobertura de precio en azúcar y concentrado de sabor (44.3% del APU).</li>
-              <li>Complementar con análisis de capital de trabajo completo (cuentas por cobrar, inventarios) antes de la decisión de inversión.</li>
-              <li>Considerar financiamiento mixto (deuda + capital propio) para optimizar el WACC.</li>
-            </ol>
+          <div class="module-note reveal" style="margin-top:1.5rem">
+            <strong>Próximos pasos:</strong> Profundizar estructura de capital y deuda para acotar el WACC real, reforzar cumplimiento Ley 2277 en formulaciones, y asegurar plan TPM y penetración comercial desde el año 1.
           </div>
         </section>
 
         <section class="module-section" id="parametros">
-          <h2 class="module-section__title">Parámetros del Modelo</h2>
+          <h2 class="module-section__title">Parámetros del modelo</h2>
           <hr class="module-section__divider">
 
           <div class="table-wrap reveal">
             <table class="data-table">
-              <caption class="visually-hidden">Parámetros clave del modelo</caption>
+              <caption class="visually-hidden">Parámetros clave del modelo multiproducto</caption>
               <thead>
                 <tr>
                   <th scope="col">Parámetro</th>
@@ -414,16 +461,16 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Capacidad nominal</td><td>20,000 bot/h</td></tr>
-                <tr><td>Operación</td><td>24 h/día, 300 días/año (7,200 h/año)</td></tr>
-                <tr><td>OEE TO-BE</td><td>0.95 (D=0.98, R=0.98, C=0.99)</td></tr>
-                <tr><td>Producción anual</td><td>136,800,000 bot/año</td></tr>
-                <tr><td>Precio Ex-Works</td><td>$1,500 COP/bot (constante)</td></tr>
-                <tr><td>Personal por turno</td><td>5 personas × 3 turnos = 15 total</td></tr>
-                <tr><td>Tasa de descuento</td><td>12% e.a.</td></tr>
-                <tr><td>Impuesto renta</td><td>35%</td></tr>
-                <tr><td>Depreciación</td><td>Línea recta, 10 años</td></tr>
-                <tr><td>Mantenimiento</td><td>4% CapEx/año ($720 MM)</td></tr>
+                <tr><td>Nombre del modelo</td><td>Negocio industrial multiproducto de bebidas y agua</td></tr>
+                <tr><td>Horizonte</td><td>5 años, términos nominales (COP)</td></tr>
+                <tr><td>WACC (tasa de descuento)</td><td>18% efectivo anual</td></tr>
+                <tr><td>Curva de rampa</td><td>50% Año 1 · 70% Año 2 · 85% Año 3 · 100% Años 4–5</td></tr>
+                <tr><td>Líneas</td><td>3 (L1 carbonatada 400&nbsp;mL, L2 energizante 355&nbsp;mL, L3 agua PET 1&nbsp;L)</td></tr>
+                <tr><td>OEE TO-BE (L1 / L2 / L3)</td><td>0.95 / 0.92 / 0.90</td></tr>
+                <tr><td>OEE AS-IS (L1 / L2 / L3)</td><td>0.80 / 0.78 / 0.75</td></tr>
+                <tr><td>Impuesto a la renta</td><td>35%</td></tr>
+                <tr><td>Inversión total (I₀)</td><td>141,252 MM COP</td></tr>
+                <tr><td>VPN base (18% + VT)</td><td>+108,878 MM COP</td></tr>
               </tbody>
             </table>
           </div>
