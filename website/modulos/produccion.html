@@ -121,114 +121,172 @@
           </header>
           <p class="module-section__lead reveal">Se elaboraron Diagramas de Análisis de Proceso para cada producto, documentando operaciones, transportes, inspecciones y almacenamientos según la norma ASME.</p>
 
-          <figure class="reveal" style="margin:1.5rem 0 2rem;text-align:center">
-            <img src="../img/diagramas/dap-gaseosa-400ml.svg" alt="DAP — Gaseosa Carbonatada 400ml: diagrama de flujo con 22 etapas ASME (Operación, Transporte, Inspección, Almacenamiento)" style="max-width:100%;height:auto;border-radius:8px;border:1px solid var(--border)">
-            <figcaption style="font-size:0.82rem;color:var(--text-muted);margin-top:0.5rem">Diagrama Analítico de Proceso (DAP) — Gaseosa Carbonatada 400ml, notación ASME.</figcaption>
-          </figure>
+          <!-- [REMOVAL-026] Diagrama SVG DAP y tablas simplificadas reemplazados por tablas Flow Process Chart completas (formato Excel ASME) -->
 
-          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:1.5rem;">Gaseosa Carbonatada 400ml (25 pasos)</h3>
-          <p class="reveal"><strong>Resumen:</strong> O=16 · T=4 · I=5 · A=1</p>
-          <div class="table-wrap reveal">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Tiempo (s)</th>
-                  <th scope="col">Tipo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td>Saneamiento previo a cambio de sabor</td><td>7,200–10,800</td><td>O</td></tr>
-                <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>259.2</td><td>O</td></tr>
-                <tr><td>3</td><td>Tratamiento y purificación del agua</td><td>259.2</td><td>O</td></tr>
-                <tr><td>4</td><td>Control de calidad del agua</td><td>30</td><td>I</td></tr>
-                <tr><td>5</td><td>Refinamiento de azúcar</td><td>240</td><td>O</td></tr>
-                <tr><td>6</td><td>Preparación del jarabe simple (agua + azúcar)</td><td>259.2</td><td>O</td></tr>
-                <tr><td>7</td><td>Mezcla con concentrado (jarabe terminado)</td><td>259.2</td><td>O</td></tr>
-                <tr><td>8</td><td>Verificación del jarabe</td><td>20</td><td>I</td></tr>
-                <tr><td>9</td><td>Envío del jarabe a tanque de mezcla</td><td>100</td><td>T</td></tr>
-                <tr><td>10</td><td>Enfriamiento del jarabe</td><td>259.2</td><td>O</td></tr>
-                <tr><td>11</td><td>Carbonatación (mezcla con CO₂)</td><td>30</td><td>O</td></tr>
-                <tr><td>12</td><td>Envío a línea de llenado</td><td>8</td><td>T</td></tr>
-                <tr><td>13</td><td>Recepción de botellas de vidrio retornables</td><td>0.18</td><td>O</td></tr>
-                <tr><td>14</td><td>Rectificado de etiquetado</td><td>0.18</td><td>O</td></tr>
-                <tr><td>15</td><td>Lavado y desinfección de botellas</td><td>0.18</td><td>O</td></tr>
-                <tr><td>16</td><td>Inspección automática de botellas</td><td>0.18</td><td>I</td></tr>
-                <tr><td>17</td><td>Botellas limpias a llenadora</td><td>20</td><td>T</td></tr>
-                <tr><td>18</td><td>Llenado de bebida (400 ml)</td><td>0.18</td><td>O</td></tr>
-                <tr><td>19</td><td>Tapado con tapa corona</td><td>0.15</td><td>O</td></tr>
-                <tr><td>20</td><td>Verificación de nivel y sellado</td><td>0.10</td><td>I</td></tr>
-                <tr><td>21</td><td>Codificación de lote y fecha</td><td>0.12</td><td>O</td></tr>
-                <tr><td>22</td><td>Control final de calidad</td><td>30</td><td>I</td></tr>
-                <tr><td>23</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
-                <tr><td>24</td><td>Empaque en canastillas</td><td>4.32</td><td>O</td></tr>
-                <tr><td>25</td><td>Almacenamiento en bodega</td><td>255</td><td>A</td></tr>
-              </tbody>
-            </table>
+          <div class="fpc-card reveal">
+            <div class="fpc-header">
+              <div class="fpc-header__title">FLOW PROCESS CHART</div>
+              <div class="fpc-header__subtitle">Operación: Embotellado de Gaseosa 400ml retornable</div>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table fpc-table">
+                <caption class="visually-hidden">Flow Process Chart: gaseosa 400 ml retornable, 25 operaciones con símbolos ASME</caption>
+                <thead>
+                  <tr>
+                    <th rowspan="2" scope="col">#</th>
+                    <th rowspan="2" scope="col">Descripción</th>
+                    <th rowspan="2" scope="col">Cantidad</th>
+                    <th rowspan="2" scope="col">Distancia (m)</th>
+                    <th rowspan="2" scope="col">Tiempo (s)</th>
+                    <th colspan="5" class="fpc-table__tipo" scope="colgroup">Tipo de elemento</th>
+                    <th rowspan="2" scope="col">Observaciones</th>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="fpc-table__sym-head" title="Operación"><span aria-hidden="true">○</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Transporte"><span aria-hidden="true">→</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Demora"><span aria-hidden="true">D</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Inspección"><span aria-hidden="true">□</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Almacenamiento"><span aria-hidden="true">▽</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Saneamiento previo a cambio de sabor</td><td>Única vez</td><td>—</td><td>2-3 hs</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Depende del producto anterior</td></tr>
+                  <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>1 Lote</td><td>50</td><td>259,2</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Agua acueducto</td></tr>
+                  <tr><td>3</td><td>Tratamiento y purificación del agua (filtración, carbón activado, UV)</td><td>1 Lote</td><td>—</td><td>259,2</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>4</td><td>Control de calidad del agua</td><td>1 muestra</td><td>—</td><td>30</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>pH, conductividad</td></tr>
+                  <tr><td>5</td><td>Refinamiento de azúcar</td><td>1 lote</td><td>—</td><td>240</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>6</td><td>Preparación del jarabe simple (agua + azúcar)</td><td>1 Lote</td><td>—</td><td>259,2</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Disolución azúcar</td></tr>
+                  <tr><td>7</td><td>Mezcla con concentrado Coca-Cola (jarabe terminado)</td><td>1 Lote</td><td>—</td><td>259,2</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>8</td><td>Verificación del jarabe</td><td>1 muestra</td><td>—</td><td>20</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Medición de °Brix</td></tr>
+                  <tr><td>9</td><td>Envío del jarabe a tanque de mezcla</td><td>1 Lote</td><td>6</td><td>100</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Bombeo por tubería</td></tr>
+                  <tr><td>10</td><td>Enfriamiento del jarabe</td><td>1 Lote</td><td>—</td><td>259,2</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>11</td><td>Carbonatación (mezcla con CO₂)</td><td>1 Lote</td><td>—</td><td>30</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Proceso en carbonatador</td></tr>
+                  <tr><td>12</td><td>Envío a línea de llenado</td><td>1 Lote</td><td>8</td><td>8</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>13</td><td>Recepción de botellas de vidrio retornables</td><td>1 Botella</td><td>—</td><td>0,18</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>14</td><td>Rectificado de etiquetado</td><td>1 Botella</td><td>—</td><td>0,18</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Cuando es necesario se corrige la impresión</td></tr>
+                  <tr><td>15</td><td>Lavado y desinfección de botellas</td><td>1 Botella</td><td>—</td><td>0,18</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Lavadora industrial</td></tr>
+                  <tr><td>16</td><td>Inspección automática de botellas</td><td>1 Botella</td><td>—</td><td>0,18</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Cámaras detectan defectos</td></tr>
+                  <tr><td>17</td><td>Botellas limpias a llenadora</td><td>1 Botella</td><td>20</td><td>20</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>18</td><td>Llenado de bebida (400 ml)</td><td>1 Botella</td><td>—</td><td>0,18</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>19</td><td>Tapado con tapa corona</td><td>1 Botella</td><td>—</td><td>0,15</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>20</td><td>Verificación de nivel y sellado</td><td>1 Botella</td><td>—</td><td>0,1</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Sensor o visión artificial</td></tr>
+                  <tr><td>21</td><td>Codificación de lote y fecha</td><td>1 Botella</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>22</td><td>Control final de calidad</td><td>1 Muestra</td><td>—</td><td>30</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>23</td><td>Transporte a bodega</td><td>1 botella</td><td>100</td><td>100</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Bandas muy largas</td></tr>
+                  <tr><td>24</td><td>Empaque en canastillas</td><td>24 botellas</td><td>—</td><td>4,32</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>25</td><td>Almacenamiento en bodega</td><td>1 lote</td><td>—</td><td>255</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--storage" aria-label="Almacenamiento">●</span></td><td>1440 u en palets</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fpc-summary">Operaciones: 16 · Transportes: 4 · Inspecciones: 5 · Almacenamientos: 1 <span class="fpc-summary__note">(sin Demoras)</span></p>
           </div>
 
-          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:2rem;">Bebida Energética 473ml — 10 operaciones clave</h3>
-          <p class="reveal"><strong>Resumen DAP completo:</strong> O=14 · T=4 · I=4 · A=1</p>
-          <div class="table-wrap reveal">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Tiempo (s)</th>
-                  <th scope="col">Tipo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>10</td><td>O</td></tr>
-                <tr><td>6</td><td>Preparación del jarabe base</td><td>120</td><td>O</td></tr>
-                <tr><td>7</td><td>Mezcla con concentrado de bebida energética</td><td>60</td><td>O</td></tr>
-                <tr><td>11</td><td>Carbonatación</td><td>30</td><td>O</td></tr>
-                <tr><td>13</td><td>Recepción de latas vacías</td><td>0.12</td><td>O</td></tr>
-                <tr><td>16</td><td>Llenado de bebida</td><td>0.12</td><td>O</td></tr>
-                <tr><td>17</td><td>Sellado de lata</td><td>0.12</td><td>O</td></tr>
-                <tr><td>18</td><td>Inspección de sellado</td><td>0.12</td><td>I</td></tr>
-                <tr><td>21</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
-                <tr><td>23</td><td>Almacenamiento producto terminado</td><td>172.8</td><td>A</td></tr>
-              </tbody>
-            </table>
+          <div class="fpc-card reveal">
+            <div class="fpc-header">
+              <div class="fpc-header__title">FLOW PROCESS CHART</div>
+              <div class="fpc-header__subtitle">Operación: Envasado Monster Energy</div>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table fpc-table">
+                <caption class="visually-hidden">Flow Process Chart: bebida energética Monster Energy, 23 operaciones con símbolos ASME</caption>
+                <thead>
+                  <tr>
+                    <th rowspan="2" scope="col">#</th>
+                    <th rowspan="2" scope="col">Descripción</th>
+                    <th rowspan="2" scope="col">Cantidad</th>
+                    <th rowspan="2" scope="col">Distancia (m)</th>
+                    <th rowspan="2" scope="col">Tiempo (s)</th>
+                    <th colspan="5" class="fpc-table__tipo" scope="colgroup">Tipo de elemento</th>
+                    <th rowspan="2" scope="col">Observaciones</th>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="fpc-table__sym-head" title="Operación"><span aria-hidden="true">○</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Transporte"><span aria-hidden="true">→</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Demora"><span aria-hidden="true">D</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Inspección"><span aria-hidden="true">□</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Almacenamiento"><span aria-hidden="true">▽</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Saneamiento previo a cambio de sabor</td><td>Única vez</td><td>—</td><td>3 hs</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Depende del producto anterior</td></tr>
+                  <tr><td>2</td><td>Recepción de agua de red o pozo</td><td>1 Lote</td><td>50</td><td>10</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Agua acueducto</td></tr>
+                  <tr><td>3</td><td>Tratamiento y purificación de agua</td><td>1 Lote</td><td>—</td><td>60</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Osmosis inversa</td></tr>
+                  <tr><td>4</td><td>Control de calidad del agua</td><td>1 muestra</td><td>—</td><td>30</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>pH, conductividad</td></tr>
+                  <tr><td>5</td><td>Refinamiento de azúcar</td><td>1 lote</td><td>—</td><td>60</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>6</td><td>Preparación del jarabe base</td><td>1 Lote</td><td>—</td><td>120</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Mezcla azúcar, cafeína, aditivos</td></tr>
+                  <tr><td>7</td><td>Mezcla con concentrado Monster</td><td>1 Lote</td><td>—</td><td>60</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>8</td><td>Verificación de jarabe</td><td>1 muestra</td><td>—</td><td>20</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Control °Brix</td></tr>
+                  <tr><td>9</td><td>Transporte a tanque de mezcla</td><td>1 Lote</td><td>6</td><td>15</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>10</td><td>Enfriamiento de bebida</td><td>1 Lote</td><td>—</td><td>40</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>11</td><td>Carbonatación</td><td>1 Lote</td><td>—</td><td>30</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>12</td><td>Transporte a línea de llenado</td><td>1 Lote</td><td>8</td><td>8</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>13</td><td>Recepción de latas vacías</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Latas de aluminio nuevas</td></tr>
+                  <tr><td>14</td><td>Enjuague de latas</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Aire ionizado o agua estéril</td></tr>
+                  <tr><td>15</td><td>Transporte a llenadora</td><td>1 Lata</td><td>4</td><td>4</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>16</td><td>Llenado de bebida</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>17</td><td>Sellado de lata</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>18</td><td>Inspección de sellado</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>19</td><td>Codificación de lote y fecha</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>20</td><td>Control de peso</td><td>1 Lata</td><td>—</td><td>0,12</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Báscula</td></tr>
+                  <tr><td>21</td><td>Transporte a bodega</td><td>1 Lata</td><td>100</td><td>100</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Bandas muy largas</td></tr>
+                  <tr><td>22</td><td>Empaque en bandejas o packs</td><td>12 Latas</td><td>—</td><td>1,44</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Empaque termoencogible</td></tr>
+                  <tr><td>23</td><td>Almacenamiento producto terminado</td><td>1 lote</td><td>—</td><td>172,8</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--storage" aria-label="Almacenamiento">●</span></td><td>1440 u en palet</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fpc-summary">Operaciones: 14 · Transportes: 4 · Inspecciones: 4 · Almacenamientos: 1 <span class="fpc-summary__note">(sin Demoras)</span></p>
           </div>
 
-          <h3 class="module-section__title module-section__title--sub reveal" style="font-size:1.15rem;margin-top:2rem;">Garrafón 20L — 10 operaciones clave (referencia, pendiente de actualizar)</h3>
-          <p class="reveal"><strong>Resumen DAP completo:</strong> O=12 · T=3 · I=4 · A=1</p>
-          <div class="table-wrap reveal">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Tiempo (s)</th>
-                  <th scope="col">Tipo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>2</td><td>Recepción de agua cruda</td><td>10</td><td>O</td></tr>
-                <tr><td>4</td><td>Tratamiento y purificación</td><td>60</td><td>O</td></tr>
-                <tr><td>5</td><td>Control de calidad del agua</td><td>30</td><td>I</td></tr>
-                <tr><td>7</td><td>Recepción de preformas PET</td><td>10</td><td>O</td></tr>
-                <tr><td>8</td><td>Soplado de botellas</td><td>0.24</td><td>O</td></tr>
-                <tr><td>11</td><td>Llenado de agua</td><td>0.24</td><td>O</td></tr>
-                <tr><td>14</td><td>Etiquetado</td><td>0.24</td><td>O</td></tr>
-                <tr><td>16</td><td>Control final de calidad</td><td>10</td><td>I</td></tr>
-                <tr><td>17</td><td>Transporte a bodega</td><td>100</td><td>T</td></tr>
-                <tr><td>19</td><td>Almacenamiento producto terminado</td><td>150</td><td>A</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="flow-steps reveal" aria-hidden="true">
-            <span class="flow-step flow-step--op">O Operación</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step flow-step--transport">T Transporte</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step flow-step--inspect">I Inspección</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step flow-step--storage">A Almacenamiento</span>
+          <div class="fpc-card reveal">
+            <div class="fpc-header">
+              <div class="fpc-header__title">FLOW PROCESS CHART</div>
+              <div class="fpc-header__subtitle">Operación: Envasado agua 1L</div>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table fpc-table">
+                <caption class="visually-hidden">Flow Process Chart: agua embotellada 1 L, 19 operaciones con símbolos ASME</caption>
+                <thead>
+                  <tr>
+                    <th rowspan="2" scope="col">#</th>
+                    <th rowspan="2" scope="col">Descripción</th>
+                    <th rowspan="2" scope="col">Cantidad</th>
+                    <th rowspan="2" scope="col">Distancia (m)</th>
+                    <th rowspan="2" scope="col">Tiempo (s)</th>
+                    <th colspan="5" class="fpc-table__tipo" scope="colgroup">Tipo de elemento</th>
+                    <th rowspan="2" scope="col">Observaciones</th>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="fpc-table__sym-head" title="Operación"><span aria-hidden="true">○</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Transporte"><span aria-hidden="true">→</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Demora"><span aria-hidden="true">D</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Inspección"><span aria-hidden="true">□</span></th>
+                    <th scope="col" class="fpc-table__sym-head" title="Almacenamiento"><span aria-hidden="true">▽</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Saneamiento previo a cambio de producto</td><td>Única vez</td><td>—</td><td>2-3 hs</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Depende del producto anterior</td></tr>
+                  <tr><td>2</td><td>Recepción de agua cruda</td><td>1 lote</td><td>50</td><td>10</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Agua acueducto</td></tr>
+                  <tr><td>3</td><td>Filtración primaria</td><td>1 lote</td><td>—</td><td>40</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Remoción de partículas</td></tr>
+                  <tr><td>4</td><td>Tratamiento y purificación</td><td>1 lote</td><td>—</td><td>60</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>5</td><td>Control de calidad del agua</td><td>1 muestra</td><td>—</td><td>30</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>pH, conductividad, microbiología</td></tr>
+                  <tr><td>6</td><td>Transporte a tanque de almacenamiento</td><td>1 lote</td><td>6</td><td>15</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>7</td><td>Recepción de preformas PET</td><td>1 lote</td><td>—</td><td>10</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>8</td><td>Soplado de botellas</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Moldeo por soplado</td></tr>
+                  <tr><td>9</td><td>Inspección de botellas</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>10</td><td>Transporte a llenadora</td><td>1 botella</td><td>4</td><td>4</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>11</td><td>Llenado de agua</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>12</td><td>Colocación de tapa</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>13</td><td>Inspección de nivel y tapa</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td>Sensor de nivel</td></tr>
+                  <tr><td>14</td><td>Etiquetado</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>15</td><td>Codificación lote y fecha</td><td>1 botella</td><td>—</td><td>0,24</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>16</td><td>Control final de calidad</td><td>1 muestra</td><td>—</td><td>10</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--inspect" aria-label="Inspección">●</span></td><td class="fpc-cell--sym"></td><td></td></tr>
+                  <tr><td>17</td><td>Transporte a bodega</td><td>10 botellas</td><td>100</td><td>100</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--transport" aria-label="Transporte">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Bandas muy largas</td></tr>
+                  <tr><td>18</td><td>Empaque en packs</td><td>10 botellas</td><td>—</td><td>2,4</td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--op" aria-label="Operación">●</span></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td>Empaque termoencogible</td></tr>
+                  <tr><td>19</td><td>Almacenamiento producto terminado</td><td>1 lote</td><td>—</td><td>150</td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"></td><td class="fpc-cell--sym"><span class="fpc-dot fpc-dot--storage" aria-label="Almacenamiento">●</span></td><td>640 u en palets</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fpc-summary">Operaciones: 12 · Transportes: 3 · Inspecciones: 4 · Almacenamientos: 1 <span class="fpc-summary__note">(sin Demoras)</span></p>
           </div>
         </section>
 
@@ -290,21 +348,23 @@
 
           <div class="vsm-gallery reveal">
             <div class="vsm-item">
-              <h4>Línea 1: Gaseosa Carbonatada 400 mL</h4>
-              <img src="../img/diagramas/vsm-final.png" alt="VSM Gaseosa Carbonatada Retornable" class="module-section__img" loading="lazy">
+              <p class="vsm-item__title">Línea 1: Gaseosa Carbonatada 400 mL</p>
+              <div class="vsm-item__frame vsm-item__frame--raster">
+                <img src="../img/diagramas/vsm-final.png" alt="VSM estado actual — Gaseosa Carbonatada Retornable" class="vsm-item__img" loading="lazy">
+              </div>
             </div>
 
             <div class="vsm-item">
-              <h4>Línea 3: Agua Saborizada PET 1 L</h4>
-              <object data="../docs/vsm-galones.pdf" type="application/pdf" width="100%" height="500" class="vsm-pdf">
-                <p>No se puede mostrar el PDF. <a href="../docs/vsm-galones.pdf" target="_blank" rel="noopener">Descargar VSM Galones</a></p>
+              <p class="vsm-item__title">Línea 2: Bebida Energizante en Lata 355 mL</p>
+              <object data="../docs/vsm-latas-monster.pdf" type="application/pdf" width="100%" height="500" class="vsm-pdf">
+                <p>No se puede mostrar el PDF. <a href="../docs/vsm-latas-monster.pdf" target="_blank" rel="noopener">Descargar VSM Latas Monster</a></p>
               </object>
             </div>
 
             <div class="vsm-item">
-              <h4>Línea 2: Bebida Energizante en Lata 355 mL</h4>
-              <object data="../docs/vsm-latas-monster.pdf" type="application/pdf" width="100%" height="500" class="vsm-pdf">
-                <p>No se puede mostrar el PDF. <a href="../docs/vsm-latas-monster.pdf" target="_blank" rel="noopener">Descargar VSM Latas Monster</a></p>
+              <p class="vsm-item__title">Línea 3: Agua Saborizada PET 1 L</p>
+              <object data="../docs/vsm-galones.pdf" type="application/pdf" width="100%" height="500" class="vsm-pdf">
+                <p>No se puede mostrar el PDF. <a href="../docs/vsm-galones.pdf" target="_blank" rel="noopener">Descargar VSM Galones</a></p>
               </object>
             </div>
           </div>
@@ -319,10 +379,7 @@
           <div class="module-note reveal">
             El diseño TO-BE se enfocará en reducir los tiempos NVA logísticos identificados en el VSM actual, manteniendo la alta disponibilidad de las máquinas.
           </div>
-          <figure class="diagram-figure reveal">
-            <div data-osd-src="../img/pagina/vsm-cocacola.png" style="width:100%;height:450px;border-radius:8px;overflow:hidden" role="img" aria-label="Value Stream Map — Gaseosa Coca-Cola Retornable"></div>
-            <figcaption class="diagram-figure__caption">VSM AS-IS — Gaseosa Coca-Cola Retornable · Fuente: equipo Gaseo S.A.S. — Usa scroll o pinch para hacer zoom</figcaption>
-          </figure>
+          <!-- [REMOVAL-027] VSM AS-IS (OpenSeadragon vsm-cocacola.png) retirado de TO-BE: el estado actual está en la sección VSM -->
           <div class="placeholder-card placeholder-card--styled reveal">
             <div class="placeholder-card__icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/><path d="M20 12v8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -499,7 +556,5 @@
   </footer>
 
   <script src="../js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/openseadragon.min.js"></script>
-  <script src="../js/osd-init.js"></script>
 </body>
 </html>
