@@ -725,6 +725,62 @@ a:hover {
   line-height: 1.5;
 }
 
+.placeholder-card--styled {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--slate-50, #F8FAFC) 0%, #f0f4f8 100%);
+  border: 1px dashed var(--slate-200, #E2E8F0);
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.placeholder-card__icon {
+  color: var(--slate-500, #64748B);
+  margin-bottom: 1rem;
+}
+
+.placeholder-card__icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.placeholder-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary, #1E293B);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-card__text {
+  font-size: 0.9rem;
+  color: var(--slate-500, #64748B);
+  max-width: 500px;
+  margin: 0 auto 0.75rem;
+  line-height: 1.5;
+}
+
+.placeholder-card__date {
+  font-size: 0.8rem;
+  color: var(--slate-500, #64748B);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.placeholder-card__link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--primary, #A8201A);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.placeholder-card__link:hover {
+  text-decoration: underline;
+}
+
 .module-list {
   margin: 0 0 1rem;
   padding-left: 1.2rem;
@@ -3034,3 +3090,49 @@ section[id] {
 }
 
 .product-card__cta:hover { color: var(--primary-dark); }
+
+/* ——— Bibliografía (propuesta) ——— */
+.ref-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  max-width: 800px;
+}
+
+.ref-list__item {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--secondary-light, #334155);
+  margin-bottom: 0.75rem;
+}
+
+.ref-list__item em {
+  font-style: italic;
+}
+
+/* ——— Evaluación económica: riesgos del modelo ——— */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.risk-card {
+  padding: 1.5rem;
+  background: var(--slate-50, #F8FAFC);
+  border-left: 3px solid var(--warning, #D97706);
+  border-radius: 0 8px 8px 0;
+}
+
+.risk-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary, #1E293B);
+  margin-bottom: 0.5rem;
+}
+
+.risk-card__desc {
+  font-size: 0.875rem;
+  color: var(--secondary-light, #334155);
+  line-height: 1.5;
+}

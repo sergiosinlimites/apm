@@ -288,6 +288,118 @@
           </div>
         </section>
 
+        <section class="module-section" id="sensibilidad-precio">
+          <h2 class="module-section__title">Sensibilidad al Precio de Venta</h2>
+          <hr class="module-section__divider">
+          <p class="module-section__lead">Impacto de variaciones del ±20% en el precio Ex-Works sobre los indicadores del proyecto (producción anual: 136.8M bot).</p>
+
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Sensibilidad al precio de venta</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Escenario</th>
+                  <th scope="col">Precio (COP)</th>
+                  <th scope="col">Ingresos (MM)</th>
+                  <th scope="col">SGA (MM)</th>
+                  <th scope="col">EBITDA (MM)</th>
+                  <th scope="col">VPN (MM)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Pesimista (−20%)</td><td>1,200</td><td>164,160</td><td>24,624</td><td>60,999</td><td>95,267</td></tr>
+                <tr class="data-table__highlight"><td>Base</td><td>1,500</td><td>205,200</td><td>30,780</td><td>95,883</td><td>201,935</td></tr>
+                <tr><td>Optimista (+20%)</td><td>1,800</td><td>246,240</td><td>36,936</td><td>130,767</td><td>308,603</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="module-note reveal">
+            <strong>Conclusión:</strong> El proyecto mantiene VPN positivo incluso con una caída del 20% en el precio. Sin embargo, esta reducción genera una caída del ~36% en el EBITDA, lo que subraya que el precio de venta es la variable de mayor impacto sobre la rentabilidad.
+          </div>
+        </section>
+
+        <section class="module-section" id="sensibilidad-envase">
+          <h2 class="module-section__title">Sensibilidad a Ciclos de Vida del Envase</h2>
+          <hr class="module-section__divider">
+          <p class="module-section__lead">Impacto del número de ciclos de uso del envase retornable sobre el costo unitario y el flujo de caja libre.</p>
+
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption class="visually-hidden">Sensibilidad a ciclos del envase</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Ciclos (N)</th>
+                  <th scope="col">Costo envase (COP/bot)</th>
+                  <th scope="col">APU (COP)</th>
+                  <th scope="col">Margen (COP)</th>
+                  <th scope="col">FCL TO-BE (MM)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>10</td><td>120.00</td><td>646.60</td><td>628.40</td><td>54,743</td></tr>
+                <tr><td>15</td><td>80.00</td><td>606.60</td><td>668.40</td><td>58,848</td></tr>
+                <tr class="data-table__highlight"><td>20 (base)</td><td>60.00</td><td>586.60</td><td>688.40</td><td>62,954</td></tr>
+                <tr><td>25</td><td>48.00</td><td>574.60</td><td>700.40</td><td>65,007</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="module-note reveal">
+            <strong>Impacto:</strong> Si los ciclos efectivos se reducen de 20 a 10 (por pérdidas, roturas o robo), el FCL anual cae ~8,211 MM COP (−13%). La tasa de pérdida de botellas es un KPI financiero crítico.
+          </div>
+        </section>
+
+        <section class="module-section" id="riesgos">
+          <h2 class="module-section__title">Riesgos del Modelo</h2>
+          <hr class="module-section__divider">
+          <p class="module-section__lead">Factores que pueden afectar la rentabilidad proyectada del modelo empresarial.</p>
+
+          <div class="risk-grid reveal">
+            <article class="risk-card">
+              <h3 class="risk-card__title">OEE alto y sostenido</h3>
+              <p class="risk-card__desc">Mantener un OEE de 0.95 requiere mantenimiento preventivo riguroso ($720 MM/año) y logística inversa estable. Un OEE promedio de 0.85 reduce el FCL en ~6,000 MM COP/año.</p>
+            </article>
+            <article class="risk-card">
+              <h3 class="risk-card__title">Ciclos de vida del envase</h3>
+              <p class="risk-card__desc">La reducción de ciclos efectivos tiene doble impacto: aumenta el costo unitario y puede generar requerimientos extraordinarios de reposición de flota no contemplados.</p>
+            </article>
+            <article class="risk-card">
+              <h3 class="risk-card__title">Absorción del mercado</h3>
+              <p class="risk-card__desc">Colocar 136.8M botellas/año (~375,000/día) requiere red de distribución madura. Una subutilización del 20% reduce el FCL en ~16,000 MM COP/año.</p>
+            </article>
+            <article class="risk-card">
+              <h3 class="risk-card__title">Precio de materias primas</h3>
+              <p class="risk-card__desc">Azúcar y concentrado representan el 44.3% del APU. La volatilidad de precios internacionales y el riesgo cambiario pueden erosionar el margen de contribución.</p>
+            </article>
+            <article class="risk-card">
+              <h3 class="risk-card__title">Regulación fiscal</h3>
+              <p class="risk-card__desc">El Impuesto Nacional al Consumo de Bebidas Azucaradas (INCBA) puede modificar la estructura de precios del mercado o reducir la demanda del segmento.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="module-section" id="conclusiones">
+          <h2 class="module-section__title">Conclusiones y Recomendaciones</h2>
+          <hr class="module-section__divider">
+
+          <div class="module-note reveal" style="margin-bottom:1.5rem">
+            <strong>Viabilidad confirmada:</strong> Con inversión total de $25,000 MM COP, el proyecto genera un VPN de ~$201,935 MM al 12% de descuento en 5 años. Los indicadores (TIR ~251%, ROI 244.6%, Payback ~4.8 meses) sitúan al proyecto en categoría de alta rentabilidad para manufactura de consumo masivo.
+          </div>
+
+          <div class="reveal">
+            <h3 style="font-size:1.1rem; margin-bottom:0.75rem; color:var(--secondary)">Recomendaciones estratégicas</h3>
+            <ol style="padding-left:1.25rem; line-height:1.8; color:var(--secondary-light)">
+              <li>Ejecutar el plan de mantenimiento preventivo al 4% del CapEx ($720 MM/año) como condición no negociable para sostener el OEE objetivo.</li>
+              <li>Gestionar activamente el precio de venta con contratos a mediano plazo con distribuidores clave.</li>
+              <li>Monitorear el KPI de ciclos efectivos del envase mensualmente; establecer alertas si el promedio cae por debajo de 18 ciclos.</li>
+              <li>Implementar cobertura de precio en azúcar y concentrado de sabor (44.3% del APU).</li>
+              <li>Complementar con análisis de capital de trabajo completo (cuentas por cobrar, inventarios) antes de la decisión de inversión.</li>
+              <li>Considerar financiamiento mixto (deuda + capital propio) para optimizar el WACC.</li>
+            </ol>
+          </div>
+        </section>
+
         <section class="module-section" id="parametros">
           <h2 class="module-section__title">Parámetros del Modelo</h2>
           <hr class="module-section__divider">
